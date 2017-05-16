@@ -1,0 +1,45 @@
+	.right{
+		height: 450px;
+	}
+	.content-righh{
+		
+		margin:5px;
+		margin-top:12px;
+	}
+	.lefttt h1{
+		font-size: 15px;
+		margin-left: -20px;
+	}
+	.que-button{
+		width: 85%;
+		text-align: left;
+		float: left;
+		color: #fff;
+	}
+	.button-submit{
+		width: 100px;
+		height: 30px;
+		background-color: rgb(16,166,180);
+		border: 0px;
+	}
+	.button-back{
+		width: 100px;
+		height: 30px;
+		background-color: rgb(16,166,180);
+		border: 0px;
+	}
+	.rightww{
+		border:0px;
+		margin-left: -90px;
+		padding-top: 3px;
+	}
+	.underline{
+		border-bottom: 1px #eee solid;
+	}
+	.p-bottom{
+		margin-bottom: 20px;
+	}
+	.imgg{
+		width: 80%;
+		margin: 15px;
+	}

@@ -1,0 +1,132 @@
+/********************视频******************************/
+.button{
+	width:140px;
+	}
+.right{
+	padding-bottom:1%;
+	}
+.rightcon{
+	margin-top:16px;
+	}
+.form{
+	margin-top:20px;
+	width:100%;
+	margin-bottom:20px;
+	}
+.form tr td{
+	line-height:32px;
+	height:34px;
+	}
+.form input[type=text]{
+	width:320px;
+	height:32px;
+	border:1px solid #cfcfcf;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	margin-bottom:10px;
+	}
+.form input[type=password]{
+	width:320px;
+	height:32px;
+	border:1px solid #cfcfcf;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	margin-bottom:10px;
+	}
+.form textarea{
+	width:100%;
+	height:56px;
+	border:1px solid #cfcfcf;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	margin-bottom:10px;
+	resize: none;
+	line-height:24px;
+	}
+.form select{
+	width:320px;
+	height:32px;
+	border:1px solid #cfcfcf;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	margin-bottom:10px;
+	resize: none;
+	}
+/***********************课本*******************************/
+.bookpage{
+	margin-top:16px;
+	height:160px;
+	position: relative;
+	cursor: pointer;
+	width: 880px;
+	}
+
+.bookpage .buttonleft{
+	background:url(../images/left_2.jpg);
+	width:25px;
+	height:47px;
+	border:0px;
+	float:left;
+	margin-top:48px;
+	margin-right:18px;
+	cursor: pointer;
+
+	}
+.bookpage .buttonleft:hover{
+	background:url(../images/left_1.jpg);
+	}
+.bookpage .buttonright{
+	background:url(../images/right_2.jpg);
+	width:25px;
+	height:47px;
+	border:0px;
+	float:left;
+	margin-top:48px;
+	margin-left:18px;
+	cursor: pointer;
+
+	}
+.bookpage .buttonright:hover{
+	background:url(../images/right_1.jpg);
+	}
+.add{
+	background:url(../images/add.jpg);
+	width:97px;
+	height:148px;
+	border:1px solid #999;
+	float:left;
+	margin-right:18px;
+	}
+.form .videoimg{
+	padding-top:6px;
+	height:42px;
+	line-height:24px;
+	}
+.bookcon{
+	float:left;
+	width: 630px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	}
+.bookcon img{
+	border:1px solid #999;
+	margin-right: 6px;
+	}
+.bookcon ul{
+	margin-left: -35px;	
+	list-style: none;
+	position: absolute;
+}
+.bookcon li{	
+	float: left;
+	
+}
+.buttongroup{
+	margin-top:14px;
+	display:block;
+	}

@@ -1,0 +1,49 @@
+.yh{
+	font-family:'微软雅黑';}
+.white2{
+	margin:auto;
+	font-family:'微软雅黑';}
+.iccon{
+	background-repeat:no-repeat;
+	height:20px;
+	width:25px;
+	margin-right:3px;
+	display:block;
+	float:left;}
+.coffee{
+	margin-top:5px;
+	background-image:url(../images/coff.gif);}
+.loginuser{
+	background-repeat:no-repeat;
+	background-position:260px 9px;
+	background-image:url(../images/loginuser.jpg);}
+.loginpsw{
+	background-repeat:no-repeat;
+	background-position:261px 8px;
+	background-image:url(../images/loginpsw.jpg);}
+.txt{
+	text-indent:5px;}
+.login{
+	background-image:url(../images/login_11.png);
+	background-position:5px 3px;}
+.btcolor{
+	background-color:#428bca;}
+.zcarrow{
+	 background-image:url(../images/zcarrow.png);
+	 background-position:0px 3px;}
+.iccon2{
+	background-repeat:no-repeat;
+	height:20px;
+	width:25px;
+	margin-right:3px;
+	display:block;
+	float:right;}
+.login-box .toolbar{
+	background-color:#5090c1;}
+body{
+		width:100%;
+		height:100%;
+		background-image:url(../images/lgbg.jpg);
+		background-size:100%;}
+.contetn{
+	margin-top:100px;}
