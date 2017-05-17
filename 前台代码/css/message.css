@@ -1,0 +1,93 @@
+*{
+	margin:0px;
+	padding:0px;
+	border-width:0px;
+	list-style:none;
+	margin:auto;
+}
+.top{
+	background-color: black;
+	width:100%;
+	height:80px;
+}
+.top img{
+	margin-top:8px;
+}
+.content{
+	width:100%;
+	height:600px;
+	background-color:lightgray;
+}
+.bottom{
+	background-color: rgb(51,51,51);
+	width:100%;
+	height:46px;
+}
+.bottom p{
+	color: white;
+	text-align: center;
+	padding-top: 18px;
+	font-size: 13px;
+}
+a:link{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+#crumb{
+	padding-left:110px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.message{
+	position:relative;
+	margin:0px 100px 0 100px;
+	width:1150px;
+	height:500px;
+	background-color: white;
+}
+.message_form{
+	float:left;
+	padding-left: 50px;
+	padding-top:50px;
+}
+.message_form h4{
+	font-family: "微软雅黑";
+	font-size:20px;
+	padding-left: 180px;
+	padding-bottom:40px;
+}
+.message_form input{
+	width:550px;
+	height:30px;
+	border-width:1px;
+	border-color: rgb(210,208,206);
+	margin-top:20px;
+}
+#advice{
+	margin-top: 20px;
+	float:left;
+}
+textarea{
+	width:550px;
+	height:120px;
+	border-width:1px;
+	border-color: rgb(210,208,206);
+	margin-top:20px;
+}
+#tijiao{
+	width:120px;
+	height:30px;
+	border-radius: 5px;
+	background-color: orange;
+	color:white;
+	text-align: center;
+	margin-left:250px;
+}
+.message_img{
+	float:left;
+	margin-left: 80px;
+	margin-top:100px;
+}
+
