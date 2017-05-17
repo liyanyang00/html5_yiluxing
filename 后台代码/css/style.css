@@ -116,6 +116,7 @@ a:hover{
 	-moz-border-radius:5px;      /* Gecko browsers */
     -webkit-border-radius:5px;
 	border:1px solid #ccc;
+	text-indent:6px;
 	}
 button{
 	width:120px;
@@ -131,6 +132,33 @@ button{
 	color:#fff;
 	}
 .button1:hover{background:#fabe00;}
+.button2{
+	border:1px solid #01ce66;
+	background:#01ce66;
+	}
+.button2:hover{background:#05ab34;}
+.button3{
+	border:1px solid #fa544b;
+	background:#fa544b;
+}
+.button3:hover{background:#FF0000;}
+
+.form1 input[type=text],.form1 input[type=date],.form1 input[type=password]{
+	width:320px;
+	height:34px;
+	line-height:30px;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	border:1px solid #ccc;
+	margin:6px 0;
+	text-indent:6px;
+	}
+.button11{
+	width:220px;
+	margin:20px 0 40px 100px;
+	display:block;
+	}
 /********************表格***********************/
 .tablegroup{
 	margin-top:20px;
@@ -213,4 +241,66 @@ button{
 	display:inline-block;
 	color:#777;
 	margin-left:10px;
+	}
+.modal-body p span .img{
+	margin:3px 2px;
+	}
+.modal-body .p1{
+	display:block;
+	background:#000;
+	color:#fff;
+	border:0;
+	text-indent:2em;
+	}
+.modal-body .p1 span{
+	color:#fff;
+	width:120px;
+	text-align:center;
+	margin:0 108px;
+	}
+.modal-body .p2{
+	text-indent:2em;
+	height:36px;
+	}
+.modal-body .p2 span{
+	width:120px;
+	text-align:center;
+	margin:0 106px 118px;
+	color:#444;
+	}
+.modal-body .p3{
+	text-align:right;
+	}
+.modal-body .p3 a{
+	color:#666;
+	}
+
+.modal-body .p3 .anow,.modal-body .p3 a:hover{
+	color:#000;
+	text-decoration:underline;
+	}
+.modal-body .p4{
+	height:110px;
+	text-indent:0px;
+	}
+
+.modal-body .p4 img{
+	display:inline-block;
+	margin:4px 0 0 0;
+	}
+.modal-body .p4 span{
+	width:104px;
+	text-align:center;
+	margin:0 28px 0px 0px;
+	color:#444;
+	}
+.modal-body .p4 .p44{
+	width:120px;
+	margin:0 6px 0px 0px;
+	}
+.modal-body .p5 span{
+	color:#fff;
+	width:120px;
+	text-align:center;
+	margin:0 38px 0 178px;
 	}

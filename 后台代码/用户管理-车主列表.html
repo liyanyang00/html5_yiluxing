@@ -27,10 +27,10 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">订单管理</a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                <li class="linow"><a href="订单管理-订单列表.html">订单列表</a></li>
+                                <li><a href="订单管理-订单列表.html">订单列表</a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,11 +55,11 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">用户管理</a>
                         </h4>
                     </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
+                    <div id="collapseThree" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul>
                                 <li><a href="用户管理-用户列表.html">用户列表</a></li>
-                                <li><a href="用户管理-车主列表.html">车主列表</a></li>
+                                <li class="linow"><a href="用户管理-车主列表.html">车主列表</a></li>
                             </ul>
                         </div>
                     </div>
@@ -98,13 +98,10 @@
         </div>
         
         <div class="col-md-10 col-xs-10 right">
-            <h1>订单列表</h1>
+            <h1>车主列表</h1>
             <div class="buttongroup">
-                <form action="">
-                	订单编号：
+                <form action="">关键字：
                     <input type="text" value="" name="">
-                    订单生成日期：
-                    <input type="date" value="" name="">
                     <button type="submit" href="#" class="button1">查询</a>
 
                 </form>
@@ -112,114 +109,92 @@
             <div class="tablegroup">
                 <table class="table">
                     <tr>
-                        <th>订单编号</th>
-                        <th>车辆信息</th>
-                        <th>订单时间</th>
-                        <th>车主</th>
-                        <th>租车人</th>
-                        <th>订单总价</th>
-                        <th>订单性质</th>
-                        <th>订单状态</th>
+                        <th>用户账号</th>
+                        <th>用户姓名</th>
+                        <th>拥有座驾</th>
+                        <th>联系电话</th>
+                        <th>所在城市</th>
+                        <th>查看座驾</th>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已取消</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>付款中</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>租赁中</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>15700006666</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>8</td>
+                        <td>13088886666</td>
+                        <td>河北石家庄</td>
+                        <td>查看</td>
                     </tr>
                     
                     <tr class="table-bottom"> 
@@ -242,20 +217,18 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title">订单详情</h4>
+									<h4 class="modal-title">车辆列表</h4>
 								</div>
-								<div class="modal-body">
-									<p>车主姓名：<span>刘二狗</span></p>
-                                    <p>车主电话：<span>13088886666</span></p>
-                                    <p>租客姓名：<span>刘二狗</span></p>
-                                    <p>租客电话：<span>13088886666</span></p>
-                                    <p>租车时间：<span>2017/05/05-2017/10/05</span></p>
-                                    <p>费用明细：<span>租车费用99元<br />&nbsp;保险费用0元<br />&nbsp;手续费50元</span></p>
-                                    <p>优惠券抵：<span>50元优惠券</span></p>
-                                    <p>会员折扣：<span>95折</span></p>
+								<div class="modal-body" style="overflow-y:auto;height:400px;">
+									<p class="p1 p5">车辆信息<span>车牌号</span>审核时间</p>
+                                    <p class="p2 p4"><img src="images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
+                                     <p class="p2 p4"><img src="images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
+                                     <p class="p2 p4"><img src="images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
+                                     <p class="p2 p4"><img src="images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
+                                                                       
 								</div>
 								<div class="modal-footer">
-									<button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">完成</button>
+                                    <button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">完成</button>
 								</div>
 							</div>
 						</div>

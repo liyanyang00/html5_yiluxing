@@ -27,10 +27,10 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">订单管理</a>
                         </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                <li class="linow"><a href="订单管理-订单列表.html">订单列表</a></li>
+                                <li><a href="订单管理-订单列表.html">订单列表</a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,10 +70,10 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">留言板管理</a>
                         </h4>
                     </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
+                    <div id="collapseFour" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="留言板管理-留言列表.html">留言列表</a></li>
+                                <li class="linow"><a href="留言板管理-留言列表.html">留言列表</a></li>
                             </ul>
                         </div>
                     </div>
@@ -98,13 +98,11 @@
         </div>
         
         <div class="col-md-10 col-xs-10 right">
-            <h1>订单列表</h1>
+            <h1>留言列表</h1>
             <div class="buttongroup">
                 <form action="">
-                	订单编号：
+                	关键字：
                     <input type="text" value="" name="">
-                    订单生成日期：
-                    <input type="date" value="" name="">
                     <button type="submit" href="#" class="button1">查询</a>
 
                 </form>
@@ -112,114 +110,81 @@
             <div class="tablegroup">
                 <table class="table">
                     <tr>
-                        <th>订单编号</th>
-                        <th>车辆信息</th>
-                        <th>订单时间</th>
-                        <th>车主</th>
-                        <th>租车人</th>
-                        <th>订单总价</th>
-                        <th>订单性质</th>
-                        <th>订单状态</th>
+                        <th>意见简述</th>
+                        <th>留言人</th>
+                        <th>联系电话</th>
+                        <th>电子邮箱</th>
+                        <th>留言状态</th>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td>未回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td>未回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已取消</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td>未回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>付款中</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td>未回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>租赁中</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td>未回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td class="green">已回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td class="green">已回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td class="green">已回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td class="green">已回复</td>
                     </tr>
                     <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
+                        <td>钻石会员的福利不够好啊</td>
                         <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
+                        <td>13088886666</td>
+                        <td>12345678@qq.com</td>
+                        <td class="green">已回复</td>
                     </tr>
                     
                     <tr class="table-bottom"> 
@@ -242,20 +207,18 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title">订单详情</h4>
+									<h4 class="modal-title">留言详情</h4>
 								</div>
-								<div class="modal-body">
-									<p>车主姓名：<span>刘二狗</span></p>
-                                    <p>车主电话：<span>13088886666</span></p>
-                                    <p>租客姓名：<span>刘二狗</span></p>
-                                    <p>租客电话：<span>13088886666</span></p>
-                                    <p>租车时间：<span>2017/05/05-2017/10/05</span></p>
-                                    <p>费用明细：<span>租车费用99元<br />&nbsp;保险费用0元<br />&nbsp;手续费50元</span></p>
-                                    <p>优惠券抵：<span>50元优惠券</span></p>
-                                    <p>会员折扣：<span>95折</span></p>
+								<div class="modal-body" style="overflow-y:auto;height:400px;">
+									<p>留言姓名：<span>刘二狗</span></p>
+                                    <p>联系电话：<span>13088886666</span></p>
+                                    <p>电子邮箱：<span>12345678@qq.com</span></p>
+                                    <p>留言内容：<span style="width:434px;">我冲了100万，都是钻石会员了，你们也不送我辆车，最次也要逢年过节送个果篮吧！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！</span></p>
+                                    
 								</div>
 								<div class="modal-footer">
-									<button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">完成</button>
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">完成回复</button>
+                                    <button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">关闭</button>
 								</div>
 							</div>
 						</div>
