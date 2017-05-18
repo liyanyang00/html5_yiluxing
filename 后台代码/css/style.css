@@ -159,6 +159,21 @@ button{
 	margin:20px 0 40px 100px;
 	display:block;
 	}
+.button4{
+	margin-left:0px;
+	width:160px;
+	margin-right:10px;
+	display:inline-block;
+	text-align:center;
+	height:34px;
+	line-height:30px;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	}
+.button4:hover{
+	color:#fff;
+	}
 /********************表格***********************/
 .tablegroup{
 	margin-top:20px;
@@ -303,4 +318,15 @@ button{
 	width:120px;
 	text-align:center;
 	margin:0 38px 0 178px;
+	}
+.modal-body p input[type=text]{
+	width:160px;
+	height:34px;
+	line-height:30px;
+	border-radius:5px;
+	-moz-border-radius:5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;
+	border:1px solid #ccc;
+	margin:6px 0;
+	text-indent:6px;
 	}

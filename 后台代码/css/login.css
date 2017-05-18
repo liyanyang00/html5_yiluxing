@@ -1,49 +1,68 @@
-.yh{
-	font-family:'微软雅黑';}
-.white2{
-	margin:auto;
-	font-family:'微软雅黑';}
-.iccon{
-	background-repeat:no-repeat;
-	height:20px;
-	width:25px;
-	margin-right:3px;
-	display:block;
-	float:left;}
-.coffee{
-	margin-top:5px;
-	background-image:url(../images/coff.gif);}
-.loginuser{
-	background-repeat:no-repeat;
-	background-position:260px 9px;
-	background-image:url(../images/loginuser.jpg);}
-.loginpsw{
-	background-repeat:no-repeat;
-	background-position:261px 8px;
-	background-image:url(../images/loginpsw.jpg);}
-.txt{
-	text-indent:5px;}
+*{
+	margin:0;
+	font-family:"微软雅黑";
+	}
+html,body{height:100%} 
 .login{
-	background-image:url(../images/login_11.png);
-	background-position:5px 3px;}
-.btcolor{
-	background-color:#428bca;}
-.zcarrow{
-	 background-image:url(../images/zcarrow.png);
-	 background-position:0px 3px;}
-.iccon2{
-	background-repeat:no-repeat;
-	height:20px;
-	width:25px;
-	margin-right:3px;
-	display:block;
-	float:right;}
-.login-box .toolbar{
-	background-color:#5090c1;}
-body{
-		width:100%;
-		height:100%;
-		background-image:url(../images/lgbg.jpg);
-		background-size:100%;}
-.contetn{
-	margin-top:100px;}
+	width:100%;
+	height:100%;
+	background:url(../images/loginbg.jpg) center bottom;
+	float:left;
+	}
+.h1{
+	width:375px;
+	text-align:center;
+	height:80px;
+	line-height:80px;
+	margin:0 auto;
+	margin-top:5%; 
+	color:#394557;
+	font-size:22px;
+	font-weight:800;
+	font-family:"幼圆";
+	}
+.kuang{
+	width:375px;
+	height:310px;
+	border:4px solid #394557;
+	margin:0 auto;
+	background:#fff;
+	}
+.kuang h1{
+	background:url(../images/loginimg.gif) 0px 3px no-repeat;
+	font-size:18px;
+	color:#428bca;
+	font-weight:normal;
+	text-indent:26px;
+	margin:36px 36px 20px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ededed;
+	}
+input[type=text]{
+	width:301px;
+	height:34px;
+	border:1px solid #ccc;
+	margin-left:36px;
+	*margin-left:6px;
+	text-indent:30px;
+	background:url(../images/loginuser.jpg) 10px 12px no-repeat;
+	}
+input[type=password]{
+	width:301px;
+	height:34px;
+	border:1px solid #ccc;
+	margin-top:14px;
+	margin-left:36px;
+	text-indent:30px;
+	background:url(../images/loginpsw.jpg) 10px 9px no-repeat;
+	}
+input[type=submit]{
+	width:302px;
+	height:42px;
+	background:#428bca;
+	border:1px solid #428bca;
+	color:#fff;
+	font-size:16px;
+	margin:30px 0 0 36px;
+	cursor:pointer;
+	}
