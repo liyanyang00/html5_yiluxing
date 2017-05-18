@@ -1,33 +1,114 @@
-*{
-	margin:0px;
-	padding:0px;
-	border-width:0px;
-	list-style:none;
-	margin:auto;
+*{ 
+	margin:0;
+	padding:0;
+	border:0;
+	list-style: none;
+	overflow: auto;
 }
 .top{
 	background-color: black;
 	width:100%;
 	height:80px;
 }
-.top img{
+.top-left{
+	float: left;
+	width:200px;
+	margin-left:100px;
+}
+.top-left img{
 	margin-top:8px;
 }
-.content{
-	width:100%;
-	height:600px;
-	background-color:lightgray;
+.top-right{
+	float:left;
+	margin-left:32px;
+	padding-top: 30px;
+}
+.top-right li{
+	float:left;
+	padding-left: 15px;
+	padding-right:15px;
+}
+.top-right a{
+	text-decoration:none;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: white;
+	font-weight: lighter;
+}
+.top-right2{
+	float: right;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: white;
+	font-weight: lighter;
+	margin-right: 100px;
+	margin-top: 30px;
 }
 .bottom{
+	float:left;
 	background-color: rgb(51,51,51);
 	width:100%;
-	height:46px;
+	height:316px;
+}
+.bottom-top{
+	padding-left: 100px;
+	width: 100%;
+	height: 260px;
+}
+.bottom-aa{
+	color: orange;
+	text-decoration:none;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: lighter;
+	margin-bottom: 5px;
+}
+.bottom-top ul{
+	float: left;
+	color: white;
+	padding-left: 45px;
+	padding-right:45px;
+	margin-top: 45px;
+}
+.bottom-top ul li{
+	margin-top: 13px;
+	font-family: "微软雅黑";
+}
+.bottom-right{
+	width: 30%;
+	height: 150px;
+	float: right;
+	margin-top: 75px;
+}
+.bottom-right img{
+	padding-left: 6px;
+}
+.bottom-right h4{
+	color: orange;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: lighter;
+	margin-top:13px;
+}
+.bottom-bottom{
+	border-top-width: 1px;
+	border-top-color: rgb(86,86,86);
+	border-top-style: solid;
+	text-align: center;
+	margin-left: 100px;
+	width:1150px;
 }
 .bottom p{
 	color: white;
 	text-align: center;
 	padding-top: 18px;
-	font-size: 13px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.content{
+	width:100%;
+	height:600px;
+	background-color: rgb(242,243,245);
 }
 a:link{
 	text-decoration: none;
@@ -61,8 +142,7 @@ a:hover{
 .message_form input{
 	width:550px;
 	height:30px;
-	border-width:1px;
-	border-color: rgb(210,208,206);
+	border:1px solid rgb(210,208,206);
 	margin-top:20px;
 }
 #advice{
@@ -72,15 +152,14 @@ a:hover{
 textarea{
 	width:550px;
 	height:120px;
-	border-width:1px;
-	border-color: rgb(210,208,206);
+	border:1px solid rgb(210,208,206);
 	margin-top:20px;
 }
 #tijiao{
 	width:120px;
 	height:30px;
 	border-radius: 5px;
-	background-color: orange;
+	background-color:rgb(251,109,0);
 	color:white;
 	text-align: center;
 	margin-left:250px;
