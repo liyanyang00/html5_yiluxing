@@ -64,7 +64,7 @@ class UserController extends Controller {
 
 	public function logout(){	
 		session('[destroy]');
-		redirect(U('users/login'),2,'exit...');
+		redirect(U('user/login'),2,'exit...');
 	}
 
 
