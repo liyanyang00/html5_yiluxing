@@ -4,6 +4,17 @@
 	<title>页</title>
 	<meta charset="utf-8">
 	<link href="css/index1.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+	/*页头下拉菜单*/
+		$(document).ready(function($) {
+			$("li").hover(function() {
+    		$(this).children('#children').css('display', 'block');
+			}, function() {
+   			$(this).children('#children').css('display', 'none');
+			});
+		});
+	</script>
 </head>
 <body>
 <!-- logo -->
@@ -22,49 +33,62 @@
 		</ul>
 	</div>
 	<div class="top-right2">
-		<div class="dropdown">
-			<p>您好！刘二狗</p>
+		<div>
+		<ul>
+			<li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;&nbsp;∨</p>
+				<div id="children">
+					<div class="arrow"></div>
+					<ul class="child">
+						<li id="xu"><a href="">我的订单</a></li>
+						<li id="xu"><a href="">我的资产</a></li>
+						<li id="xu"><a href="">我的账号</a></li>
+						<li><a href="login.html">退出登录</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 		</div>
 	</div>
 	
 </div>
 
-<!-- banner注册 -->
+<!-- 主要部分-->
 <div class="middle">
 	
 </div>
 <!-- footer -->
 <div class="bottom">
 	<div class="bottom-top">
+		<div class="bottom-left">
+			<ul>
+				<li class="bottom-aa">了解更多</li>
+				<li>法律解读</li>
+				<li>押金政策</li>
+				<li>押金政策</li>
+				<li>保险条例</li>
+			</ul>
 
-		<ul>
-		    <li class="bottom-aa">了解更多</li>
-			<li>法律解读</li>
-			<li>押金政策</li>
-			<li>押金政策</li>
-			<li>保险条例</li>
-		</ul>
-		
-		<ul>
-			<li class="bottom-aa">产品支持</li>
-			<li>服务条款</li>
-			<li>驾客协议</li>
-			<li>车东协议</li>
-			<li>平台规则</li>
-		</ul>
-		
-		<ul>
-			<li class="bottom-aa">帮助中心</li>
-			<li>常见问题</li>
-			<li>新手上路</li>
-			<li>驾客原理</li>
-		</ul>
-		
-		<ul>
-			<li class="bottom-aa">联系我们</li>
-			<li>客服电话：0311-88888888</li>
-			<li>客服电话：0311-88886666</li>
-		</ul>
+			<ul>
+				<li class="bottom-aa">产品支持</li>
+				<li>服务条款</li>
+				<li>驾客协议</li>
+				<li>车东协议</li>
+				<li>平台规则</li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">帮助中心</li>
+				<li>常见问题</li>
+				<li>新手上路</li>
+				<li>驾客原理</li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">联系我们</li>
+				<li>客服电话：0311-88888888</li>
+				<li>客服电话：0311-88886666</li>
+			</ul>
+		</div>
 		<div class="bottom-right">
 			<img src="images/QRcode.jpg" width="99px" height="99px"/>
 			<h4>关注微信公众号</h4>

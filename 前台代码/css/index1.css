@@ -4,6 +4,9 @@
 	border:0;
 	list-style: none;
 }
+body{
+	overflow:auto;
+}
 .top{
 	background-color: black;
 	width:100%;
@@ -33,7 +36,9 @@
 	font-size: 18px;
 	color: white;
 	font-weight: lighter;
+
 }
+a:hover{text-decoration:underline;}
 .top-right2{
 	float: right;
 	font-family: "微软雅黑";
@@ -49,9 +54,13 @@
 	height:316px;
 }
 .bottom-top{
-	padding-left: 100px;
-	width: 100%;
+	margin-left: 100px;
 	height: 260px;
+}
+.bottom-left{
+	width:70%;
+	height:260px;
+	float:left;
 }
 .bottom-aa{
 	color: orange;
@@ -61,21 +70,21 @@
 	font-weight: lighter;
 	margin-bottom: 5px;
 }
-.bottom-top ul{
+.bottom-left ul{
 	float: left;
 	color: white;
 	padding-left: 45px;
 	padding-right:45px;
 	margin-top: 45px;
 }
-.bottom-top ul li{
+.bottom-left ul li{
 	margin-top: 13px;
 	font-family: "微软雅黑";
 }
 .bottom-right{
-	width: 30%;
+	width: 10%;
 	height: 150px;
-	float: right;
+	float: left;
 	margin-top: 75px;
 }
 .bottom-right img{
@@ -103,3 +112,49 @@
 	font-size: 16px;
 	font-family: "微软雅黑";
 }
+/*尖角代码,尖角就是定义个width和height都为0的div，
+然后给这个div添加一个n像素并且为实线的border，并设置四个border的颜色即可！
+至于尖角是朝上、朝左、朝右还是朝下使用border-color控制的。*/
+.arrow{
+	width: 0;
+	height: 0;
+	border:solid 8px;
+	border-color:rgba(0,0,0,0)  rgba(0,0,0,0)  rgba(255,255,255,255);
+	position: relative;
+	top: 0px;
+	left: 40px;
+}
+#children{
+	display: none;
+}
+.child{
+	background-color: white;
+	position:absolute;/*绝对定位，顺序堆叠，是菜单浮动到第二层*/
+	z-index: 2;
+	-moz-border-radius: 4px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 4px;   /* Webkit browsers */
+    border-radius:4px;            /* W3C syntax */
+}
+
+.child li{
+	list-style-type: none;
+	padding: 10px 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-right: 35px;
+	font-size:13px;
+}
+#xu{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: rgb(207,207,207);
+}
+.child li:hover{
+	background-color: white;
+}
+
+.child li a{
+	color: black;
+	text-decoration: blink;
+}
+.show{display: block;}
