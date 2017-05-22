@@ -1,0 +1,20 @@
+<?php
+namespace Admin\Controller;
+use Think\Controller;
+class UserController extends Controller {	
+	public function __construct() {
+    parent::__construct();
+    
+    if (!isLogin()) {
+      	$this->redirect('Admin/login');
+    }
+  }
+
+	public function user(){	
+		$this->display();
+	}
+	public function owner(){	
+		$this->display();
+	}
+
+}
