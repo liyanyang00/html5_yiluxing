@@ -184,6 +184,7 @@ body,html{
 	margin-left:20px;
 	margin-top:20px;
 	width:930px;
+	float:left;
 	}
 .order table tr th{
 	background:#f2f3f5;
@@ -396,4 +397,173 @@ body,html{
 	}
 .text .write p{
 	text-indent:2em;
+	}
+	
+	
+.detail{
+	float:left;
+	width:890px;
+	height:60px;
+	background:#f2f3f5;
+	margin-left:20px;
+	padding:20px;
+	}
+.detail p{
+	margin-left:8px;
+	color:#666;
+	line-height:32px;
+	font-size:13px;
+	}
+.detail1{
+	font-size:24px;
+	line-height:38px;
+	}
+.detail2{
+	font-size:14px;
+	}
+.detail3{
+	font-size:14px;
+	color:#fb6d00;
+	}
+.detail4{
+	font-size:24px;
+	color:#fb6d00;
+	}
+.cost{
+	float:left;
+	}
+.cost h1{
+	width:930px;
+	background:#f2f3f5;
+	height:30px;
+	color:#444;
+	margin:20px 0 0 20px;
+	line-height:30px;
+	font-size:15px;
+	}
+.cost p{
+	margin-left:20px;
+	text-indent:20px;
+	height:48px;
+	line-height:48px;
+	border-bottom:1px solid #ececec;
+	}
+.cost p span{
+	float:right;
+	font-size:13px;
+	color:#888;
+	}
+.cost p span span{
+	color:#fb6d00;
+	font-size:18px;
+	margin-left:-18px;
+	margin-right:16px;
+	text-align:0;
+	}
+.cost .pay{
+	margin:20px 0 20px 0;
+	display:block;
+	float:right;
+	width:160px;
+	height:42px;
+	line-height:42px;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	background:#fb7611;
+	-moz-border-radius: 6px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 6px;   /* Webkit browsers */
+    border-radius:6px;            /* W3C syntax */
+	}
+.cost .pay:hover{
+	background:#fb6d00;
+	color:#fff;
+	}
+.configure{
+	float:left;
+	padding-bottom:30px;
+	}
+.configure h1{
+	width:930px;
+	background:#f2f3f5;
+	height:30px;
+	color:#444;
+	margin:20px 0 0 20px;
+	line-height:30px;
+	font-size:15px;
+	}
+.configure p{
+	width:260px;
+	float:left;
+	margin-left:40px;
+	margin-top:20px;
+	line-height:20px;
+	font-size:13px;
+	text-indent:10px;
+	color:#888;
+	}
+.configure p span{
+	color:#444;}
+.configure p img{
+	margin-top:1px;
+	float:left;
+	}
+.yhq table tr td{
+	border:none;
+	height:190px;
+	}
+.yhqdate{
+	margin-top:-39px;
+	margin-left:-110px;
+	color:#888;
+	}
+.yhk{
+	height:600px;
+	}
+.yhk table tr td{
+	border:none;
+	height:190px;
+	color:#444;
+	font-size:14px;
+	}
+.addyhk table tr td{
+	height:48px;
+	}
+.addyhk table input[type=text],.addyhk table input[type=password]{
+	border:1px solid #ccc;
+	width:200px;
+	height:34px;
+	text-indent:10px;
+	margin-left:20px;
+	font-size:14px;
+	color:#666;
+	}
+.addyhk table select{
+	border:1px solid #ccc;
+	width:202px;
+	height:36px;
+	text-indent:8px;
+	margin-left:20px;
+	font-size:14px;
+	color:#666;
+	}
+.addyhk table input[type=button]{
+	background:#fff;
+	color:#fb6d00;
+	border:1px solid #fb6d00;
+	width:120px;
+	height:36px;
+	margin-left:10px;
+	cursor:pointer;
+	}
+.addyhk table input[type=submit]{
+	width:200px;
+	margin-left:20px;
+	}
+.addyhk .head_img{
+	-moz-border-radius: 113px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 113px;   /* Webkit browsers */
+    border-radius:113px;            /* W3C syntax */
+	margin-left:44px;
+	margin-bottom:20px;
 	}
