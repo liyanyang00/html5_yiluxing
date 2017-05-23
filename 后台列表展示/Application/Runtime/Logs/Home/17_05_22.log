@@ -1,0 +1,103 @@
+[ 2017-05-22T14:49:37+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009255s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-05-22T14:49:41+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.216664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.216767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017665s ]
+
+[ 2017-05-22T17:57:51+08:00 ] 127.0.0.1 /easygo/index.php/Home/message/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001150s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001254s ]
+
+[ 2017-05-22T17:58:10+08:00 ] 127.0.0.1 /easygo/index.php/Home/message/submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `message` [ RunTime:0.0292s ]
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user ''@'localhost' (using password: NO) F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 25 行.
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 25 行.
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user ''@'localhost' (using password: NO) F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 26 行.
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 26 行.
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user ''@'localhost' (using password: NO) F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 27 行.
+NOTIC: [2] mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established F:\Web\easygo\Application\Home\Controller\MessageController.class.php 第 27 行.
+SQL: INSERT INTO `message` (`mes_telephone`,`mes_intoduce`,`mes_email`,`mes_content`,`user_id`,`mes_publish`) VALUES ('1342324','123','111@qq.com','134253647','1','2017-05-22 17:57:51') [ RunTime:0.0476s ]
+
+[ 2017-05-22T17:58:10+08:00 ] 127.0.0.1 /easygo/index.php/Home/message/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2017-05-22T18:00:35+08:00 ] 127.0.0.1 /easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-05-22T18:01:15+08:00 ] 127.0.0.1 /easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+ERR: 无法加载控制器:Index
+
