@@ -90,7 +90,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -117,86 +117,26 @@
                         <th>所在城市</th>
                         <th>查看座驾</th>
                     </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>8</td>
-                        <td>13088886666</td>
-                        <td>河北石家庄</td>
-                        <td>查看</td>
-                    </tr>
+                    <volist name="usertab" id="d">
+                        <tr data-toggle="modal" data-target="#mymodal-data">
+                          <td>{$d.user_id}</td>
+                          <?php
+                            $where ='user_id = '.$d['inf_user_id'];
+                            $result = M("usertab")->where($where)->find();
+
+                          ?>
+                          <td id="username">{$result.user_name}</td>
+                          <?php
+                            $where = 'inf_user_id = '.$d['user_id'];
+                            $result1 = M("information")->where($where)->select();
+                            $sql=count($result1);                           
+                          ?>
+                          <td>{$sql}</td>
+                          <td>{$d.user_telephone}</td>
+                          <td>{$d.inf_city}</td>
+                          <td><a href="#">查看</a></td>
+                        </tr>
+                    </volist>
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">

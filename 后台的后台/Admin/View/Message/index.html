@@ -90,7 +90,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -117,76 +117,15 @@
                         <th>电子邮箱</th>
                         <th>留言状态</th>
                     </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td>未回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td>未回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td>未回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td>未回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td>未回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td class="green">已回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td class="green">已回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td class="green">已回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td class="green">已回复</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>钻石会员的福利不够好啊</td>
-                        <td>刘二狗</td>
-                        <td>13088886666</td>
-                        <td>12345678@qq.com</td>
-                        <td class="green">已回复</td>
-                    </tr>
+                 	<volist name="message" id="d">
+		            	<tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.mes_id})">
+			              <td width="20%">{$d.mes_intoduce}</td>
+			              <td width="10%">{$d.mes_username}</td>
+			              <td width="20%">{$d.mes_telephone}</td>  
+			              <td width="20%">{$d.mes_email}</td>                  
+			              <td width="20%">{$d.mes_state}</td>
+			            </tr>
+			         </volist>
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
@@ -210,7 +149,7 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">留言详情</h4>
 								</div>
-								<div class="modal-body" style="overflow-y:auto;height:400px;">
+								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
 									<p>留言姓名：<span>刘二狗</span></p>
                                     <p>联系电话：<span>13088886666</span></p>
                                     <p>电子邮箱：<span>12345678@qq.com</span></p>
@@ -232,5 +171,22 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">
+	function postIt (res){	
+			$.post("action.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+					$('#detail p span').eq(0).text(array['mes_username']);
+					$('#detail p span').eq(1).text(array['mes_telephone']);
+					$('#detail p span').eq(2).text(array['mes_email']);
+					$('#detail p span').eq(3).text(array['mes_content']);
+					return false;				
+			});
+
+		}
+</script>
 </body>
 </html>

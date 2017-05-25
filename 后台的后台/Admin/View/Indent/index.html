@@ -90,7 +90,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -122,106 +122,23 @@
                         <th>订单性质</th>
                         <th>订单状态</th>
                     </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已取消</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>活动订单</td>
-                        <td>付款中</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>租赁中</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>0000000001</td>
-                        <td>雪佛兰科鲁兹</td>
-                        <td>2017-05-05</td>
-                        <td>刘二狗</td>
-                        <td>王大壮</td>
-                        <td>￥998</td>
-                        <td>普通订单</td>
-                        <td>已完成</td>
-                    </tr>
+                    <volist name="indent" id="d">
+                        <tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.ind_id})">
+                          <td>{$d.ind_id}</td>
+                          <td>{$d.inf_type}</td>
+                          <td>{$d.ind_startdate}</td>
+                          <td>{$d.user_name}</td>
+                          <?php
+                          $where ='user_id = '.$d['ind_user_id'];
+                            $result = M("usertab")->where($where)->find();
+                          ?>
+                          <td>{$result.user_name}</td>
+                          <td>{$d.ind_currnetprice}</td>
+                          <td>{$d.ind_type}</td>
+                          <td>{$d.ind_state}</td> 
+                        </tr>
+                    </volist>
+                    
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
@@ -245,12 +162,13 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">订单详情</h4>
 								</div>
-								<div class="modal-body">
-									<p>车主姓名：<span>刘二狗</span></p>
-                                    <p>车主电话：<span>13088886666</span></p>
-                                    <p>租客姓名：<span>刘二狗</span></p>
-                                    <p>租客电话：<span>13088886666</span></p>
-                                    <p>租车时间：<span>2017/05/05-2017/10/05</span></p>
+								<div class="modal-body" id="detail">
+								
+									<p>车主姓名：<span></span></p>
+                                    <p>车主电话：<span></span></p>
+                                    <p>租客姓名：<span></span></p>
+                                    <p>租客电话：<span></span></p>
+                                    <p>租车时间：<span></span></p>
                                     <p>费用明细：<span>租车费用99元<br />&nbsp;保险费用0元<br />&nbsp;手续费50元</span></p>
                                     <p>优惠券抵：<span>50元优惠券</span></p>
                                     <p>会员折扣：<span>95折</span></p>
@@ -269,5 +187,24 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">	
+				
+
+		function postIt (res){	
+			$.post("action.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+				$('#detail p span').eq(0).text(array['user_name']);
+				$('#detail p span').eq(1).text(array['user_telephone']);
+				$('#detail p span').eq(2).text("{$result['user_name']}");
+				$('#detail p span').eq(3).text({$result['user_telephone']});
+					return false;				
+			});
+
+		}
+</script>
 </body>
 </html>

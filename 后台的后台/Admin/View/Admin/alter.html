@@ -44,7 +44,7 @@
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                 <li><a href="{:U('Admin/Cars/check')}">车辆审核</a></li>
+                                <li><a href="{:U('Admin/Cars/check')}">车辆审核</a></li>
                                 <li><a href="{:U('Admin/Cars/special')}">每日一车</a></li>
                             </ul>
                         </div>
@@ -74,7 +74,7 @@
                     <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
-                                 <li><a href="{:U('Admin/Message/index')}">留言列表</a></li>
+                                <li><a href="{:U('Admin/Message/index')}">留言列表</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,8 +89,8 @@
                         <div class="panel-body">
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
-                                <li class="linow"><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
+                                <li class="linow"><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -99,56 +99,20 @@
         </div>
         
         <div class="col-md-10 col-xs-10 right">
-            <h1>添加管理员</h1>
+            <h1>个人密码修改</h1>
             <div class="buttongroup">
-                <form action="__MODULE__/Admin/doadd" class="form1" method="post">
+                <form action="__MODULE__/admin/doAlter" class="form1" method="post">
                 	登陆账号：
-                    <input type="text" id="username" value="" name="username">&nbsp;<span style="color:red;font-size:16px;display:none;">×</span><br />
+                    <input type="text" value="" name="username"><br />
                     真实姓名：
-                    <input type="text" id="name" value="" name="name">&nbsp;<span style="color:red;font-size:16px;display:none;">×</span><br />
-                    电子邮箱：
-                    <input type="text" value="" name="email">&nbsp;<span style="color:gray">(选填)</span><br />
-                    联系电话：
-                    <input type="text" id="telephone" value="" name="telephone">&nbsp;<span style="color:red;font-size:16px;display:none;">×</span><br />
-                    <input type="text" name="date" style="display:none;" id="today" readonly>
-                    设置密码：
-                    <input type="password" value="" id="password" name="password">&nbsp;<span style="color:red;font-size:16px;display:none;">×</span><br />
+                    <input type="text" value="" name="name"><br />
+                    旧的密码：
+                    <input type="password" value="" name="earlypwd"><br />
+                    新的密码：
+                    <input type="password" value="" name="latepwd"><br />
                     确认密码：
-                    <input type="password" value="" id="repwd" name="repwd">&nbsp;<span style="color:red;font-size:16px;display:none;">×</span><br />
-                    <!--<button type="submit" id="modal-container-491897" class="button1 button11" data-toggle="modal">添加</a>
-                    <div class="modal fade" id="modal-container-491897" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:190px;margin-left:100px;">
-                               <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            
-                                        </div>
-                                    <div class="modal-body">
-                                        修改成功！
-                                    </div>
-                                    <div class="modal-footer">
-                                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="submit" class="btn btn-primary">确定</button>
-                                    </div>
-                                    </div>                    
-                                </div>               
-                         </div>-->
-                         <button type="button" id="modal-491897" href="#modal-container-491897"  class="button1 button11" data-toggle="modal">保存</button>
-                        <div class="modal fade" id="modal-container-491897" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:190px;margin-left:100px;">
-                               <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            
-                                        </div>
-                                    <div class="modal-body">
-                                        是否添加
-                                    </div>
-                                    <div class="modal-footer">
-                                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="submit" class="btn btn-primary">确定</button>
-                                    </div>
-                                    </div>                    
-                                </div>               
-                         </div>
+                    <input type="password" value="" name="repwd"><br />
+                    <button type="submit" class="button1 button11">修改</a>
 
                 </form>
             </div>
@@ -159,24 +123,5 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
-<script src="__PUBLIC__/Admin/js/check.js"></script>
-<script type="text/javascript">
-
-function today(){
-    var today=new Date();
-    var h=today.getFullYear();
-    var m=today.getMonth()+1;
-    var d=today.getDate();
-    return h+"-"+m+"-"+d;
-}
-
-document.getElementById("today").value = today();
-
-
-
-
-
-</script>
-
 </body>
 </html>

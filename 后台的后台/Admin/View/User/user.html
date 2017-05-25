@@ -90,7 +90,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -118,96 +118,17 @@
                         <th>会员等级</th>
                         <th>操作记录</th>
                     </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>15700006666</td>
-                        <td>刘二狗</td>
-                        <td>女</td>
-                        <td>13088886666</td>
-                        <td>￥998</td>
-                        <td>普通会员</td>
-                        <td>查看</td>
-                    </tr>
+                    <volist name="usertab" id="d">
+                        <tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.user_id})">
+                          <td>{$d.user_id}</td>
+                          <td>{$d.user_name}</td>
+                          <td>{$d.user_sex}</td>
+                          <td>{$d.user_telephone}</td>
+                          <td>{$d.user_cost}</td>
+                          <td>{$d.user_vip}</td>
+                          <td>查看</td>
+                        </tr>
+                    </volist>
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
@@ -231,22 +152,13 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">操作记录</h4>
 								</div>
-								<div class="modal-body" style="overflow-y:auto;height:400px;">
+								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
 									<p class="p1">用户操作<span>涉及金额</span>操作时间</p>
                                     <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
                                     <p class="p2">座驾出租<span>￥998</span>2017-01-01</p>
                                     <p class="p2">领取收益<span>￥998</span>2017-01-01</p>
                                     <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">座驾出租<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">领取收益<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
-                                    <p class="p2">租车订单<span>￥998</span>2017-01-01</p>
+                                 
 								</div>
 								<div class="modal-footer">
                                     <button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">完成</button>
@@ -262,5 +174,22 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">
+	function postIt (res){	
+			$.post("action.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+					$('#detail p span').eq(1).text(array['user_name']);
+					$('#detail p span').eq(2).text(array['user_telephone']);
+					$('#detail p span').eq(3).text(array['user_sex']);
+					$('#detail p span').eq(4).text(array['user_vip']);
+					return false;				
+			});
+
+		}
+</script>
 </body>
 </html>

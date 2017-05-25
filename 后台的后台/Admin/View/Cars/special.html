@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -90,7 +90,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -121,96 +121,17 @@
                         <th>所在城市</th>
                         <th>活动租价</th>
                     </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#mymodal-data">
-                        <td>雪佛兰科鲁兹</td>
-                        <td>白色 | 自动挡 | 5座</td>
-                        <td>冀A12345</td>
-                        <td>2017-05-05</td>
-                        <td>王大壮</td>
-                        <td>河北石家庄</td>
-                        <td>￥98元/天</td>
-                    </tr>
+                    <volist name="data" id="d">
+                        <tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.inf_id})">
+                          <td>{$d.inf_type}</td>
+                          <td>{$d.inf_introduce}</td>
+                          <td>{$d.inf_carnumber}</td>
+                          <td>{$d.inf_specialdate}</td>
+                          <td>{$d.user_name}</td>
+                          <td>{$d.inf_city}</td>
+                          <td>{$d.inf_specialprice}</td>
+                        </tr>
+                    </volist>
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
@@ -234,14 +155,13 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">车辆详情</h4>
 								</div>
-								<div class="modal-body" style="overflow-y:auto;height:400px;">
-									<p>车主姓名：<span>刘二狗</span></p>
-                                    <p>车主电话：<span>13088886666</span></p>
-                                    <p>车辆信息：<span>车牌号：冀A12345&nbsp;&nbsp;品牌车型：奇瑞QQ2012&nbsp;&nbsp;颜色：白<br />&nbsp;变速箱：手动挡&nbsp;&nbsp;座位数：5座&nbsp;&nbsp;燃料类型：汽油&nbsp;&nbsp;天窗：单天窗<br />&nbsp;音箱：有&nbsp;&nbsp;真皮座椅：有&nbsp;&nbsp;倒车雷达：有<br />&nbsp;GPS导航：有&nbsp;&nbsp;可抽烟：否</span></p>
-                                    <p>车辆原价：<span>￥198元/天</span></p>
-                                    <p>活动组价：<span>￥98元/天</span></p>
-                                    <p>车辆照片：<span><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><br />
-                                    &nbsp;<img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/></span></p>
+								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
+									<p>车主姓名：<span></span></p>
+                                    <p>车主电话：<span></span></p>
+                                    <p>车辆信息：<span></span></p>
+                                    <p>车辆原价：<span></span></p>
+                                    <p>活动租价：<span></span></p>
+                                    <p>车辆照片：<span></span></p>
 								</div>
 								<div class="modal-footer">
 									<button type="button" data-dismiss="modal" class="button1 button3" style="margin-right:20px;">删除此车</button>
@@ -258,5 +178,26 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">	
+				
+
+		function postIt (res){	
+			$.post("action.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+					$('#detail p span').eq(0).text(array['user_name']);
+					$('#detail p span').eq(1).text(array['user_telephone']);
+					$('#detail p span').eq(2).text("车牌号："+array['inf_carnumber']+"  品牌车型："+array['inf_type']+"  颜色："+array['inf_color']+"  变速箱："+array['inf_gearbox']+"  座位数："+array['inf_chair']+"  GPS导航："+array['inf_gps']+"  天窗："+array['inf_window']+"  音箱："+array['inf_sound']+"  DVD/CD："+array['inf_dvd']+"  真皮沙发："+array['inf_leather']+"  倒车雷达："+array['inf_camera']+"  能否抽烟："+array['inf_smoke']);
+					$("#detail p span").eq(3).text("￥"+array['inf_dayprice']+"/天");
+					$("#detail p span").eq(4).text("￥"+array['inf_specialprice']+"/天");
+					$("#detail p span").eq(5).text(array['inf_carphoto']);
+					return false;				
+			});
+
+		}
+</script>
 </body>
 </html>
