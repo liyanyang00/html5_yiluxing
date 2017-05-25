@@ -1,0 +1,203 @@
+/************
+//租车详情页代码
+************/
+
+.content{
+	background-color: rgb(242,243,245);
+}
+.mybody2{
+	margin:0 auto;/*div居中显示*/
+	width: 85.7%;
+}
+.bread{
+	font-size: 15px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 10px;
+}
+.middle-left{
+	background-color: white;
+	width: 68%;
+	height: 1445px;
+	float: left;
+	margin-top: 19px;
+	margin-right: 22px;
+	margin-bottom: 25px;
+}
+.tao{
+	width:97%;
+	margin: 0 auto;
+}
+.middle-right{
+	background-color: white;
+	width:30%;
+	float: left;
+	margin-top: 19px;
+}
+.tao2{
+	width:90%;
+	margin: 0 auto;
+	line-height:50px;
+}
+.picture{
+	width: 421px;
+	height: 400px;
+	margin-left: 33px;
+	margin-top: 35px;
+	margin-right: 35px;
+	float: left;
+}
+img{
+	float:left; 
+  /*background-color: gray;
+  opacity:0.5;*//*半透明遮罩*/
+}
+.down{
+	float: right;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+#smallpic img:hover{
+    cursor:pointer;
+}/*小手*/
+
+#smallpic img{
+border:3px solid rgb(214,214,214);
+margin-top: 5px;
+} 
+.pb{  /*边框设置*/
+    border:3px solid rgb(251,109,0);
+}
+#small1{
+	margin-right: 3px;
+}
+.pchoose{
+	width: 250px;
+	margin-top: 33px;
+	float: left;
+}
+#carname1{
+	font-family: '微软雅黑';
+	font-size: 25px;
+	border-bottom:1px solid rgb(212,212,212);
+}
+#descript{
+	font-family: '微软雅黑';
+	font-size: 15px;
+	color: gray;
+	line-height: 30px;
+}
+.pchoose select,input{
+	border:1px solid rgb(212,212,212);
+	width:80px;
+	height:30px;
+	font-size: 1.1em;
+}
+#rent{
+	height: 45px;
+	width:225px;
+	margin-left: 20px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    background-color:rgb(251,109,0);
+    border-color:rgb(251,109,0);
+    margin-top: 10px;
+    color: white;
+    font-family: '微软雅黑';
+    font-size: 85%;
+    font-weight: lighter;
+}
+.message{
+	float: left;
+	margin:0 auto;
+	width:90%;
+	font-family: '微软雅黑';
+	padding-left: 40px;
+	line-height: 50px;
+}
+.message p{
+	text-indent: 2em;
+	color: rgb(102,102,102);
+}
+#config img{
+	padding-top: 15px;
+}
+#config{
+	margin-left: 40px;
+}
+#config td{
+	width: 324px;
+	color: rgb(169,169,169);
+}
+#config p{
+	color: black;
+	display: inline;
+}
+h3{
+	color: rgb(251,109,0);
+	font-weight: lighter;
+}
+#comm1{
+	width: 776px;
+}
+#comment img{
+	border-radius:50%;
+	width: 60px;
+	height: 60px;
+}
+#comment p,h4{
+	text-indent: 0em;
+	line-height: 30px;
+}
+#comment tr td p{
+	font-size: 13px;
+}
+#comment tr td{
+	padding:15px;
+	border-bottom:1px solid rgb(221,222,226);
+}
+#comment2 img{
+	border-radius:50%;
+	width: 60px;
+	height: 60px;
+}
+.middle-right h4{
+	font-weight: lighter;
+}
+.tao{
+	width: 85%;
+}
+.user{
+	margin-top: 10px;
+}
+#comment2 tr td{
+	padding:5px;
+	padding-top: 20px;
+}
+.tao2{
+	width: 100%;
+}
+#comment3 img{
+	width: 113px;
+	height: 71px;
+}
+#comment3 tr{
+	height: 90px;
+}
+#qq{
+	font-size: 0.5em;
+	color: rgb(152,152,152);
+	line-height: 20px;
+}
+#QQ{
+	line-height: 30px;
+}
+#comm2{
+	padding-left: 15px;
+}
+#more{
+	width: 100%;
+}
