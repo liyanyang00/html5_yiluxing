@@ -7,7 +7,7 @@
 }
 .mybody2{
 	margin:0 auto;/*div居中显示*/
-	width: 85.7%;
+	width: 1156.08px;
 }
 .bread{
 	font-size: 15px;
@@ -17,7 +17,7 @@
 }
 .middle-left{
 	background-color: white;
-	width: 68%;
+	width: 786.13px;
 	height: 1445px;
 	float: left;
 	margin-top: 19px;
@@ -30,7 +30,7 @@
 }
 .middle-right{
 	background-color: white;
-	width:30%;
+	width:346.81px;
 	float: left;
 	margin-top: 19px;
 }
@@ -198,6 +198,8 @@ h3{
 #comm2{
 	padding-left: 15px;
 }
-#more{
-	width: 100%;
+.pchoose span p{
+	color: rgb(251,109,0);
+	font-size: 25px;
+	display:inline;
 }

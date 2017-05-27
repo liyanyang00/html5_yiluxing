@@ -7,17 +7,17 @@
 }
 .mybody2{
 	margin:0 auto;/*div居中显示*/
-	width: 85%;
+	width: 1156.08px;
 }
 .middle-top{
 	background-color: white;
-	width: 100%;	
+	width: 1156.08px;	
 	height: 100px;
 	float: left;
 }
 .middle-left{
 	background-color: white;
-	width: 68%;
+	width: 786.13px;
 	float: left;
 	margin-top: 19px;
 	margin-right: 22px;
@@ -34,7 +34,7 @@
 }
 .middle-right{
 	background-color: white;
-	width:30%;
+	width:346.81px;
 	float: left;
 	margin-top: 19px;
 }

@@ -3,6 +3,7 @@
 	padding:0px;
 	border-width:0px;
 	list-style:none;
+	font-family:"微软雅黑";
 	margin:auto;
 }
 .top{
@@ -26,8 +27,8 @@
 .bottom p{
 	color: white;
 	text-align: center;
-	padding-top: 18px;
-	font-size: 13px;
+	font-size: 12px;
+	line-height:46px;
 }
 .register{
 	width: 400px;
@@ -37,20 +38,34 @@
 	margin-top: 100px;
 	margin-right: 100px;
 }
-input{
+
+input[type=text],input[type=password]{
 	height: 40px;
 	width:314px;
-	border-width:1px;
-	border-color: rgb(210,208,206);
+	border:1px solid #ccc;
 	margin-top: 10px;
 	margin-left: 40px;
+	text-indent:1em;
+	font-size:14px;
 }
+input[type=submit]{
+	height: 40px;
+	width:314px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align:center;
+	cursor:pointer;}
 .register h4{
 	text-align: center;
 	padding-top: 20px;
+	font-weight:normal;
+	font-size:18px;
 	height: 40px;
-	font-family: '微软雅黑';
+	font-family: "微软雅黑";
 }
+.register form a:hover p{
+	text-decoration:underline;
+	}
 #zhuce{
 	height:50px;
 	width:320px;
@@ -63,6 +78,7 @@ input{
     color: white;
     font-family: '微软雅黑';
     font-size: 100%;
+	border:1px solid rgb(251,109,0);
     font-weight: lighter;
 }
 form p{
@@ -72,6 +88,7 @@ form p{
 	font-family: '微软雅黑';
 }
 #zhuce2{
+	display:block;
 	height:50px;
 	width:320px;
 	-moz-border-radius: 8px;      /* Gecko browsers */
@@ -82,5 +99,12 @@ form p{
     font-family: '微软雅黑';
     font-size: 100%;
     font-weight: lighter;
+	border:1px solid #ccc;
     color: gray;
+	line-height:50px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align:center;
+	cursor:pointer;
+	text-decoration:none;
 }
