@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>易路行后台管理系统</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+    <link href="__PUBLIC__/Admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/Admin/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row header">
+        <h1>易路行后台管理系统<span>欢迎您，{$_SESSION['username']}！<a href="__MODULE__/Admin/logout">退出</a></span></h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-md-2 col-xs-2 left">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title con">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">订单管理</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="{:U('Admin/Indent/index')}">订单列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title question">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">车辆列表</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                 <li><a href="{:U('Admin/Cars/check')}">车辆审核</a></li>
+                                <li><a href="{:U('Admin/Cars/special')}">每日一车</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title user">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">用户管理</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a href="{:U('Admin/User/user')}">用户列表</a></li>
+                                <li><a href="{:U('Admin/User/owner')}">车主列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title write">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">留言板管理</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                 <li><a href="{:U('Admin/Message/index')}">留言列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title user1">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">管理员管理</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                        	<ul>
+                            	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
+                                <li class="linow"><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
+                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-10 col-xs-10 right">
+            <h1>添加管理员</h1>
+            <div class="buttongroup">
+                <form method="post" action="__MODULE__/Admin/doAdd" class="form1">
+                	登陆账号：
+                    <input type="text" value="" name="adm_username"><br />
+                    真实姓名：
+                    <input type="text" value="" name="adm_name"><br />
+                    电子邮箱：
+                    <input type="text" value="" name="adm_email"><br />
+                    联系电话：
+                    <input type="text" value="" name="adm_phone"><br />
+                    添加时间：
+                    <input type="text" name="adm_addtime" id="today" readonly><br />
+                    设置密码：
+                    <input type="password" value="" name="adm_password"><br />
+                    确认密码：
+                    <input type="password" value="" name="adm_password"><br />
+                    <button type="submit" class="button1 button11">添加</a>
+
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">
+function today(){
+    var today=new Date();
+    var h=today.getFullYear();
+    var m=today.getMonth()+1;
+    var d=today.getDate();
+    return h+"-"+m+"-"+d;
+}
+ 
+document.getElementById("today").value = today();
+</script>
+
+</body>
+</html>
