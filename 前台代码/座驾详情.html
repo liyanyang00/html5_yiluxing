@@ -64,14 +64,14 @@
             <div class="left_nav">
             	<h1>我的订单</h1>
                 <a href="租车订单.html">租车订单(2)</a>
-                <a href="出租订单.html" class="person_now">出租订单(6)</a>
+                <a href="出租订单.html">出租订单(6)</a>
                 <h1>我的资产</h1>
                 <a href="优惠券.html">优惠券(1张)</a>
                 <a href="银行卡.html">银行卡(1张)</a>
                 <h1>我的账户</h1>
                 <a href="个人信息.html">个人信息</a>
                 <a href="修改密码.html">修改密码</a>
-                <a href="我的座驾.html">我的座驾</a>
+                <a href="我的座驾.html" class="person_now">我的座驾</a>
                 <h1>我的会员</h1>
                 <a href="会员等级.html">会员等级</a>
                 <a href="会员制度.html">会员制度</a>
@@ -80,44 +80,15 @@
        
        <div class="right">
        		<div class="order">
-            	<h1>出租订单</h1>
-                <form>
-                	<input type="date" value="" />
-                    <input type="submit" value="查&nbsp;询" />
-                </form>
-                <div class="tab">
-                	<a href="#" class="tabnow">全部</a>
-                    <a href="#">预定成功</a>
-                    <a href="#">租赁中</a>
-                    <a href="#">已完成</a>
-                    <a href="#">已取消</a>
-                </div>
+            	<h1>座驾详情</h1>
+                
                 <table cellspacing="0">
                 	<tr>
                     	<th style="width:170px;">车辆信息</th>
                         <th style="width:240px;">&nbsp;</th>
-                        <th style="width:140px;">借还时间</th>
-                        <th style="width:140px;">总价</th>
-                        <th style="width:140px;">订单状态</th>
-                    </tr>
-                    <tr>
-                    	<td style="height:114px;">
-                        	<img src="images/order.jpg" width="160" height="100" alt="" />  
-                        </td>
-                        <td>
-                        	<h5>雪佛兰科鲁兹</h5>
-                            <p class="p">三厢/自动挡/乘坐5人</p>
-                            <p class="p">订单号：0000000001</p></td>
-                        <td>
-                        	<p>2017-05-05</p>
-                            <p>至</p>
-                            <p>2017-05-05</p>
-                        </td>
-                        <td><h4>￥100000元</h4></td>
-                        <td>
-                        	<p class="arr2">租赁中</p>
-                            <p><a href="订单详情2.html">查看</a></p>
-                        </td>
+                        <th style="width:200px;">车辆状态</th>
+                        <th style="width:200px;">借还时间</th>
+                        <th style="width:200px;">租车价格</th>
                     </tr>
                     <tr>
                     	<td style="height:118px;">
@@ -126,57 +97,56 @@
                         <td>
                         	<h5>雪佛兰科鲁兹</h5>
                             <p class="p">三厢/自动挡/乘坐5人</p>
-                            <p class="p">订单号：0000000001</p></td>
                         <td>
-                        	<p>2017-05-05</p>
-                            <p>至</p>
-                            <p>2017-05-05</p>
+                            <p>闲置中</p>
                         </td>
-                        <td><h4>￥1000元</h4></td>
                         <td>
-                        	<p class="arr2">租赁中</p>
-                            <p><a href="订单详情2.html">查看</a></p>
+                        	<p></p>
+                            <p>--</p>
+                            <p></p>
                         </td>
-                    </tr>
-                    <tr>
-                    	<td colspan="5" style="text-align:center;height:100px;">
-                        	<a href="#" class="page pagenow">1</a>
-                            <a href="#" class="page">2</a>
-                        </td>
+                        <td><p>￥98元/天</p>
+                        <p>￥598元/周</p>
+                        <p>￥2398元/月</p></td>
                     </tr>
                 </table>
+                <div class="configure">
+                	<h1>配置信息</h1>
+                    <p><img src="images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
+                    <p><img src="images/cm.gif" width="20" height="20" alt="" />车门数：<span>4</span></p>
+                    <p><img src="images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>有</span></p>
+                    <p><img src="images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>汽油</span></p>
+                    <p><img src="images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>AT</span></p>
+                    <p><img src="images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>CD</span></p>
+                    <p><img src="images/pl.gif" width="20" height="20" alt="" />排量：<span>1598</span></p>
+                    <p><img src="images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>92-93汽油</span></p>
+                    <p><img src="images/qn.gif" width="20" height="20" alt="" />气囊：<span>4</span></p>
+                    <p><img src="images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>前驱</span></p>
+                    <p><img src="images/fdj.gif" width="20" height="20" alt="" />发动机进气形式：<span>自然吸气</span></p>
+                    <p><img src="images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>有</span></p>
+                    <p><img src="images/tc.gif" width="20" height="20" alt="" />天窗：<span>单天窗</span></p>
+                    <p><img src="images/cm.gif" width="20" height="20" alt="" />油箱容量：<span>60</span></p>
+                    <p><img src="images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
+                    <p><img src="images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
+                </div>
+                <div class="change">
+                	<p>修改价格：</p>
+                	<form>
+                    	日租价：<input type="text" placeholder="98" />&nbsp;元/日<br />
+                        月租价：<input type="text" placeholder="598" />&nbsp;元/周<br />
+                        年租价：<input type="text" placeholder="2398" />&nbsp;元/月<br />
+                        <input type="submit" value="保存" />
+                    </form>
+                </div>
             </div>
             
-            <div class="arr">
-            	<h1>订单状态介绍</h1>
-                <div class="arr_1">
-                	<p class="arr1">预约成功</p>
-                    <p>订单确认，请与车主联系取车</p>
-                </div>
-                <div class="arr_3">
-                	<p class="arr3">租赁中</p>
-                    <p>车辆正在租赁过程中</p>
-                </div>
-                <div class="arr_5" style="margin-top:0px;">
-                	<p class="arr5">已完成</p>
-                    <p>已还车，订单结算完毕</p>
-                </div>
-                <div class="arr_6" style="margin-left:20px;">
-                	<p class="arr6">已取消</p>
-                    <p>订单已取消，交易结束</p>
-                </div>
-            </div>
-            
+
             <div class="text">
             	<h1>注意事项</h1>
                 <div class="write">
-                	1.订单确认
-                    <p>驾客根据订单流程，提供银行付款预授权，即认定为订单确认。</p>
-                    <p>订单一旦确认，相关预定规则不可更改。</p>
-                    <p>订单确认后，由于车东或驾客个人原因导致订单不能履行的情况，易路行不承担任何责任。</p>
-                    2.订单取消
-                    <p>若驾客/车东在早于行程开始前24小时的时段内取消预订，取消方应支付违约金，违约金的数额为交易费用的20%，同时，向易路行平台交纳保险费（如已发生）。</p>
-                    <p>在车东接受预订请求后，驾客/车东在晚于行程开始前24小时的时段内取消预订，取消方应支付违约金，违约金的数额为交易费用的100%，同时，向易路行平台交纳保险费（如已发生）。若行程已开始，取消方应支付违约金，违约金的数额为交易费用的100%。</p>
+                    <p>1.取车时，请检查租车人以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。</p>
+                    <p>2.请您准时送车，超时送车造成的一切损失由车主承担。</p>
+                    <p>3.车辆归还之后请仔细检查车辆有无破损以及其他问题，如有请及时与租客沟通，订单结束之后发现的损失由车主承担。</p>
                 </div>
             </div>
        </div>

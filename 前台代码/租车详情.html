@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>车辆详情页</title>
+  	<meta name="Generator" content="EditPlus">
+  	<meta name="Author" content="">
+  	<meta name="Keywords" content="">
+  	<meta name="Description" content="">
+	<link href="css/public.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/cardetails.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/cardetails.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+	var app=angular.module('md1',['ng']);
+        app.controller('mc1',function($scope){
+            
+        });
+	</script>
+</head>
+<body ng-controller="mc1">
+<!-- logo -->
+<div class="header">
+	<div class="mybody">
+    	<div class="logo"><a href="首页.html"><img src="images/logo.jpg" alt="logo" /></a></div>
+			<ul class="nav">
+                <li><a href="首页.html">首页</a></li>
+                <li class="navnow"><a href="自驾租车.html">自驾租车</a></li>
+                <li><a href="信息发布.html">信息发布</a></li>
+                <li><a href="优惠活动.html">优惠活动</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="留言板.html">留言板</a></li>
+      		</ul>
+            
+			<div class="top-right2">
+				<div>
+					<ul>
+                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="images/down.gif" alt="" class="down" /></p>
+                            <div id="children">
+                                <div class="arrow"></div>
+                                <ul class="child">
+                                    <li id="xu"><a href="">我的订单</a></li>
+                                    <li id="xu"><a href="">我的资产</a></li>
+                                    <li id="xu"><a href="">我的账号</a></li>
+                                    <li><a href="login.html">退出登录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+<!-- 主要部分-->
+<div class="content">
+	<div class="mybody2">
+		<p class="bread">当前位置：首页>自驾租车</p>
+		<div class="middle-left">
+			<div class="picture">
+				<div><img src="images/photo.png" id="bigpic" width="421" height="240"/></div>
+				<div id="smallpic">
+					<img src="images/photo.png" width="97" height="56" id="small1" />
+					<img src="images/carlist.png" width="97" height="56" id="small1"/>
+					<img src="images/photo.png" width="97" height="56" id="small1"/>
+					<img src="images/carlist.png" width="97" height="56"/>
+				</div>
+			</div>
+			<div class="pchoose">
+				<p id="carname1">奇瑞QQ 2012</p>
+				<p id="descript">车辆描述</p>
+				<br/>
+				选择时长：<select ng-model="num">
+					<option value="1">1天</option>
+					<option value="7">1周</option>
+					<option value="30">1月</option>
+				</select>
+				<br/><br/>
+				其他&nbsp;&nbsp;&nbsp;<input ng-model="num"/>&nbsp;&nbsp;&nbsp;天
+				<br/><br/>
+				<span>费用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<p style=" color: rgb(251,109,0);font-size: 25px;display:inline;">￥98</p>元</span>
+				<br/><br/>
+				<input id="rent" type="submit" value="我要租">
+			</div>
+			<div class="message">
+				<div class="self">
+					<h4>个性描述</h4>
+					<p>酷酷酷酷酷酷酷酷</p>
+					<h4>配置信息</h4>
+					<table id="config">
+						<tr>
+							<td><img src="images/zws.gif"> &nbsp;&nbsp;<span>座 位 数：<p>5</p><span></td>
+							<td><img src="images/cm.gif"> &nbsp;&nbsp;<span>车 门 数：<p>4</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/rl.gif"> &nbsp;&nbsp;<span>燃料类型：<p>汽油</p><span></td>
+							<td><img src="images/bs.gif"> &nbsp;&nbsp;<span>变速箱类型：<p>AT</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/pl.gif"> &nbsp;&nbsp;<span>排&nbsp;&nbsp;&nbsp;&nbsp;量：<p>xxx</p><span></td>
+							<td><img src="images/ry.gif"> &nbsp;&nbsp;<span>燃油标号：<p>xxx</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/qd.gif"> &nbsp;&nbsp;<span>驱动方式：<p>xxx</p><span></td>
+							<td><img src="images/fdj.gif"> &nbsp;&nbsp;<span>发动机进气方式：<p>xxx</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/tc.gif"> &nbsp;&nbsp;<span>天&nbsp;&nbsp;&nbsp;&nbsp;窗：<p>xxx</p><span></td>
+							<td><img src="images/yx.gif"> &nbsp;&nbsp;<span>邮箱容量：<p>xxx</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/yx1.gif"> &nbsp;&nbsp;<span>音&nbsp;&nbsp;&nbsp;&nbsp;箱：<p>xxx</p><span></td>
+							<td><img src="images/zy.gif"> &nbsp;&nbsp;<span>座&nbsp;&nbsp;&nbsp;&nbsp;椅：<p>xxx</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/ld.gif"> &nbsp;&nbsp;<span>倒车雷达：<p>xxx</p><span></td>
+							<td><img src="images/qn.gif"> &nbsp;&nbsp;<span>气&nbsp;&nbsp;&nbsp;&nbsp;囊：<p>xxx</p><span></td>
+						</tr>
+						<tr>
+							<td><img src="images/dvd.gif"> &nbsp;&nbsp;<span>DVD/CD：<p>xxx</p><span></td>
+							<td><img src="images/dh.gif"> &nbsp;&nbsp;<span>GPS导航：<p>xxx</p><span></td>
+						</tr>
+					</table>
+					<h4>租用事项</h4>
+					<p>车牌号：后台获取&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车辆颜色：后台获取&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可否抽烟：后台获取</p>
+					<h3>座驾评价</h3>
+					<table id="comment">
+						<tr>
+							<td><img src="images/user.jpg"></td>
+							<td id="comm1"><h4>后台获取评价</h4><p>王先生 &nbsp;&nbsp;2017-05-01</p></td>
+						</tr>
+						<tr>
+							<td><img src="images/user.jpg"></td>
+							<td id="comm1"><h4>后台获取评价</h4><p>王先生 &nbsp;&nbsp;2017-05-01</p></td>
+						</tr>
+						<tr>
+							<td><img src="images/user.jpg"></td>
+							<td id="comm1"><h4>后台获取评价</h4><p>王先生 &nbsp;&nbsp;2017-05-01</p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="middle-right">
+		<div class="tao">
+				<p class="user">车主信息</p>
+				<table id="comment2">
+					<tr>
+						<td><img src="images/user.jpg"></td>
+						<td id="comm2"><h4>王先生</h4><p>20次预定 &nbsp;&nbsp;8次评价</p></td>
+					</tr>
+				</table>
+				<div class="tao2">
+					<p class="user">车主的其他座驾</p>
+					<table id="comment3">
+						<tr>
+							<td><img src="images/today.jpg"></td>
+							<td id="comm2">
+								<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="images/today.jpg"></td>
+							<td id="comm2">
+								<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p>
+							</td>
+						</tr>
+						<tr id="showdiv" style="display:none;">
+							<td><img src="images/today.jpg"></td>
+							<td id="comm2">
+								<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p>
+							</td>
+						</tr>
+					</table>
+					<a style="padding-left:100px;font-size:1.3em;" onclick="showHide()">查看更多</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class="footer">
+	<div class="mybody">
+    	<div class="bottom-ul">
+			<ul>
+				<li class="bottom-aa">新手上路</li>
+				<li><a href="法律解读.html">法律解读</a></li>
+				<li><a href="押金政策.html">押金政策</a></li>
+				<li><a href="保险条款.html">保险条款</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">服务规则</li>
+				<li><a href="服务条款.html">服务条款</a></li>
+				<li><a href="驾客协议.html">驾客协议</a></li>
+				<li><a href="车东协议.html">车东协议</a></li>
+				<li><a href="平台规则.html">平台规则</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">帮助中心</li>
+				<li><a href="预定取车.html">预定取车</a></li>
+				<li><a href="我要出租.html">我要出租</a></li>
+				<li><a href="会员服务.html">会员服务</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">联系我们</li>
+				<li>客服电话：0311-88888888</li>
+				<li>客服电话：0311-88886666</li>
+			</ul>
+		</div>
+        <div class="bottom-right">
+			<img src="images/QRcode.jpg" width="99px" height="99px"/>
+			<h4>关注微信公众号</h4>
+		</div>
+    <p>Copyright©2017-2019 www.jumao.com All Rights Reserved.　易路行官网 京ICP备10005000号 京公网安备号 11010502026705</p>
+    </div>
+</div>
+</body>
+</html>
