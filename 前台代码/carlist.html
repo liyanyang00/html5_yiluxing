@@ -4,11 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>租车列表页</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
-<link href="css/carlist.css" rel="stylesheet" type="text/css" />
+<link href="css/carlist1.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/select.js"></script>
 </head>
-
 <body>
 <div class="header">
 	<div class="mybody">
@@ -88,6 +87,8 @@
 						<dd><a href="javascript:void(0)">奥迪</a></dd>
 						<dd><a href="javascript:void(0)">奔驰</a></dd>
 						<dd><a href="javascript:void(0)">凯迪拉克</a></dd>
+						<!-- 加载显示更多 -->
+						<div id="er" style="display:none;">
 						<dd><a href="javascript:void(0)">纳智捷</a></dd>
 						<dd><a href="javascript:void(0)">江淮</a></dd>
 						<dd><a href="javascript:void(0)">江铃</a></dd>
@@ -98,6 +99,9 @@
 						<dd><a href="javascript:void(0)">比亚迪</a></dd>
 						<dd><a href="javascript:void(0)">广汽传祺</a></dd>
 						<dd><a href="javascript:void(0)">克莱斯勒</a></dd>
+						</div>
+						<dd><a id="but" class="but" onclick="fang();" style="color:rgb(251,109,0);">显示更多</a></dd>
+						<dd><a id="but1" class="but1" onclick="shou();" style="color:rgb(251,109,0);display:none;">收起</a></dd>
 					</dl>
 				</li>
 				<li class="select-list">

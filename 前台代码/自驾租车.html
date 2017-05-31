@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>租车列表页</title>
+<title>易路行</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/carlist.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery.min.js"></script>
@@ -45,12 +45,14 @@
 <!-- 主要部分-->
 <div class="content">
 	<div class="mybody2">
-		<p class="bread">当前位置：首页>自驾租车</p>
+		<div class="bread">
+       		<p>当前位置：<a href="首页.html">易路行</a> > <a href="自驾租车.html">自驾租车</a></p>
+       </div>
 		<div class="middle-top">
 			<form>
 				您的位置：<input type="text" name="address"/>
-				取车时间：<input id="time" type="text" name="taketime"/>
-				还车时间：<input id="time" type="text" name="returntime"/>
+				取车时间：<input id="time" type="date" name="taketime"/>
+				还车时间：<input id="time" type="date" name="returntime"/>
 				<input type="submit" value="搜索">
 			</form>
 		</div>
@@ -88,6 +90,8 @@
 						<dd><a href="javascript:void(0)">奥迪</a></dd>
 						<dd><a href="javascript:void(0)">奔驰</a></dd>
 						<dd><a href="javascript:void(0)">凯迪拉克</a></dd>
+						<!-- 加载显示更多 -->
+						<div id="er" style="display:none;">
 						<dd><a href="javascript:void(0)">纳智捷</a></dd>
 						<dd><a href="javascript:void(0)">江淮</a></dd>
 						<dd><a href="javascript:void(0)">江铃</a></dd>
@@ -98,6 +102,9 @@
 						<dd><a href="javascript:void(0)">比亚迪</a></dd>
 						<dd><a href="javascript:void(0)">广汽传祺</a></dd>
 						<dd><a href="javascript:void(0)">克莱斯勒</a></dd>
+						</div>
+						<dd><a id="but" class="but" onclick="fang();" style="color:rgb(251,109,0);">显示更多</a></dd>
+						<dd><a id="but1" class="but1" onclick="shou();" style="color:rgb(251,109,0);display:none;">收起</a></dd>
 					</dl>
 				</li>
 				<li class="select-list">
@@ -142,85 +149,139 @@
 			</div>
 			<table>
 				<tr>
-					<td><img src="images/carlist.png"></td>
-					<td>
-						<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p id="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p id="qq">河北石家庄·裕华区</p>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
 					</td>
-					<td id="price">
+					<td class="price" style="width:240px;">
 						<p>98元/天</p>
 					</td>
-					<td>
-						<a href="租车详情.html"><input id="rent" type="submit" value="我要租"></a>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
 					</td>
 				</tr>
-				<tr>
-					<td><img src="images/carlist.png"></td>
-					<td>
-						<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p id="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p id="qq">河北石家庄·裕华区</p>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
 					</td>
-					<td id="price">
+					<td class="price" style="width:240px;">
 						<p>98元/天</p>
 					</td>
-					<td>
-						<a href="租车详情.html"><input id="rent" type="submit" value="我要租"></a>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
 					</td>
 				</tr>
-				<tr>
-					<td><img src="images/carlist.png"></td>
-					<td>
-						<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p id="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p id="qq">河北石家庄·裕华区</p>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
 					</td>
-					<td id="price">
+					<td class="price" style="width:240px;">
 						<p>98元/天</p>
 					</td>
-					<td>
-						<a href="租车详情.html"><input id="rent" type="submit" value="我要租"></a>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
 					</td>
 				</tr>
-				<tr>
-					<td><img src="images/carlist.png"></td>
-					<td>
-						<p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p id="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p id="qq">河北石家庄·裕华区</p>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
 					</td>
-					<td id="price">
+					<td class="price" style="width:240px;">
 						<p>98元/天</p>
 					</td>
-					<td>
-						<a href="租车详情.html"><input id="rent" type="submit" value="我要租"></a>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
+					</td>
+				</tr>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
+					</td>
+					<td class="price" style="width:240px;">
+						<p>98元/天</p>
+					</td>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
+					</td>
+				</tr>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
+					</td>
+					<td class="price" style="width:240px;">
+						<p>98元/天</p>
+					</td>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
+					</td>
+				</tr>
+                <tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
+					</td>
+					<td class="price" style="width:240px;">
+						<p>98元/天</p>
+					</td>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
+					</td>
+				</tr><tr>
+					<td style="width:160px;"><a href="租车详情.html" target="_blank"><img src="images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:290px;">
+						<a href="租车详情.html" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
+						<p class="qq">河北石家庄·裕华区</p></a>
+					</td>
+					<td class="price" style="width:240px;">
+						<p>98元/天</p>
+					</td>
+					<td style="width:130px;">
+						<a href="租车详情.html" target="_blank" class="go">我要租</a>
 					</td>
 				</tr>
 			</table>
-			<div id="page">
-				<a href="" class="selecte">1</a>
-				<a href="">2</a>
-				<a href="">3</a>
+			<div class="fan">
+				<a href="#" class="page pagenow">1</a>
+                <a href="#" class="page">2</a>
 			</div>
 		</div>
 		</div>
 		<!-- ************************************* -->
 		<div class="middle-right">
 			<div class="tao2">
-			<h5>常见问题</h5>
-			<ul>
-				<li>1、客户具备什么条件可享受租车服务？</li>
-				<li>2、换车时需要哪些手续？</li>
-				<li>3、客户具备什么条件可享受租车服务？</li>
-				<li>4、换车时需要哪些手续？</li>
-				<li>5、客户具备什么条件可享受租车服务？</li>
-				<li>6、换车时需要哪些手续？</li>
-				<li>7、客户具备什么条件可享受租车服务？</li>
-				<li>8、换车时需要哪些手续？</li>
-				<li>9、客户具备什么条件可享受租车服务？</li>
-				<li>10、车辆没有续租的情况下，超时还车怎么计费？</li>
-			</ul>
+			<h1>什么样的车才可以发布？</h1>
+            <ul>
+            	<li><a href="帮助中心.html" target="_blank">1.客户具备什么条件可以享受租车服务？</a></li>
+                <li><a href="帮助中心.html" target="_blank">2.哪些身份证明可以作为租车的身份证件？</a></li>
+                <li><a href="帮助中心.html" target="_blank">3.每天的租车次数有限制吗？</a></li>
+                <li><a href="帮助中心.html" target="_blank">4.还车时需要走什么手续？</a></li>
+                <li><a href="帮助中心.html" target="_blank">5.还车时油箱不满该怎么处理？</a></li>
+                <li><a href="帮助中心.html" target="_blank">6.车辆超时还车怎么计算费用？</a></li>
+                <li><a href="帮助中心.html" target="_blank">7.租用车辆必须支付保险费用吗？</a></li>
+                <li><a href="帮助中心.html" target="_blank">8.如果车辆在使用过程中出现故障该如何处理？</a></li>
+                <li><a href="帮助中心.html" target="_blank">9.怎样升级会员级别？</a></li>
+                <li><a href="帮助中心.html" target="_blank">10.会员有哪些服务？</a></li>
+            </ul>
 			</div>
 		</div>
 	</div>
