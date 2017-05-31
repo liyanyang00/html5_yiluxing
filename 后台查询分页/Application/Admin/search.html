@@ -45,8 +45,8 @@
                     <div id="collapseTwo" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="{:U('Admin/Cars/check')}">车辆审核</a></li>
-                                <li  class="linow"><a href="{:U('Admin/Cars/special')}">每日一车</a></li>
+                                <li class="linow"><a href="{:U('Admin/Cars/check')}">车辆审核</a></li>
+                                <li><a href="{:U('Admin/Cars/special')}">每日一车</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,8 +91,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
-                            </ul>
+                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -101,15 +100,26 @@
         </div>
         
         <div class="col-md-10 col-xs-10 right">
-            <h1>添加活动车</h1>
+            <h1>车辆列表</h1>
             <div class="buttongroup">
-                <form action="{:U('Admin/Cars/searchspecial')}" class="navbar-form" role="search" >
+                <div class="col-md-6 col-xs-6 left">
+                    <form action="{:U('Admin/Cars/search')}" class="navbar-form" role="search" >
                        <div class="form-group">
                        关键字：
                         <input type="text" class="form-control" name="search_value" placeholder="请输入车辆信息">
                         </div>
                       <button type="submit" class="button1" >搜索</button> 
                       </form>
+                </div>
+                <div class="col-md-6 col-xs-6 left">
+                       <form action="{:U('Admin/Cars/query')}" class="navbar-form" role="search" style="margin-left:-50px;">
+                        认证日期：
+                        <input type="date" value="" name="date1">
+                        至
+                        <input type="date" value="" name="date2">
+                        <button type="submit" class="button1">查询</button>
+                    </form>
+                </div>
             </div>
             <div class="tablegroup">
                 <table class="table">
@@ -120,23 +130,33 @@
                         <th>认证时间</th>
                         <th>车主</th>
                         <th>所在城市</th>
-                        <th>车辆原价</th>
+                        <th>审核状态</th>
                     </tr>
                     <volist name="information" id="d">
-                        <tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.inf_id})">
+                        <tr data-toggle="modal" data-target="#mymodal-data">
                           <td>{$d.inf_type}</td>
                           <td>{$d.inf_introduce}</td>
                           <td>{$d.inf_carnumber}</td>
                           <td>{$d.inf_register}</td>
                           <td>{$d.user_name}</td>
                           <td>{$d.inf_city}</td>
-                          <td>{$d.inf_dayprice}/天</td>
+                          <td id="state">{$d.inf_state}</td>
                         </tr>
                     </volist>
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
-                        	<div class="pagination" id="page">{$page}</div>
+                        <div class="pagination" id="page">{$page}</div>
+                            <!-- <ul class="page">
+                                <li><a href="#">上一页</a></li>
+                                <li class="now"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li>...</li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">下一页</a></li>
+                                <li>共5页/48条数据 转到<input type="text" class="pageinput" placeholder="1">页</li>
+                            </ul> -->
                         </td>
                     </tr>
                     <!--弹出框-->
@@ -145,26 +165,22 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title">添加为活动车</h4>
+									<h4 class="modal-title">车辆详情</h4>
 								</div>
-								<form method="post" action="__MODULE__/Cars/append">
-								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
-									<p>车主姓名：<span></span></p>
-                                    <p>车主电话：<span></span></p>
-                                    <p>活动日期：<input name="inf_specialdate" type="date" value=""></p>
-                                    
-                                    <p>车辆信息：<span></span></p>
-                                    <p>车辆原价：￥<span></span>/天</p>
-                                    <p>活动价格：<span><input name="inf_specialprice" type="text" value=""></span>/天</p>
-                                   <p>车辆照片：<span><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><br />
+								<div class="modal-body" style="overflow-y:auto;height:400px;">
+									<p>车主姓名：<span>{$d.user_name}</span></p>
+                                    <p>车主电话：<span>{$d.user_telephone}</span></p>
+                                    <p>证件号码：<span>{$d.user_idnum}</span></p>
+                                    <p>证件照片：<span><img src="__PUBLIC__/Admin/images/idcard.gif" width="290" height="180" /></span></p>
+                                    <p>车辆信息：<span>车牌号：{$d.inf_carnumber}&nbsp;&nbsp;品牌车型：{$d.inf_type}&nbsp;&nbsp;颜色：{$d.inf_color}<br />&nbsp;变速箱：{$d.inf_gearbox}&nbsp;&nbsp;座位数：{$d.inf_chair}&nbsp;&nbsp;燃料类型：汽油&nbsp;&nbsp;天窗：{$d.inf_window}<br />&nbsp;音箱：{$d.inf_sound}&nbsp;&nbsp;真皮座椅：{$d.inf_leather}&nbsp;&nbsp;倒车雷达：{$d.inf_camera}<br />&nbsp;GPS导航：{$d.inf_gps}&nbsp;&nbsp;可抽烟：{$d.inf_smoke}</span></p>
+                                    <p>车主描述：<span>我的车很棒棒！！！！</span></p>
+                                    <p>车辆照片：<span><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><br />
                                     &nbsp;<img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/><img src="__PUBLIC__/Admin/images/img1.jpg" width="200" height="110" class="img"/></span></p>
-                                    <p style="display:none">车辆id<input type="text" id="inf_id" name="inf_id" /></p>
 								</div>
 								<div class="modal-footer">
-									<button type="submit"class="button1 button2" style="margin-right:20px;">确认添加</button>
-                                    <button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">关闭</button>
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;" id="success">通过审核</button>
+                                    <button type="button" data-dismiss="modal" class="button1 button3" style="margin-right:20px;" id="fail">未通过</button>
 								</div>
-								</form>
 							</div>
 						</div>
 					</div>
@@ -176,26 +192,5 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
-<script type="text/javascript">	
-				
-
-		function postIt (res){	
-			$.post("action.php",{	
-				id : res
-			},
-			function(data,status){	
-				var array = JSON.parse(data);
-				console.log(array);
-					$('#detail p span').eq(0).text(array['user_name']);
-					$('#detail p span').eq(1).text(array['user_telephone']);
-					$('#detail p span').eq(2).text("车牌号："+array['inf_carnumber']+"  品牌车型："+array['inf_type']+"  颜色："+array['inf_color']+"  变速箱："+array['inf_gearbox']+"  座位数："+array['inf_chair']+"  GPS导航："+array['inf_gps']+"  天窗："+array['inf_window']+"  音箱："+array['inf_sound']+"  DVD/CD："+array['inf_dvd']+"  真皮沙发："+array['inf_leather']+"  倒车雷达："+array['inf_camera']+"  能否抽烟："+array['inf_smoke']);
-					$("#detail p span").eq(3).text(array['inf_dayprice']);
-					$("#detail p span").eq(5).text(array['inf_carphoto']);
-					$("#inf_id").val(array['inf_id']);
-					return false;				
-			});
-
-		}
-</script>
 </body>
 </html>

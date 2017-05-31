@@ -91,7 +91,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -134,7 +134,7 @@
                         <th>订单状态</th>
                     </tr>
                     <volist name="indent" id="d">
-                        <tr data-toggle="modal" data-target="#mymodal-data">
+                        <tr data-toggle="modal" data-target="#mymodal-data" onclick="postIt({$d.ind_id})">
                           <td>{$d.ind_id}</td>
                           <td>{$d.inf_type}</td>
                           <td>{$d.ind_startdate}</td>
@@ -149,21 +149,11 @@
                           <td>{$d.ind_state}</td> 
                         </tr>
                     </volist>
-                
+                    
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
-                        <div class="pagination" id="page">{$page}</div>
-                            <!-- <ul class="page">
-                                <li><a href="#">上一页</a></li>
-                                <li class="now"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li>...</li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                                <li>共5页/48条数据 转到<input type="text" class="pageinput" placeholder="1">页</li>
-                            </ul> -->
+                            <div class="pagination" id="page">{$page}</div>
                         </td>
                     </tr>
                     <!--弹出框-->
@@ -174,14 +164,17 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">订单详情</h4>
 								</div>
-								<div class="modal-body">
-									<p>车主姓名：<span>{$d.user_name}</span></p>
-                                    <p>车主电话：<span>{$d.user_telephone}</span></p>
-                                    <p>租客姓名：<span>{$result.user_name}</span></p>
-                                    <p>租客电话：<span>{$result.user_telephone}</span></p>
-                                    <p>租车时间：<span>{$d.ind_startdate}-{$d.ind_enddate}</span></p>
+								<div class="modal-body" id="detail">
+									<?php
+									
+									?>
+									<p>车主姓名：<span></span></p>
+                                    <p>车主电话：<span></span></p>
+                                    <p>租客姓名：<span></span></p>
+                                    <p>租客电话：<span></span></p>
+                                    <p>租车时间：<span></span></p>
                                     <p>费用明细：<span>租车费用99元<br />&nbsp;保险费用0元<br />&nbsp;手续费50元</span></p>
-                                    <p>优惠券抵：<span>{$d.user_discount1}元优惠券</span></p>
+                                    <p>优惠券抵：<span>50元优惠券</span></p>
                                     <p>会员折扣：<span>95折</span></p>
 								</div>
 								<div class="modal-footer">
@@ -198,5 +191,25 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">	
+				
+
+		function postIt (res){	
+			$.post("action.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+				array['ind_user_id']
+				$('#detail p span').eq(0).text(array['user_name']);
+				$('#detail p span').eq(1).text(array['user_telephone']);
+				$('#detail p span').eq(2).text("{$result['user_name']}");
+				$('#detail p span').eq(3).text({$result['user_telephone']});
+					return false;				
+			});
+
+		}
+</script>
 </body>
 </html>

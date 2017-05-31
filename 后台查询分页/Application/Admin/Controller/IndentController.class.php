@@ -18,9 +18,9 @@ class IndentController extends Controller {
 
          $count = $indentModel->count();// 查询满足要求的总记录数
      
-      $Page = new \Think\Page($count,1);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+      $Page = new \Think\Page($count,5);// 实例化分页类 传入总记录数和每页显示的记录数(25)
 
-      $Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+      //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
       $Page->setConfig('prev','上一页');
       $Page->setConfig('next','下一页');
       $Page->setConfig('last','末页');
@@ -49,8 +49,8 @@ class IndentController extends Controller {
 
 	    $count = $Model->where($condition)->count();
 
-	    $Page = new \Think\Page($count,1);        
-	    $Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+	    $Page = new \Think\Page($count,5);        
+	    //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
 	    $Page->setConfig('prev','上一页');
 	    $Page->setConfig('next','下一页');
 	    $Page->setConfig('last','末页');
@@ -83,8 +83,8 @@ class IndentController extends Controller {
 
         $count = $Model->where($condition)->count();// 查询满足要求的总记录数
 
-        $Page = new \Think\Page($count,1);// 实例化分页类 
-        $Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+        $Page = new \Think\Page($count,5);// 实例化分页类 
+        //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
         $Page->setConfig('prev','上一页');
         $Page->setConfig('next','下一页');
         $Page->setConfig('last','末页');
@@ -99,4 +99,20 @@ class IndentController extends Controller {
   
         $this->display();
     }
+
+	public function action(){	
+		if(IS_POST){	
+			$id = I('id');
+			$indentModel = M("indent");
+			$ids = 'ind_id='.$id;
+			$result = M('indent')->join('information on information.inf_id = indent.inf_id','left')->join('usertab on usertab.user_id=information.inf_user_id','left')->where($ids)->find();
+			//$result = $indentModel -> where($ids)->find();
+			
+			print_r(json_encode($result));
+
+		}
+		
+
+	}
+
 }
