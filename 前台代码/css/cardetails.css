@@ -48,7 +48,7 @@ img{
   /*background-color: gray;
   opacity:0.5;*//*半透明遮罩*/
 }
-#down{
+.down{
 	float: right;
 	padding-right: 5px;
 	padding-top: 5px;
@@ -255,7 +255,4 @@ h3{
 	color: rgb(251,109,0);
 	font-size: 25px;
 	display:inline;
-}
-.top-right2 img{
-	float: right;
 }
