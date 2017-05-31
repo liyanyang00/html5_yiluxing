@@ -163,7 +163,9 @@
 									<h4 class="modal-title">订单详情</h4>
 								</div>
 								<div class="modal-body" id="detail">
-								
+									<?php
+									
+									?>
 									<p>车主姓名：<span></span></p>
                                     <p>车主电话：<span></span></p>
                                     <p>租客姓名：<span></span></p>
@@ -197,6 +199,7 @@
 			function(data,status){	
 				var array = JSON.parse(data);
 				console.log(array);
+				array['ind_user_id']
 				$('#detail p span').eq(0).text(array['user_name']);
 				$('#detail p span').eq(1).text(array['user_telephone']);
 				$('#detail p span').eq(2).text("{$result['user_name']}");

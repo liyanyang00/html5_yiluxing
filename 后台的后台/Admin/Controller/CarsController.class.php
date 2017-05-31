@@ -40,7 +40,71 @@ class CarsController extends Controller {
 
 		}
 		
+	}
+	public function pass(){	
+		$id = isset($_GET['inf_id']) ? intval($_GET['inf_id']) : '';
+		$condition = array(	
+			'inf_id' => $id
+			);
+		$infModel = M('information');
+		$result = $infModel->where($condition)->find();
+		$result['inf_state'] = '已通过';
+		if($infModel->save($result)){	
+			$this->redirect('Cars/check');
+		}
+		else{	
+			$this->error();
+		}
+	}
 
+	public function notPass(){	
+		$id = isset($_GET['inf_id']) ? intval($_GET['inf_id']) : '';
+		$condition = array(	
+			'inf_id' => $id
+			);
+		$infModel = M('information');
+		$result = $infModel->where($condition)->find();
+		$result['inf_state'] = '未通过';
+		if($infModel->save($result)){	
+			$this->redirect('Cars/check');
+		}
+		else{	
+			$this->error();
+		}
+	}
+	public function del(){	
+		$id = isset($_GET['inf_id']) ? intval($_GET['inf_id']) : '';
+		$condition = array(	
+			'inf_id' => $id
+			);
+		$infModel = M('information');
+		$result = $infModel->where($condition)->find();
+		$result['inf_add'] = "否";
+		$result['inf_specialdate'] = NULL;
+		$result['inf_specialprice'] = NULL;
+		if($infModel->save($result)){	
+			$this->redirect('Cars/special');
+		}
+		else{	
+			$this->error();
+		}
+	}
+	public function append(){	
+		$condition = array(
+			'inf_specaildate' => I('inf_specialdate'),
+			'inf_specailprice' => I('inf_specailprice')
+			);
+			$id = 'inf_id='.I('inf_id');
+			$result = M('information')->where($id)->find();
+			$result['inf_add'] = "是";
+			$result['inf_specialdate'] = I('inf_specialdate');
+			$result['inf_specialprice'] = I('inf_specialprice');
+			if(M('information')->save($result)){	
+				$this->redirect('Cars/special');
+			}
+			else{	
+				$this->error();
+			}
 	}
 
 }

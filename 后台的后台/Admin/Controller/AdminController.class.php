@@ -117,7 +117,7 @@ class AdminController extends Controller {
 		$id = isset($_GET['adm_id']) ? intval($_GET['adm_id']) : '';
 		if ($id == '') {
 			exit("bad param!");
-		}
+		} 
 		if(M("administrator")->delete($id)){
 			$this->success("删除成功！");
 		}

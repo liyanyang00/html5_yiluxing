@@ -150,14 +150,14 @@
 									<h4 class="modal-title">留言详情</h4>
 								</div>
 								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
-									<p>留言姓名：<span>刘二狗</span></p>
-                                    <p>联系电话：<span>13088886666</span></p>
-                                    <p>电子邮箱：<span>12345678@qq.com</span></p>
-                                    <p>留言内容：<span style="width:434px;">我冲了100万，都是钻石会员了，你们也不送我辆车，最次也要逢年过节送个果篮吧！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！！真抠门！！！</span></p>
+									<p>留言姓名：<span></span></p>
+                                    <p>联系电话：<span></span></p>
+                                    <p>电子邮箱：<span></span></p>
+                                    <p>留言内容：<span style="width:434px;"></span></p>
                                     
 								</div>
 								<div class="modal-footer">
-									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">完成回复</button>
+									<button type="button" class="button1 button2" style="margin-right:20px;"><a id="reply" href="">完成回复</a></button>
                                     <button type="button" data-dismiss="modal" class="button1" style="margin-right:20px;">关闭</button>
 								</div>
 							</div>
@@ -183,7 +183,9 @@
 					$('#detail p span').eq(1).text(array['mes_telephone']);
 					$('#detail p span').eq(2).text(array['mes_email']);
 					$('#detail p span').eq(3).text(array['mes_content']);
-					return false;				
+						
+					$("#reply").attr("href","__MODULE__/Message/reply/mes_id/"+array['mes_id']);
+					return false;			
 			});
 
 		}
