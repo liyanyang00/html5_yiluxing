@@ -1,0 +1,24 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>易路行后台管理系统</title>
+<link href="/easygo/Public/Admin/css/login.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="login">
+	<div class="h1">
+    	易路行后台管理系统
+    </div>
+	<div class="kuang">
+    	<h1>请输入您的登陆信息</h1>
+        <form action="" method="post">
+        	<input name="username" type="text" value="" placeholder="请输入用户名" />
+            <input name="password" type="password" value="" placeholder="请输入密码" />
+            <input type="submit" value="登陆" />
+        </form>
+    </div>
+</div>
+</body>
+</html>
