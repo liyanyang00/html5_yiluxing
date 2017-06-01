@@ -242,3 +242,14 @@ a[class=selecte]{
 	color:white;
 	background-color:rgb(251,109,0);
 }
+.but1{
+	display:none;
+}
+#but{
+	width:46px;
+	background-color: white;
+}
+#but1{
+	width:26px;
+	background-color: white;
+}
