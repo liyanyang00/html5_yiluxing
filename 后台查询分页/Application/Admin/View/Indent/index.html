@@ -105,7 +105,7 @@
                 <div class="col-md-6 col-xs-6 left">
                     <form action="{:U('Admin/Indent/search')}" class="navbar-form" role="search" >
                        <div class="form-group">
-                       订单编号：
+                       关键字：
                         <input type="text" class="form-control" name="search_value" >
                         </div>
                       <button type="submit" class="button1" >搜索</button> 
@@ -205,7 +205,7 @@
 				$('#detail p span').eq(0).text(array['user_name']);
 				$('#detail p span').eq(1).text(array['user_telephone']);
 				$('#detail p span').eq(2).text("{$result['user_name']}");
-				$('#detail p span').eq(3).text({$result['user_telephone']});
+				$('#detail p span').eq(3).text("{$result['user_telephone']}");
 					return false;				
 			});
 

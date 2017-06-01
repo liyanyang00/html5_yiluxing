@@ -46,8 +46,12 @@ class IndentController extends Controller {
 	    $value = $_GET['search_value'];
 
 	    $condition['ind_id'] = array('like','%'.$value.'%');
+      $condition['inf_type'] = array('like','%'.$value.'%');
+      $condition['user_name'] = array('like','%'.$value.'%');
+      $condition['ind_type'] = array('like','%'.$value.'%');
+      $condition['_logic'] = 'or';
 
-	    $count = $Model->where($condition)->count();
+	    $count = $Model->join('information on information.inf_id = indent.inf_id','left')->join('usertab on usertab.user_id=information.inf_user_id','left')->where($condition)->count();
 
 	    $Page = new \Think\Page($count,5);        
 	    //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
