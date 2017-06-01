@@ -59,19 +59,10 @@ form{
 	height:50px;
 }
 /*input中小图标**************/
-
-.icon-find{
-position: absolute;
-left: 0;
-z-index:5;
-background-image: url(../images/find.jpg); /*引入图片图片*/
-background-repeat: no-repeat; /*设置图片不重复*/
-background-position: 0px 0px; /*图片显示的位置*/
-width: 26px; /*设置图片显示的宽*/
-height: 26px; /*图片显示的高*/
-margin-left: 465px;
-margin-top: 12px;
+.find input[type=text]{
+	background:url(../images/find.jpg) 8px no-repeat;
 }
+
 
 /*标签页********************************/
 #tabs ul li img{

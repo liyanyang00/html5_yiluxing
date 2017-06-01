@@ -30,14 +30,14 @@ body,html{
 	margin-top:20px;
 	float:left;
 	}
-.today h1{
+.jrtj h1{
 	font-size:28px;
 	font-weight:normal;
 	width:1200px;
 	text-align:center;
 	line-height:52px;
 	}
-.today h2{
+.jrtj h2{
 	font-size:14px;
 	font-weight:normal;
 	width:1200px;
@@ -50,7 +50,7 @@ body,html{
 	float:left;
 	}
 .car1{
-	margin-left:26px;
+	margin-left:20px;
 	}
 .car p{
 	width:122px;
@@ -143,3 +143,42 @@ body,html{
 	}
 	
 /****************图片*******************/
+/****************轮播图****************/
+#buttons {
+	position: absolute;
+	left: 47%;
+	bottom: 20px;
+	z-index: 2;
+	height: 10px;
+	width: 100px;
+}
+
+#buttons span {
+	float: left;
+	margin-right: 5px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid rgb(251,109,0);
+	border-radius: 50%;
+	background: white;
+	cursor: pointer;
+}
+
+#buttons .on {
+	background: orangered;
+}
+#container{
+	width:1200px;
+	height:256px;	
+	position: relative;
+	overflow: hidden;/*多余的部分就隐藏起来*/
+}
+#list{
+	position: absolute;
+	z-index: 1;
+	width: 4500px;
+	height: 256px;
+}
+.car{
+	margin-left: 20px;
+}
