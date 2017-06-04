@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助中心页</title>
+	<link href="__PUBLIC__/Home/css/public.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/helpcenter.css">	
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery-ui.js"></script>
+    <style type="text/css">
+    :focus{
+    	outline:0px #000 auto;/*设置他在有焦点时的样式*/
+    }
+    </style>
+    <script type="text/javascript">
+    	/*页头下拉菜单*/
+    	$(document).ready(function($) {
+    		$("li").hover(function() {
+    			$(this).children('#children').css('display', 'block');
+    		}, function() {
+    			$(this).children('#children').css('display', 'none');
+    		});
+    	})
+    	$(function(){
+    		$("#tabs").tabs();
+    		$("#mybody1").tabs();
+    		$("#mybody2").tabs();
+    		$("#mybody3").tabs();
+    		$("#accordion1").accordion({
+    			active:true
+    		});
+    		$("#accordion2").accordion({
+    			active:true
+    		});
+    		$("#accordion3").accordion({
+    			active:true
+    		});
+    		$("#accordion4").accordion({
+    			active:true
+    		});
+    		$("#accordion5").accordion({
+    			active:true
+    		});
+    		$("#accordion6").accordion({
+    			active:true
+    		});
+    		$("#accordion7").accordion({
+    			active:true
+    		});
+    		$("#accordion8").accordion({
+    			active:true
+    		});
+    		$("#accordion9").accordion({
+    			active:true
+    		});
+    		$("#accordion10").accordion({
+    			active:true
+    		});
+    		$("#accordion11").accordion({
+    			active:true
+    		});
+    	});
+	</script>
+</head>
+<body>
+<!-- logo -->
+<div class="header">
+	<div class="mybody">
+    	<div class="logo"><a href="{:U('Index/index')}"><img src="__PUBLIC__/Home/images/logo.jpg" alt="logo" /></a></div>
+			<ul class="nav">
+                <li><a href="{:U('Index/index')}">首页</a></li>
+                <li><a href="{:U('Rent/index')}">自驾租车</a></li>
+                <li><a href="{:U('Issue/index')}">信息发布</a></li>
+                <li><a href="{:U('Special/index')}">优惠活动</a></li>
+                <li class="navnow"><a href="{:U('Help/index')}" target="_blank">帮助中心</a></li>
+                <li><a href="{:U('Message/index')}">留言板</a></li>
+      		</ul>
+            
+			<div class="top-right2">
+				<div>
+					<ul>
+                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
+                            <div id="children">
+                                <div class="arrow"></div>
+                                <ul class="child">
+                                    <li id="xu"><a href="">我的订单</a></li>
+                                    <li id="xu"><a href="">我的资产</a></li>
+                                    <li id="xu"><a href="">我的账号</a></li>
+                                    <li><a href="login.html">退出登录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+
+<!-- 主要部分-->
+<div class="content">
+	<div class="banner">
+		<div class="find">
+			<h1>帮助中心</h1>
+			<form>
+			<i class="icon-find"></i>
+				<input type="text" name="keyword" placeholder="请输入关键词" style="background-color:white;" />
+				<input type="submit" value="搜索">
+			</form>
+		</div>
+	</div>
+	<div id="tabs">
+		<ul>
+			<li id="borb"><a href="#mybody1"><span><img src="__PUBLIC__/Home/images/xs.jpg"><p>新手上路</p></span></a></li>
+			<li id="borb"><a href="#mybody2"><span><img src="__PUBLIC__/Home/images/fw.jpg"><p>服务规则</p></span></a></li>
+			<li id="borb"><a href="#mybody3"><span><img src="__PUBLIC__/Home/images/bz.jpg"><p>帮助中心</p></span></a></li>
+
+		</ul>
+<!-- 新手上路***************************************** -->
+		<div id="mybody1">
+			<div id="left">
+				<p>问题索引</p>
+				<ul>
+					<li><a href="#right1">预定取车</a></li>
+					<li><a href="#right2">我要出租</a></li>
+				</ul>
+			</div>
+			<div id="right1">
+				<p>预定取车1</p>
+				<div id="accordion1">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+				</div>
+			</div>
+			<div id="right2">
+				<p>预定取车1</p>
+				<div id="accordion2">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+<!-- 服务规则************************ -->
+		<div id="mybody2">
+			<div id="left">
+				<p>问题索引</p>
+				<ul>
+					<li><a href="#right1">预定取车</a></li>
+					<li><a href="#right2">我要出租</a></li>
+					<li><a href="#right3">还车结算</a></li>
+				</ul>
+			</div>
+
+			<div id="right1">
+				<p>预定取车2000</p>
+				<div id="accordion3">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+				</div>
+			</div>
+			<div id="right2">
+				<p>预定取车22</p>
+				<div id="accordion4">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="right3">
+				<p>预定取车23</p>
+				<div id="accordion5">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+<!-- 帮助中心******************************** -->
+		<div id="mybody3">
+			<div id="left">
+				<p>问题索引</p>
+				<ul>
+					<li><a href="#right1">预定取车</a></li>
+					<li><a href="#right2">我要出租</a></li>
+					<li><a href="#right3">还车结算</a></li>
+					<li><a href="#right4">保险服务</a></li>
+					<li><a href="#right5">会员服务</a></li>
+					<li><a href="#right6">其他</a></li>
+				</ul>
+			</div>
+
+			<div id="right1">
+				<p>预定取车2000</p>
+				<div id="accordion6">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+				</div>
+			</div>
+			<div id="right2">
+				<p>预定取车22</p>
+				<div id="accordion7">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="right3">
+				<p>预定取车13</p>
+				<div id="accordion8">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="right4">
+				<p>预定取车14</p>
+				<div id="accordion9">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="right5">
+				<p>预定取车15</p>
+				<div id="accordion10">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="right6">
+				<p>预定取车16</p>
+				<div id="accordion11">
+					<h4>01.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>02.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					<h4>03.客户需要具备什么条件才有取车服务？</h4>
+					<div class="hei">
+						<p>客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？客户需要具备什么条件才有取车服务？</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class="footer">
+	<div class="mybody">
+    	<div class="bottom-ul">
+			<ul>
+				<li class="bottom-aa">新手上路</li>
+				<li><a href="法律解读.html">法律解读</a></li>
+				<li><a href="押金政策.html">押金政策</a></li>
+				<li><a href="保险条款.html">保险条款</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">服务规则</li>
+				<li><a href="服务条款.html">服务条款</a></li>
+				<li><a href="驾客协议.html">驾客协议</a></li>
+				<li><a href="车东协议.html">车东协议</a></li>
+				<li><a href="平台规则.html">平台规则</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">帮助中心</li>
+				<li><a href="预定取车.html">预定取车</a></li>
+				<li><a href="我要出租.html">我要出租</a></li>
+				<li><a href="会员服务.html">会员服务</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">联系我们</li>
+				<li>客服电话：0311-88888888</li>
+				<li>客服电话：0311-88886666</li>
+			</ul>
+		</div>
+        <div class="bottom-right">
+			<img src="__PUBLIC__/Home/images/QRcode.jpg" width="99px" height="99px"/>
+			<h4>关注微信公众号</h4>
+		</div>
+    <p>Copyright©2017-2019 www.jumao.com All Rights Reserved.　易路行官网 京ICP备10005000号 京公网安备号 11010502026705</p>
+    </div>
+</div>
+</body>
+</html>
