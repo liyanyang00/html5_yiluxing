@@ -41,9 +41,8 @@
 	float:left;
 	}
 .part1{
-	position:absolute;
-	top:130px;
-	left:60px;
+	position:inherit;
+	margin:10px 20px 0 30px;
 	}
 .part2{
 	position:absolute;
@@ -166,7 +165,7 @@
 	resize:none;
 	}
 .left table .img{
-	margin-left:8px;
+	margin-left:5px;
 	margin-top:2px;
 	}
 .left input[type=submit]{
@@ -306,3 +305,15 @@
 	line-height:24px;
 	color:#888;
 	}
+
+/******************上传**********************/
+.file-box{ position:relative;width:252px;display:inline;
+} 
+
+.add{
+	background:url(../images/+.gif) no-repeat;
+	width:252px;
+	height:160px;
+	}
+.file{ position:absolute;top:-200px;left:0px;filter:alpha(opacity:0);opacity:0;width:360px;height:210px;cursor:pointer;}
+.file1{ position:absolute;top:-106px;left:6px;filter:alpha(opacity:0);opacity:0;width:205px;height:120px;cursor:pointer;}

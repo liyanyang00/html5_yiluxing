@@ -623,7 +623,7 @@ body,html{
 	-moz-border-radius: 113px;      /* Gecko browsers圆角 */
     -webkit-border-radius: 113px;   /* Webkit browsers */
     border-radius:113px;            /* W3C syntax */
-	margin-left:44px;
+	margin-left:60px;
 	margin-bottom:20px;
 	}
 .button{
@@ -797,3 +797,14 @@ body,html{
 	top:-89px;
 	left:904px;
 	}
+/******************上传**********************/
+.file-box{ position:relative;width:252px;display:inline;
+} 
+
+.add{
+	background:url(../images/+.gif) no-repeat;
+	width:252px;
+	height:160px;
+	}
+.file{ position:absolute;top:-120px;left:56px;filter:alpha(opacity:0);opacity:0;width:120px;height:120px;cursor:pointer;}
+

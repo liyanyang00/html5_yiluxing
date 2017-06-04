@@ -38,7 +38,7 @@
 	margin-top: 100px;
 	margin-right: 100px;
 }
-
+.register .little{width:180px;}
 input[type=text],input[type=password]{
 	height: 40px;
 	width:314px;
@@ -108,3 +108,14 @@ form p{
 	cursor:pointer;
 	text-decoration:none;
 }
+.register input[type=button]{
+	float:right;
+	display:inline-block;
+	background:#fff;
+	color:#fb6d00;
+	border:1px solid #fb6d00;
+	width:120px;
+	height:42px;
+	margin:10px 44px 0 0 ;
+	cursor:pointer;
+	}

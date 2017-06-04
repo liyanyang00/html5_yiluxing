@@ -5,7 +5,7 @@
 <title>易路行</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/person.css" rel="stylesheet" type="text/css" />
-
+<link href="css/lend.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -44,51 +44,18 @@
 
 <div class="content">
 	<div class="mybody">
-       <div class="left">
-       		<div class="person">
-            	<div class="person_head">
-                	<img src="images/user.jpg" class="head_img" width="113" height="113" alt="" />
-                    <p>刘二狗<img src="images/card.gif" alt="" /></p>
-                    <div class="left_1">
-                    	<a href="租车订单.html">
-                    	<h4><span>1</span>单</h4>
-                        <h4>未完成订单</h4></a>
-                    </div>
-                    <div class="left_2">
-                    	<a href="优惠券.html">
-                    	<h4><span>3</span>张</h4>
-                        <h4>优惠券</h4></a>
-                    </div>
-                </div>
-            </div>
-            <div class="left_nav">
-            	<h1>我的订单</h1>
-                <a href="租车订单.html">租车订单(2)</a>
-                <a href="出租订单.html">出租订单(6)</a>
-                <h1>我的资产</h1>
-                <a href="优惠券.html">优惠券(1张)</a>
-                <a href="银行卡.html">银行卡(1张)</a>
-                <h1>我的账户</h1>
-                <a href="个人信息.html">个人信息</a>
-                <a href="修改密码.html">修改密码</a>
-                <a href="我的座驾.html" class="person_now">我的座驾</a>
-                <h1>我的会员</h1>
-                <a href="会员等级.html">会员等级</a>
-                <a href="会员制度.html">会员制度</a>
-            </div>
-       </div>
-       
-       <div class="right">
        		<div class="order">
-            	<h1>座驾详情</h1>
-                
+            	<h1>订单详情</h1>
+                <div class="detail">
+                	<p><span class="detail1">订单已生成</span>&nbsp;&nbsp;<span>请在1小时之内付款完成下单</span></p>
+                    <p style="border-top:1px solid #e3e4e6;">订单号：0000000001&nbsp;&nbsp;租车人：刘二狗&nbsp;&nbsp;租期：30天&nbsp;&nbsp;车主：刘大壮&nbsp;&nbsp;车主联系方式：13088888888</p>
+                </div>
                 <table cellspacing="0">
                 	<tr>
                     	<th style="width:170px;">车辆信息</th>
                         <th style="width:240px;">&nbsp;</th>
-                        <th style="width:200px;">车辆状态</th>
-                        <th style="width:200px;">借还时间</th>
-                        <th style="width:200px;">租车价格</th>
+                        <th style="width:240px;">借还时间</th>
+                        <th style="width:240px;">总价</th>
                     </tr>
                     <tr>
                     	<td style="height:118px;">
@@ -97,19 +64,85 @@
                         <td>
                         	<h5>雪佛兰科鲁兹</h5>
                             <p class="p">三厢/自动挡/乘坐5人</p>
+                            <p class="p">订单号：0000000001</p></td>
                         <td>
-                            <p>闲置中</p>
+                        	<p>2017-05-05</p>
+                            <p>至</p>
+                            <p>2017-05-05</p>
                         </td>
-                        <td>
-                        	<p></p>
-                            <p>--</p>
-                            <p></p>
-                        </td>
-                        <td><p>￥98元/天</p>
-                        <p>￥598元/周</p>
-                        <p>￥2398元/月</p></td>
+                        <td><h4>￥10438元</h4></td>
                     </tr>
+                    
+					</div>
                 </table>
+                <div class="cost">
+                	<h1>费用明细</h1>
+                    <p>车辆租赁费用<span>+198*30=<span>￥5940</span></span></p>
+                    <p>押金<span>-3000*1=<span>￥3000</span></span></p>
+                    <p>手续费<span>+98*1=<span>￥98</span></span></p>
+                    <p data-toggle="modal" data-target="#mymodal-data"><input type="checkbox" />&nbsp;保险费<span>+50*30=<span>￥1500</span></span></p>
+                    <p data-toggle="modal" data-target="#mymodal-data1"><input type="checkbox" />&nbsp;优惠券<span>-100*1=<span>￥100</span></span></p>
+                    <p><span>合计：<span>￥10438</span></span></p>
+                    <a href="#" class="pay">付款</a>
+                    <!--弹出框-->
+                    <div class="modal" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+									<h4 class="modal-title">保险介绍</h4>
+								</div>
+								<div class="modal-body" style="overflow-y:auto;height:240px;">
+									<p>&nbsp;</p>
+                                    <p>1.保险不是必须购买，不计免赔服务可根据您的需求自行选购。</p>
+                                    <p>2.易路行为客户提供不计免赔服务，购买不计免赔服务后，您无需承担保险理赔范
+                                    围内的任何损失及轮胎损失。</p>
+                                    <p>3.购买不计免赔服务可以获得更高的保险，未购买保险的客户车辆出险后，
+                                    保险理赔内的事故损失，由客户负责。如客户同时购买了不计免赔服务，则保险理赔范围
+                                    内事故损失，以及保险理赔范围外的轮胎损失，均无需客户承担。为降低您的理赔风险，建议购买。</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">已了解</button>
+                                    
+								</div>
+							</div>
+						</div>
+                	</div>
+                    <div class="modal" id="mymodal-data1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+									<h4 class="modal-title">优惠券选择</h4>
+								</div>
+								<div class="modal-body" style="overflow-y:auto;height:340px;">
+                                    <form>
+									<table>
+                                    	<tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                     </table>
+                                     </form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">使用优惠券</button>
+                                    <button type="button" data-dismiss="modal" class="button1 button3" style="margin-right:20px;">关闭</button>
+                                    
+                                    </form>
+								</div>
+							</div>
+						</div>
+                	</div>
+                </div>
                 <div class="configure">
                 	<h1>配置信息</h1>
                     <p><img src="images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
@@ -129,27 +162,16 @@
                     <p><img src="images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
                     <p><img src="images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
                 </div>
-                <div class="change">
-                	<p>修改价格：</p>
-                	<form>
-                    	日租价：<input type="text" placeholder="98" />&nbsp;元/日<br />
-                        月租价：<input type="text" placeholder="598" />&nbsp;元/周<br />
-                        年租价：<input type="text" placeholder="2398" />&nbsp;元/月<br />
-                        <input type="submit" value="保存" />
-                    </form>
-                </div>
             </div>
-            
 
             <div class="text">
             	<h1>注意事项</h1>
                 <div class="write">
-                    <p>1.取车时，请检查租车人以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。</p>
-                    <p>2.请您准时送车，超时送车造成的一切损失由车主承担。</p>
-                    <p>3.车辆归还之后请仔细检查车辆有无破损以及其他问题，如有请及时与租客沟通，订单结束之后发现的损失由车主承担。</p>
+                    <p>1.取车时，请出示以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。由车主自行核实。</p>
+                    <p>2.请您准时取车，超时取车起租时间按预定取车时间起算。</p>
+                    <p>3.车辆押金由还车后车主检查车辆完毕确认后退还。</p>
                 </div>
             </div>
-       </div>
     </div>  
 </div>
 
@@ -194,6 +216,7 @@
 </body>
 	
 <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
 /*页头下拉菜单*/
 		$(document).ready(function($) {

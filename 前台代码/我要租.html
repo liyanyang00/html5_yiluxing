@@ -5,6 +5,7 @@
 <title>易路行</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/person.css" rel="stylesheet" type="text/css" />
+<link href="css/lend.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -44,51 +45,62 @@
 
 <div class="content">
 	<div class="mybody">
-       <div class="left">
-       		<div class="person">
-            	<div class="person_head">
-                	<img src="images/user.jpg" class="head_img" width="113" height="113" alt="" />
-                    <p>刘二狗<img src="images/card.gif" alt="" /></p>
-                    <div class="left_1">
-                    	<a href="租车订单.html">
-                    	<h4><span>1</span>单</h4>
-                        <h4>未完成订单</h4></a>
-                    </div>
-                    <div class="left_2">
-                    	<a href="优惠券.html">
-                    	<h4><span>3</span>张</h4>
-                        <h4>优惠券</h4></a>
-                    </div>
-                </div>
-            </div>
-            <div class="left_nav">
-            	<h1>我的订单</h1>
-                <a href="租车订单.html">租车订单(2)</a>
-                <a href="出租订单.html">出租订单(6)</a>
-                <h1>我的资产</h1>
-                <a href="优惠券.html">优惠券(1张)</a>
-                <a href="银行卡.html">银行卡(1张)</a>
-                <h1>我的账户</h1>
-                <a href="个人信息.html">个人信息</a>
-                <a href="修改密码.html">修改密码</a>
-                <a href="我的座驾.html" class="person_now">我的座驾</a>
-                <h1>我的会员</h1>
-                <a href="会员等级.html">会员等级</a>
-                <a href="会员制度.html">会员制度</a>
-            </div>
-       </div>
-       
-       <div class="right">
        		<div class="order">
-            	<h1>座驾详情</h1>
-                
+            	<h1>生成订单</h1>
+                <div class="form">
+                	<table cellspacing="0" class="table">
+                <form>
+                	<tr>
+                    	<th width="100px" style="text-align:right">
+                        	起租日期：
+                        </td>
+                        <td width="200px">
+                        	<input type="date" />
+                        </td>
+                        <td width="400px">&nbsp;&nbsp;还车日期：<input type="date" /></td>
+                        
+                        <td>&nbsp;</td>
+                    </tr>
+                    
+                    <tr>
+                    	<th style="text-align:right">
+                        	联系方式：
+                        </td>
+                        <td>
+                        	<input type="text" placeholder="请输入手机号" />
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                    	<th style="text-align:right">
+                        	短信验证码：
+                        </td>
+                        <td>
+                        	<input type="text" />
+                        </td>
+                        <td><input type="button" value="获取短信验证码" id="btn" onclick="settime(this)" /></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;</td>
+                    	<td style="text-align:center;height:100px;">
+                        	<input type="submit" value="确认信息" />
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </form>
+                </table>
+                </div>
                 <table cellspacing="0">
                 	<tr>
-                    	<th style="width:170px;">车辆信息</th>
+                    	<th style="width:200px;">车辆信息</th>
                         <th style="width:240px;">&nbsp;</th>
-                        <th style="width:200px;">车辆状态</th>
-                        <th style="width:200px;">借还时间</th>
-                        <th style="width:200px;">租车价格</th>
+                        <th>日租价</th>
+                        <th>周租价</th>
+                        <th>月租价</th>
+                        <th style="width:140px">是否活动</th>
                     </tr>
                     <tr>
                     	<td style="height:118px;">
@@ -96,18 +108,12 @@
                         </td>
                         <td>
                         	<h5>雪佛兰科鲁兹</h5>
-                            <p class="p">三厢/自动挡/乘坐5人</p>
-                        <td>
-                            <p>闲置中</p>
-                        </td>
-                        <td>
-                        	<p></p>
-                            <p>--</p>
-                            <p></p>
-                        </td>
-                        <td><p>￥98元/天</p>
-                        <p>￥598元/周</p>
-                        <p>￥2398元/月</p></td>
+                            <p class="p">三厢/自动挡/乘坐5人</p></td>
+                        
+                    	<td><p>￥98元/天</p></td>
+                        <td><p>￥598元/周</p></td>
+                        <td><p>￥2298元/月</p></td>
+                        <td><p>否</p></td>
                     </tr>
                 </table>
                 <div class="configure">
@@ -129,27 +135,16 @@
                     <p><img src="images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
                     <p><img src="images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
                 </div>
-                <div class="change">
-                	<p>修改价格：</p>
-                	<form>
-                    	日租价：<input type="text" placeholder="98" />&nbsp;元/日<br />
-                        月租价：<input type="text" placeholder="598" />&nbsp;元/周<br />
-                        年租价：<input type="text" placeholder="2398" />&nbsp;元/月<br />
-                        <input type="submit" value="保存" />
-                    </form>
-                </div>
             </div>
-            
 
             <div class="text">
             	<h1>注意事项</h1>
                 <div class="write">
-                    <p>1.取车时，请检查租车人以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。</p>
-                    <p>2.请您准时送车，超时送车造成的一切损失由车主承担。</p>
-                    <p>3.车辆归还之后请仔细检查车辆有无破损以及其他问题，如有请及时与租客沟通，订单结束之后发现的损失由车主承担。</p>
+                    <p>1.取车时，请出示以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。由车主自行核实。</p>
+                    <p>2.请您准时取车，超时取车起租时间按预定取车时间起算。</p>
+                    <p>3.车辆押金由还车后车主检查车辆完毕确认后退还。</p>
                 </div>
             </div>
-       </div>
     </div>  
 </div>
 
@@ -203,5 +198,20 @@
    			$(this).children('#children').css('display', 'none');
 			});
 		});
+var countdown=60; 
+function settime(val) { 
+if (countdown == 0) { 
+val.removeAttribute("disabled");    
+val.value="免费获取验证码"; 
+countdown = 60; 
+} else { 
+val.setAttribute("disabled", true); 
+val.value="重新发送(" + countdown + ")"; 
+countdown--; 
+} 
+setTimeout(function() { 
+settime(val) 
+},1000) 
+}  
 </script>
 </html>

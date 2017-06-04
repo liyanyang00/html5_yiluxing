@@ -95,15 +95,3 @@ $(document).ready(function() {
             }
         });
 });
-/****************加载显示更多，收起筛选条件***************/
-function fang(){ 
-    $("#er").css("display", "block"); 
-    $("#but").css("display", "none"); 
-    $("#but1").css("display", "block"); 
-};
-
-function shou() { 
-    $("#er").css("display", "none"); 
-    $("#but").css("display", "block"); 
-    $("#but1").css("display", "none"); 
-};
