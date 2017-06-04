@@ -91,7 +91,7 @@
                         	<ul>
                             	<li><a href="{:U('Admin/Admin/index')}">管理员列表</a></li>
                                 <li><a href="{:U('Admin/Admin/add')}">添加管理员</a></li>
-                                <li><a href="{:U('Admin/Admin/alert')}">个人密码修改</a></li>
+                                <li><a href="{:U('Admin/Admin/alter')}">个人密码修改</a></li>
                             </ul>
                         </div>
                     </div> 
@@ -114,14 +114,16 @@
                         <th>用户姓名</th>
                         <th>拥有座驾</th>
                         <th>联系电话</th>
-                        <th>所在城市</th>
                         <th>查看座驾</th>
                     </tr>
                     <volist name="usertab" id="d">
-                        <tr data-toggle="modal" data-target="#mymodal-data">
+                        <tr data-toggle="modal" data-target="#mymodal-data"onclick="postIt({$d.user_id})">
                           <td>{$d.user_id}</td>
                           <?php
-                            $where ='user_id = '.$d['inf_user_id'];
+                          	$inf = M("information");
+                          	$ids = "inf_user_id = ".$d['user_id'];
+                          	$infor = $inf->where($ids)->find();
+                            $where ='user_id = '.$d['user_id'];
                             $result = M("usertab")->where($where)->find();
 
                           ?>
@@ -132,26 +134,14 @@
                             $sql=count($result1);                           
                           ?>
                           <td>{$sql}</td>
-                          <td>{$d.user_telephone}</td>
-                          <td>{$d.inf_city}</td>
+                          <td>{$result.user_telephone}</td>
                           <td><a href="#">查看</a></td>
                         </tr>
                     </volist>
-                
                     
                     <tr class="table-bottom"> 
                         <td colspan="9" style="text-align:right">
-                        <div class="pagination" id="page">{$page}</div>
-                            <!-- <ul class="page">
-                                <li><a href="#">上一页</a></li>
-                                <li class="now"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li>...</li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">下一页</a></li>
-                                <li>共5页/48条数据 转到<input type="text" class="pageinput" placeholder="1">页</li>
-                            </ul> -->
+                            <div class="pagination" id="page">{$page}</div>
                         </td>
                     </tr>
                     <!--弹出框-->
@@ -162,12 +152,10 @@
 									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title">车辆列表</h4>
 								</div>
-								<div class="modal-body" style="overflow-y:auto;height:400px;">
-									<p class="p1 p5">车辆信息<span>车牌号</span>审核时间</p>
-                                    <p class="p2 p4"><img src="__PUBLIC__/Admin/images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
-                                     <p class="p2 p4"><img src="__PUBLIC__/Admin/images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
-                                     <p class="p2 p4"><img src="__PUBLIC__/Admin/images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
-                                     <p class="p2 p4"><img src="__PUBLIC__/Admin/images/img1.jpg" width="160" height="100"><span class="p44">雪佛兰科鲁兹</span><span>冀A12345</span>2017-01-01</p>
+								<div class="modal-body" style="overflow-y:auto;height:400px;" id="detail">
+									<p class="p1 p5">车辆信息<span>车牌号</span>所在城市</p>
+									
+                                  
                                                                        
 								</div>
 								<div class="modal-footer">
@@ -184,5 +172,23 @@
 <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/Admin/js/scripts.js"></script>
+<script type="text/javascript">
+	function postIt (res){	
+			$.post("action1.php",{	
+				id : res
+			},
+			function(data,status){	
+				var array = JSON.parse(data);
+				console.log(array);
+				$("#detail").empty();$("#detail").append("<p class='p1 p5'>车辆信息<span>车牌号</span>所在城市</p>")
+				for (var i = array.length - 1; i >= 0; i--) {
+					$("#detail").append("<p class='p2 p4'><img src='__PUBLIC__/Admin/images/img1.jpg' width='160' height='100'><span class='p44'>"+array[i]['inf_type']+"</span><span>"+array[i]['inf_carnumber']+"</span>"+array[i]['inf_province']+"/"+array[i]['inf_city']+"</p>");
+				};
+				
+				return false;
+			});
+
+		}
+</script>
 </body>
 </html>

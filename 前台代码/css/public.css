@@ -116,6 +116,7 @@ body,html{
     border-radius:4px;            /* W3C syntax */
     width: 112px;
     height: 161px;
+	border:1px solid #ececec;
 }
 
 .child li{

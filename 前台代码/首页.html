@@ -5,7 +5,17 @@
 <title>易路行</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/index.css" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<script type="text/javascript" src="js/first.js"></script>
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/set1.css" />
+<style type="text/css">
+    #xu{
+        width:90px;
+        padding-right:25px; 
+    }
+</style>
 </head>
 
 <body>
@@ -31,7 +41,7 @@
                                     <li id="xu"><a href="租车订单.html">我的订单</a></li>
                                     <li id="xu"><a href="优惠券.html">我的资产</a></li>
                                     <li id="xu"><a href="个人信息.html">我的账户</a></li>
-                                    <li><a href="login.html">退出登录</a></li>
+                                    <li style="width:90px;padding-right:25px;"><a href="login.html">退出登录</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -45,51 +55,163 @@
 <div class="content">
 	<div class="mybody">
         <div class="picshow">
-            <div class="pic">
-                <div class="pic1"><img src="images/pic01.jpg" width="839" height="485" /></div>
+            <div class="pic grid grid1" style="margin:-7px 0 0 0px;">
+                <figure class="pic1 effect-roxy" style="width:839px;height:485px;">
+                	<img src="images/pic01.jpg" width="839" height="485" />
+                    <figcaption>
+					<h2>买车太贵了，地铁又很挤，<span>怎么办？</span></h2>
+					<p>上易路行，选车约车，一步到位！再也不用担心旅途劳累，想去哪里就去哪里，来
+                    一场说走就走的旅行吧！一或二百万人民币的承租人P2P租车责任险，严
+                    格的车辆认证与丰富的座驾评价和7x24小时的路援及支持，保障您的出行安全。
+                    <a href="自驾租车.html">点此租车</a></p>
+                    
+				</figcaption>	
+                </figure>
             </div>
             
-            <div class="pic picc">
-                <div class="pic1"><img src="images/pic02.jpg" width="341" height="485" /></div>
+            <div class="pic picc grid" style="margin:-7px 0 0 20px;">
+                <figure class="pic1 effect-sadie">
+                	<img src="images/pic02.jpg" width="341" height="485" />
+                    <figcaption>
+                        <h2>百余款车型<br /><span>任意租</span></h2>
+                        <p>租什么车，租多久，在哪租，由您选择。
+我们只租放心的车。</p>
+                    </figcaption>
+                </figure>
             </div>
             
-            <div class="pic">
-                <div class="pic1"><img src="images/pic03.jpg" width="341" height="485" /></div>
+            <div class="pic grid" style="margin:-7px 0 0 5px;">
+                <figure class="pic1 effect-sadie">
+                	<img src="images/pic03.jpg" width="341" height="485" />
+                    <figcaption>
+					<div>
+						<h2>让闲置的座驾为您<br /><span>工作</span></h2>
+						<p>暂时用不到的爱车，在易路行就可以转化
+成您一个月的油费。</p>
+					</div>
+				</figcaption>
+                </figure>
             </div>
             
-            <div class="pic picc">
-                <div class="pic1"><img src="images/pic04.jpg" width="839" height="485" /></div>
+            <div class="pic picc grid grid1" style="margin:-7px 0 0 -10px;">
+                <figure class="pic1 effect-bubba" style="width:839px;height:485px;">
+                	<img src="images/pic04.jpg" width="839" height="485" />
+                    <figcaption>
+					<h2>爱车在家闲着，如何给它一个<span>完美归宿？</span></h2>
+					<p>把爱车托放在易路行平台，闲暇时间可以多一份收入。驾客实名认证与第三方个人信用评估，您
+                    来决定谁才可以租用您的爱车，完善的交易系统与独有的风控体系，保护您的爱车被正常租用！
+                    <a href="信息发布.html">点此出租</a></p>
+				</figcaption>
+                </figure>
             </div>
         </div>
         <div class="today">
-        	<h1>今日推荐</h1>
-            <h2>爆款车型特价租，给力优惠不能错过</h2>            
-            <div>
-                <div class="car">
+            <div class="jrtj">
+               <h1>今日推荐</h1>
+               <h2>爆款车型特价租，给力优惠不能错过</h2>
+            </div>
+            <div id="container">
+                <div id="list" style="left: -1200px;">
+                <div class="car" alt="1">
+                    <a href="#"><img src="images/photo.png" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car" alt="1">
+                    <a href="#"><img src="images/photo.png" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="1">
                     <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
                     <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
                     <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
                     <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
                 </div>
-                <div class="car car1">
+                <div class="car car1" alt="2">
                     <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
                     <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
                     <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
                     <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
                 </div>
-                <div class="car car1">
+                <div class="car car1" alt="3">
                     <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
                     <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
                     <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
                     <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
                 </div>
-                <div class="car car1">
+                <div class="car car1" alt="4">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="5">
+                    <a href="#"><img src="images/pic01.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="6">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="7">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="8">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="9">
+                    <a href="#"><img src="images/pic01-2.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="10">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="11">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="12">
+                    <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
+                    <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
+                    <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
+                    <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
+                </div>
+                <div class="car car1" alt="12">
                     <a href="#"><img src="images/today.jpg" width="280" height="160" /></a>
                     <p>￥&nbsp;<span>198</span>&nbsp;/天</p>
                     <h3><a href="#">大众斯柯达明锐</a><span>河北·石家庄</span></h3>
                     <h4><a href="#">操控&nbsp;自动&nbsp;|&nbsp;舒适型&nbsp;|&nbsp;5座</a></h4>
                 </div>
             </div>
+            <div id="buttons">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+                <span index="4"></span>
+            </div>
+            <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+            <a href="javascript:;" id="next" class="arrow">&gt;</a>
+        </div>
         </div>
     </div>
 </div>
@@ -99,25 +221,25 @@
         	<h1>短租自驾</h1>
             <img src="images/car1.jpg" width="200" height="130" />
             <p>一键约车，轻松取还</p>
-            <a href="#" class="button">我要约车</a>
+            <a href="自驾租车.html" class="button">我要约车</a>
         </div>
         <div class="lend lend1">
         	<h1>长期租用</h1>
             <img src="images/car2.jpg" width="200" height="130" />
             <p>长期租借，更多优惠</p>
-            <a href="#" class="button">我要约车</a>
+            <a href="自驾租车.html" class="button">我要约车</a>
         </div>
         <div class="lend lend1">
         	<h1>闲置出租</h1>
             <img src="images/car3.jpg" width="200" height="130" />
             <p>自家闲置，随时出租</p>
-            <a href="#" class="button">我要分享</a>
+            <a href="信息发布.html" class="button">我要分享</a>
         </div>
         <div class="lend lend1">
         	<h1>租车公司</h1>
             <img src="images/car4.jpg" width="200" height="130" />
             <p>更多客源，更多展示</p>
-            <a href="#" class="button">我要分享</a>
+            <a href="信息发布.html" class="button">我要分享</a>
         </div>
     </div>  
 </div>

@@ -1,0 +1,242 @@
+/************
+//租车列表页代码
+************/
+
+.content{
+	background-color: rgb(242,243,245);
+}
+.mybody2{
+	margin:0 auto;/*div居中显示*/
+	width: 1156.08px;
+}
+.middle-top{
+	background-color: white;
+	width: 1156.08px;	
+	height: 100px;
+	float: left;
+}
+.middle-left{
+	background-color: white;
+	width: 786.13px;
+	float: left;
+	margin-top: 19px;
+	margin-right: 22px;
+	margin-bottom: 25px;
+}
+.tao{
+	width:97%;
+	margin: 0 auto;
+}
+.tao2{
+	width:90%;
+	margin: 0 auto;
+	line-height:50px;
+}
+.middle-right{
+	background-color: white;
+	width:346.81px;
+	float: left;
+	margin-top: 19px;
+}
+.bread{
+	font-size: 15px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 10px;
+}
+form{
+	margin-left: 15px;
+}
+input[type=text]{
+	height: 35px;
+	width:200px;
+	border:1px solid rgb(209,208,206);
+	text-indent:1em;
+	font-size:14px;
+	margin-right: 15px;
+}
+#time{
+	width: 147px;
+}
+input[type=submit]{
+	height: 35px;
+	width:118px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    background-color:rgb(251,109,0);
+    border-color:rgb(251,109,0);
+    margin-top: 30px;
+    color: white;
+    font-family: '微软雅黑';
+    font-size: 100%;
+    font-weight: lighter;
+}
+
+/**************************************************
+//*******************筛选代码*******************
+**************************************************/
+.select {
+	padding:5px 15px;
+	border-bottom:rgb(242,243,245) 2px solid;
+	border-radius:4px;
+	/*width:60%;*/
+	margin:2% auto;
+	font-size:12px
+}
+.select li {
+	list-style:none;
+	padding:10px 0 5px 40px;
+}
+/*.select .select-list {
+	border-bottom:#eee 1px dashed;
+}*/
+.select dl {
+	zoom:1;
+	position:relative;
+	line-height:24px;
+}
+.select dl:after {
+	content:" ";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+}
+.select dt {
+	width:100px;
+	margin-bottom:5px;
+	position:absolute;
+	top:0;
+	left:-100px;
+	text-align:right;
+	height:24px;
+	line-height:24px;
+	font-size: 15px;
+}
+.select dd {
+	float:left;
+	display:inline;
+	margin:0 0 5px 5px;
+}
+.select a {
+	display:inline-block;
+	white-space:nowrap;
+	height:24px;
+	padding:0 10px;
+	text-decoration:none;
+	color:black;
+	border-radius:2px;
+}
+.select a:hover {
+	color:#f60;
+	background-color:#f3edc2
+}
+.select .selected a {
+	color:#fff;
+	background-color:#f60
+}
+.select-result dt {
+	font-weight:bold;
+}
+.select-no {
+	color:#999
+}
+.select .select-result a {
+	padding-right:20px;
+	background:#f60 url("close.gif") right 9px no-repeat
+}
+.select .select-result a:hover {
+	background-position:right -15px
+}
+
+.xv{
+	background-color:rgb(242,243,245);
+	width:97%;
+	height: 30px;
+	margin: 0 auto;
+	text-align: right;
+	font-size: 0.8em;
+	padding-top: 15px;
+	padding-right: 10px;
+}
+#qq{
+	font-size: 0.5em;
+	color: rgb(152,152,152);
+	line-height: 20px;
+}
+.tao td{
+	border-bottom: 2px solid rgb(242,243,245);
+}
+.tao td{
+	padding: 15px;
+}
+#price{
+	width: 170px;
+	text-align: center;
+	color: rgb(251,109,0);
+}
+#rent{
+	height: 35px;
+	width:85px;
+	margin-left: 20px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    background-color:rgb(251,109,0);
+    border-color:rgb(251,109,0);
+    margin-top: 10px;
+    color: white;
+    font-family: '微软雅黑';
+    font-size: 85%;
+    font-weight: lighter;
+}
+.tao2 li{
+	border-bottom:#eee 1px dashed;
+	color: rgb(152,152,152);
+	text-indent: 1em;
+}
+#page{
+	margin-left: 300px;
+	height: 90px;
+	width: 100%;
+	margin-top:45px;
+}
+#page a{
+	width: 32px;
+	height: 32px;
+	border: rgb(251,109,0) 1px solid;
+	float: left;
+	margin: 5px;
+	text-align: center;
+	color: orange;
+}
+#page a:link {
+	font-size: 20px;
+}
+#page a:hover {
+	color:white;
+	background-color:rgb(251,109,0);
+}
+a[class=selecte]{
+	color:white;
+	background-color:rgb(251,109,0);
+}
+
+.but1{
+	display:none;
+}
+#but{
+	width:46px;
+	background-color: white;
+}
+#but1{
+	width:26px;
+	background-color: white;
+}

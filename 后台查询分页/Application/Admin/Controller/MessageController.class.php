@@ -15,9 +15,9 @@ class MessageController extends Controller {
 
 		$count = $messageModel->count();// 查询满足要求的总记录数
      
-      $Page = new \Think\Page($count,2);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+      $Page = new \Think\Page($count,5);// 实例化分页类 传入总记录数和每页显示的记录数(25)
 
-      $Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+      //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
       $Page->setConfig('prev','上一页');
       $Page->setConfig('next','下一页');
       $Page->setConfig('last','末页');
@@ -39,11 +39,15 @@ class MessageController extends Controller {
 	    $value = $_GET['search_value'];
 
 	    $condition['mes_intoduce'] = array('like','%'.$value.'%');
+	    $condition['mes_username'] = array('like','%'.$value.'%');
+	    $condition['mes_telephone'] = array('like','%'.$value.'%');
+	    $condition['mes_email'] = array('like','%'.$value.'%');
+	    $condition['_logic'] = 'or';
 
 	    $count = $Model->where($condition)->count();
 
 	    $Page = new \Think\Page($count,2);        
-	    $Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+	    //$Page->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
 	    $Page->setConfig('prev','上一页');
 	    $Page->setConfig('next','下一页');
 	    $Page->setConfig('last','末页');
@@ -57,5 +61,30 @@ class MessageController extends Controller {
 	    $this->assign('page',$show);// 赋值分页输出
 	    $this->display();
     }
+	public function action(){	
+		if(IS_POST){	
+			$id = I('id');
+			$messageModel = M("message");
+			$ids = "mes_id=".$id;
+			$result = $messageModel->where($ids)->find();
+			print_r(json_encode($result));
+		}
+
+	}
+	public function reply(){	
+		$id = isset($_GET['mes_id']) ? intval($_GET['mes_id']) : '';
+		$condition = array(	
+			'mes_id' => $id
+			);
+		$mesModel = M('message');
+		$result = $mesModel->where($condition)->find();
+		$result['mes_state'] = '已回复';
+		if($mesModel->save($result)){	
+			$this->redirect('Message/index');
+		}
+		else{	
+			$this->error();
+		}
+	}
 
 }

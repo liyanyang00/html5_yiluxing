@@ -41,9 +41,8 @@
 	float:left;
 	}
 .part1{
-	position:absolute;
-	top:130px;
-	left:60px;
+	position:inherit;
+	margin:10px 20px 0 30px;
 	}
 .part2{
 	position:absolute;
@@ -149,6 +148,26 @@
 	text-indent:4px;
 	margin-top:0px;
 	}
+.left table .select{
+	width:202px;
+	height:34px;
+	}
+.left table textarea{
+	border:1px solid #ccc;
+	width:582px;
+	height:68px;
+	margin-left:12px;
+	margin-top:12px;
+	font-size:14px;
+	color:#666;
+	padding:4px;
+	margin-top:0px;
+	resize:none;
+	}
+.left table .img{
+	margin-left:5px;
+	margin-top:2px;
+	}
 .left input[type=submit]{
 	text-align:center;
 	border:1px solid #fb7611;
@@ -165,6 +184,35 @@
     border-radius:3px;            /* W3C syntax */
 	}
 .left input[type=submit]:hover{
+	background:#fb6d00;
+	border:1px solid #fb6d00;
+	color:#fff;
+	}
+.left table .title{
+	height:62px;
+	font-size:24px;
+	font-weight:bold;
+	line-height:62px;
+	background:url(../images/ture.jpg) left no-repeat;
+	text-indent:80px;
+	}
+.left table a{
+	display:block;
+	text-align:center;
+	border:1px solid #fb7611;
+	width:200px;
+	height:36px;
+	margin-left:280px;
+	margin-top:66px;
+	color:#fff;
+	font-size:14px;
+	background:#fb7611;
+	cursor:pointer;
+	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+	}
+.left table a:hover{
 	background:#fb6d00;
 	border:1px solid #fb6d00;
 	color:#fff;
@@ -187,4 +235,85 @@
 	text-indent:16px;
 	line-height:32px;
 	}
+.me_table{
+	margin:30px;
+	}
+.me_table tr th{
+	font-weight:normal;
+	text-align:right;
+	height:42px;
+	font-size:14px;
+	}
+.me_table tr td{
+	font-size:13px;
+	}
+.me_table tr td span{
+	color:#f00;
+	font-size:13px;
+	}
+.me_table input[type=text],.me_table input[type=date]{
+	border:1px solid #ccc;
+	width:200px;
+	height:32px;
+	margin-left:12px;
+	margin-top:12px;
+	font-size:14px;
+	color:#666;
+	text-indent:4px;
+	margin-top:0px;
+	}
+.me_table select{
+	border:1px solid #ccc;
+	width:202px;
+	height:34px;
+	margin-left:12px;
+	margin-top:12px;
+	font-size:14px;
+	color:#666;
+	text-indent:4px;
+	margin-top:0px;
+	}
+.me_table input[type=submit]{
+	text-align:center;
+	border:1px solid #fb7611;
+	width:200px;
+	height:36px;
+	margin-left:140px;
+	margin-top:66px;
+	color:#fff;
+	font-size:14px;
+	background:#fb7611;
+	cursor:pointer;
+	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+	}
+.me_table input[type=submit]:hover{
+	background:#fb6d00;
+	border:1px solid #fb6d00;
+	color:#fff;
+	}
+.bg h1{
+	margin:20px;
+	font-size:15px;
+	font-weight:normal;
+	}
+.message_text p{
+	margin:0 20px;
+	text-indent:2em;
+	font-size:13px;
+	line-height:24px;
+	color:#888;
+	}
 
+/******************上传**********************/
+.file-box{ position:relative;width:252px;display:inline;
+} 
+
+.add{
+	background:url(../images/+.gif) no-repeat;
+	width:252px;
+	height:160px;
+	}
+.file{ position:absolute;top:-200px;left:0px;filter:alpha(opacity:0);opacity:0;width:360px;height:210px;cursor:pointer;}
+.file1{ position:absolute;top:-106px;left:6px;filter:alpha(opacity:0);opacity:0;width:205px;height:120px;cursor:pointer;}

@@ -17,7 +17,7 @@
                 <li><a href="自驾租车.html">自驾租车</a></li>
                 <li><a href="信息发布.html">信息发布</a></li>
                 <li><a href="优惠活动.html">优惠活动</a></li>
-                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="帮助中心.html" target="_blank">帮助中心</a></li>
                 <li><a href="留言板.html">留言板</a></li>
       		</ul>
             
@@ -28,9 +28,9 @@
                             <div id="children">
                                 <div class="arrow"></div>
                                 <ul class="child">
-                                    <li id="xu"><a href="租车订单.html">我的订单</a></li>
-                                    <li id="xu"><a href="优惠券.html">我的资产</a></li>
-                                    <li id="xu"><a href="个人信息.html">我的账户</a></li>
+                                    <li id="xu"><a href="租车订单.html" target="_blank">我的订单</a></li>
+                                    <li id="xu"><a href="优惠券.html" target="_blank">我的资产</a></li>
+                                    <li id="xu"><a href="个人信息.html" target="_blank">我的账户</a></li>
                                     <li><a href="login.html">退出登录</a></li>
                                 </ul>
                             </div>
@@ -45,97 +45,131 @@
 <div class="content">
 	<div class="mybody">
        <div class="bread">
-       		<p>当前位置：<a href="首页.html">易路行</a> > <a href="添加座驾1.html">添加座驾</a> - <a href="添加座驾1.html">提交信息</a></p>
+       		<p>当前位置：<a href="首页.html">易路行</a> > <a href="添加座驾1.html">添加座驾</a> - <a href="添加座驾3.html">完善信息</a></p>
        </div>
        <div class="add_bg">
-       		<div class="part part1">
-            	<div class="cir1">1</div>&nbsp;&nbsp;提交信息
+       		<div class="partt part1">
+            	<div class="cir2">1</div>&nbsp;&nbsp;提交信息
             </div>
             <div class="partt part2">
             	<div class="cir2">2</div>&nbsp;&nbsp;认证身份
             </div>
-            <div class="partt part3">
-            	<div class="cir2">2</div>&nbsp;&nbsp;完善信息
+            <div class="part part3">
+            	<div class="cir1">3</div>&nbsp;&nbsp;完善信息
             </div>
             <div class="partt part4">
-            	<div class="cir2">2</div>&nbsp;&nbsp;信息审核
+            	<div class="cir2">4</div>&nbsp;&nbsp;信息审核
             </div>
        </div>
        <div class="left">
        		<table>
             <form>
             	<tr>
-                	<th style="width:90px">车辆牌照号</th>
+                	<th style="width:90px">颜色</th>
                     <td><input type="text" />&nbsp;&nbsp;<span>*</span></td>
-                    <td>&nbsp;</td>
+                    <th style="width:100px">车门数</th>
+                    <td><input type="text" />&nbsp;&nbsp;<span>*</span></td>
                 </tr>
                 <tr>
-                	<th>所在城市</th>
-                    <td><select>
-                    		<option>省/直辖市</option>
-                    	</select>
-                        <select>
-                    		<option>市区</option>
+                	<th>燃料类型</th>
+                    <td><select class="select">
+                    		<option>可选择</option>
                     	</select>
                         &nbsp;&nbsp;<span>*</span>
                         </td>
-                	<td>&nbsp;</td>
-                </tr>
-                <tr>
-                	<th>品牌车型</th>
-                    <td><select>
-                    		<option>请选择品牌</option>
-                    	</select>
-                        <select>
-                    		<option>请选择车系</option>
-                    	</select>
-                        <select>
-                    		<option>请选择车型</option>
+                	<th>燃油标号</th>
+                    <td><select class="select">
+                    		<option>可选择</option>
                     	</select>
                         &nbsp;&nbsp;<span>*</span>
                         </td>
-                	<td>&nbsp;</td>
                 </tr>
                 <tr>
-                	<th>排量</th>
-                    <td><input type="text" /></td>
-                    <td>&nbsp;</td>
+                	<th>驱动方式</th>
+                    <td><select class="select">
+                    		<option>前驱</option>
+                    	</select>
+                        &nbsp;&nbsp;<span>*</span>
+                        </td>
+                	<th>发动机进气形式</th>
+                    <td><select class="select">
+                    		<option>自然吸气</option>
+                    	</select>
+                        &nbsp;&nbsp;<span>*</span>
+                        </td>
                 </tr>
                 <tr>
-                	<th>注册年份</th>
-                    <td><select>
-                    		<option>请选择</option>
+                	<th>天窗</th>
+                    <td><select class="select">
+                    		<option>单天窗</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    <th>油箱容量</th>
+                    <td><select class="select">
+                    		<option>60</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                </tr>
+                <tr>
+                	<th>音箱</th>
+                    <td><select class="select">
+                    		<option>有</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    <th>真皮座椅</th>
+                    <td><select class="select">
+                    		<option>有</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                </tr>
+                <tr>
+                	<th>倒车雷达</th>
+                    <td><select class="select">
+                    		<option>有</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                        <th>气囊数量</th>
+                    <td><select class="select">
+                    		<option>6</option>
                     	</select>&nbsp;&nbsp;<span>*</span></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                	<th>已行驶里程</th>
-                    <td><input type="text" />&nbsp;&nbsp;万公里&nbsp;&nbsp;<span>*</span></td>
-                    <td>&nbsp;</td>
+                	<th>DVD/VCD</th>
+                    <td><select class="select">
+                    		<option>DVD</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    <th>GPS导航</th>
+                    <td><select class="select">
+                    		<option>有</option>
+                    	</select>&nbsp;&nbsp;<span>*</span></td>
                 </tr>
                 <tr>
-                	<th>变速箱</th>
-                    <td><select>
-                    		<option>请选择</option>
+                	<th>可抽烟</th>
+                    <td><select class="select">
+                    		<option>否</option>
                     	</select>&nbsp;&nbsp;<span>*</span></td>
                     <td>&nbsp;</td>
-                </tr>
-                <tr>
-                	<th>座位数</th>
-                    <td><select>
-                    		<option>请选择</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                	<th>出租价</th>
-                    <td><input type="text" class="text1" />&nbsp;&nbsp;元/天<input type="text" class="text1" />&nbsp;&nbsp;元/周<input type="text" class="text1" />&nbsp;&nbsp;元/月&nbsp;&nbsp;<span>*</span></td>
-                    <td>&nbsp;</td>
+                	<th>车主描述</th>
+                    <td colspan="3" rowspan="2"><textarea></textarea></td>
                 </tr>
                 <tr>
                 	<th>&nbsp;</th>
-                    <td><span class="span1">(注：推荐周租价为日租价的5倍，月租价为日租价的18倍)</span></td>
-                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                	<th>添加图片</th>
+                    <td colspan="3" rowspan="3">
+                    	<div class="img" style="margin-bottom:10px">
+                                <div class="file-box"> 
+                                     <img src="images/img_add.jpg" class="img" width="205" height="120" />
+                                     <input type="file" name="fileField" class="file1" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" accept="image/jpeg,image/gif,image/png"/><br />
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                	<td>&nbsp;</td>
+                </tr>
+                <tr>
+                	<td>&nbsp;</td>
                 </tr>
                 <tr>
                 	<th colspan="3"><input type="submit" value="提交信息" /></td>
@@ -169,24 +203,24 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html">法律解读</a></li>
-				<li><a href="押金政策.html">押金政策</a></li>
-				<li><a href="保险条款.html">保险条款</a></li>
+				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
+				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
+				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html">服务条款</a></li>
-				<li><a href="驾客协议.html">驾客协议</a></li>
-				<li><a href="车东协议.html">车东协议</a></li>
-				<li><a href="平台规则.html">平台规则</a></li>
+				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
+				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
+				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
+				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html">预定取车</a></li>
-				<li><a href="我要出租.html">我要出租</a></li>
-				<li><a href="会员服务.html">会员服务</a></li>
+				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
+				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
+				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
 			</ul>
 
 			<ul>
