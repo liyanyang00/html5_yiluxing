@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>易路行</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/person.css" rel="stylesheet" type="text/css" />
+<link href="css/lend.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="header">
+	<div class="mybody">
+    	<div class="logo"><a href="首页.html"><img src="images/logo.jpg" alt="logo" /></a></div>
+			<ul class="nav">
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="自驾租车.html">自驾租车</a></li>
+                <li><a href="信息发布.html">信息发布</a></li>
+                <li><a href="优惠活动.html">优惠活动</a></li>
+                <li><a href="帮助中心.html" target="_blank">帮助中心</a></li>
+                <li><a href="留言板.html">留言板</a></li>
+      		</ul>
+            
+			<div class="top-right2">
+				<div>
+					<ul>
+                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="images/down.gif" alt="" /></p>
+                            <div id="children">
+                                <div class="arrow"></div>
+                                <ul class="child">
+                                    <li id="xu"><a href="租车订单.html" target="_blank">我的订单</a></li>
+                                    <li id="xu"><a href="优惠券.html" target="_blank">我的资产</a></li>
+                                    <li id="xu"><a href="个人信息.html" target="_blank">我的账户</a></li>
+                                    <li><a href="login.html">退出登录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="content">
+	<div class="mybody">
+       		<div class="order">
+            	<h1>订单详情</h1>
+                <div class="detail">
+                	<p><span class="detail1">订单已生成</span>&nbsp;&nbsp;<span>请在1小时之内付款完成下单</span></p>
+                    <p style="border-top:1px solid #e3e4e6;">订单号：0000000001&nbsp;&nbsp;租车人：刘二狗&nbsp;&nbsp;租期：30天&nbsp;&nbsp;车主：刘大壮&nbsp;&nbsp;车主联系方式：13088888888</p>
+                </div>
+                <table cellspacing="0">
+                	<tr>
+                    	<th style="width:170px;">车辆信息</th>
+                        <th style="width:240px;">&nbsp;</th>
+                        <th style="width:240px;">借还时间</th>
+                        <th style="width:240px;">总价</th>
+                    </tr>
+                    <tr>
+                    	<td style="height:118px;">
+                        	<img src="images/order.jpg" width="160" height="100" alt="" />  
+                        </td>
+                        <td>
+                        	<h5>雪佛兰科鲁兹</h5>
+                            <p class="p">三厢/自动挡/乘坐5人</p>
+                            <p class="p">订单号：0000000001</p></td>
+                        <td>
+                        	<p>2017-05-05</p>
+                            <p>至</p>
+                            <p>2017-05-05</p>
+                        </td>
+                        <td><h4>￥10438元</h4></td>
+                    </tr>
+                    
+					</div>
+                </table>
+                <div class="cost">
+                	<h1>费用明细</h1>
+                    <p>车辆租赁费用<span>+198*30=<span>￥5940</span></span></p>
+                    <p>押金<span>-3000*1=<span>￥3000</span></span></p>
+                    <p>手续费<span>+98*1=<span>￥98</span></span></p>
+                    <p data-toggle="modal" data-target="#mymodal-data"><input type="checkbox" />&nbsp;保险费<span>+50*30=<span>￥1500</span></span></p>
+                    <p data-toggle="modal" data-target="#mymodal-data1"><input type="checkbox" />&nbsp;优惠券<span>-100*1=<span>￥100</span></span></p>
+                    <p><span>合计：<span>￥10438</span></span></p>
+                    <a href="#" class="pay">付款</a>
+                    <!--弹出框-->
+                    <div class="modal" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+									<h4 class="modal-title">保险介绍</h4>
+								</div>
+								<div class="modal-body" style="overflow-y:auto;height:240px;">
+									<p>&nbsp;</p>
+                                    <p>1.保险不是必须购买，不计免赔服务可根据您的需求自行选购。</p>
+                                    <p>2.易路行为客户提供不计免赔服务，购买不计免赔服务后，您无需承担保险理赔范
+                                    围内的任何损失及轮胎损失。</p>
+                                    <p>3.购买不计免赔服务可以获得更高的保险，未购买保险的客户车辆出险后，
+                                    保险理赔内的事故损失，由客户负责。如客户同时购买了不计免赔服务，则保险理赔范围
+                                    内事故损失，以及保险理赔范围外的轮胎损失，均无需客户承担。为降低您的理赔风险，建议购买。</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">已了解</button>
+                                    
+								</div>
+							</div>
+						</div>
+                	</div>
+                    <div class="modal" id="mymodal-data1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" style="width:30px;"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+									<h4 class="modal-title">优惠券选择</h4>
+								</div>
+								<div class="modal-body" style="overflow-y:auto;height:340px;">
+                                    <form>
+									<table>
+                                    	<tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                        <tr>
+                                        	<td><label><input name="yhq1" type="radio" value="" /></label></td>
+                                            <td><img src="images/yhq.jpg" /><p>有效期：2017.05.05-2017.10.05</p></td>
+                                        </tr>
+                                     </table>
+                                     </form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="button1 button2" style="margin-right:20px;">使用优惠券</button>
+                                    <button type="button" data-dismiss="modal" class="button1 button3" style="margin-right:20px;">关闭</button>
+                                    
+                                    </form>
+								</div>
+							</div>
+						</div>
+                	</div>
+                </div>
+                <div class="configure">
+                	<h1>配置信息</h1>
+                    <p><img src="images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
+                    <p><img src="images/cm.gif" width="20" height="20" alt="" />车门数：<span>4</span></p>
+                    <p><img src="images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>有</span></p>
+                    <p><img src="images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>汽油</span></p>
+                    <p><img src="images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>AT</span></p>
+                    <p><img src="images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>CD</span></p>
+                    <p><img src="images/pl.gif" width="20" height="20" alt="" />排量：<span>1598</span></p>
+                    <p><img src="images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>92-93汽油</span></p>
+                    <p><img src="images/qn.gif" width="20" height="20" alt="" />气囊：<span>4</span></p>
+                    <p><img src="images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>前驱</span></p>
+                    <p><img src="images/fdj.gif" width="20" height="20" alt="" />发动机进气形式：<span>自然吸气</span></p>
+                    <p><img src="images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>有</span></p>
+                    <p><img src="images/tc.gif" width="20" height="20" alt="" />天窗：<span>单天窗</span></p>
+                    <p><img src="images/cm.gif" width="20" height="20" alt="" />油箱容量：<span>60</span></p>
+                    <p><img src="images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
+                    <p><img src="images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
+                </div>
+            </div>
+
+            <div class="text">
+            	<h1>注意事项</h1>
+                <div class="write">
+                    <p>1.取车时，请出示以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。由车主自行核实。</p>
+                    <p>2.请您准时取车，超时取车起租时间按预定取车时间起算。</p>
+                    <p>3.车辆押金由还车后车主检查车辆完毕确认后退还。</p>
+                </div>
+            </div>
+    </div>  
+</div>
+
+<div class="footer">
+	<div class="mybody">
+    	<div class="bottom-ul">
+			<ul>
+				<li class="bottom-aa">新手上路</li>
+				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
+				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
+				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">服务规则</li>
+				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
+				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
+				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
+				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">帮助中心</li>
+				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
+				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
+				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">联系我们</li>
+				<li>客服电话：0311-88888888</li>
+				<li>客服电话：0311-88886666</li>
+			</ul>
+		</div>
+        <div class="bottom-right">
+			<img src="images/QRcode.jpg" width="99px" height="99px"/>
+			<h4>关注微信公众号</h4>
+		</div>
+    <p>Copyright©2017-2019 www.jumao.com All Rights Reserved.　易路行官网 京ICP备10005000号 京公网安备号 11010502026705</p>
+    </div>
+</div>
+</body>
+	
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+/*页头下拉菜单*/
+		$(document).ready(function($) {
+			$("li").hover(function() {
+    		$(this).children('#children').css('display', 'block');
+			}, function() {
+   			$(this).children('#children').css('display', 'none');
+			});
+		});
+</script>
+</html>
