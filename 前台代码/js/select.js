@@ -61,7 +61,7 @@ $(document).ready(function() {
             }
         }
     });
-
+/*
     $("#selectA").live("click",
     function() {
         $(this).remove();
@@ -93,7 +93,7 @@ $(document).ready(function() {
             } else {
                 $(".select-no").show();
             }
-        });
+        });*/
 });
 /****************加载显示更多，收起筛选条件***************/
 function fang(){ 

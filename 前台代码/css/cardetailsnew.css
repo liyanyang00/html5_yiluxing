@@ -60,6 +60,12 @@ img{
 #smallpic img{
 border:3px solid rgb(214,214,214);
 margin-top: 5px;
+} 
+#smallpic a{
+	width:103px;
+	height:62px;
+	float:left;	
+	margin-right: 2px;
 }
 .pb{  /*边框设置*/
     border:3px solid rgb(251,109,0);
@@ -255,4 +261,103 @@ h3{
 	color: rgb(251,109,0);
 	font-size: 25px;
 	display:inline;
+}
+input[type=submit]{
+	text-align:center;
+	border:1px solid #fb7611;
+	width:200px;
+	height:36px;
+	margin-top:12px;
+	color:#fff;
+	font-size:14px;
+	background:#fb7611;
+	cursor:pointer;
+	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+input[type=submit]:hover{
+	background:#fb6d00;
+	border:1px solid #fb6d00;
+	color:#fff;
+	}
+
+
+/************
+//筛选代码
+************/
+.select {
+	padding:5px 0px;
+	/*width:60%;*/
+	font-size:12px
+}
+.select li {
+	list-style:none;
+	padding:0px;
+}
+/*.select .select-list {
+	border-bottom:#eee 1px dashed;
+}*/
+.select dl {
+	zoom:1;
+	position:relative;
+	line-height:24px;
+}
+.select dl:after {
+	content:" ";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+}
+.select dt {
+	width:100px;
+	margin-bottom:5px;
+	position:absolute;
+	top:0;
+	left:-100px;
+	text-align:right;
+	height:24px;
+	line-height:24px;
+	font-size: 14px;
+}
+.select dd {
+	font-size:13px;
+	float:left;
+	display:inline;
+	margin:0 0 5px 5px;
+	border:1px solid #f3edc2;
+	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+}
+.select a {
+	display:inline-block;
+	white-space:nowrap;
+	height:24px;
+	padding:2px 14px;
+	text-decoration:none;
+	color:black;
+	border-radius:2px;
+}
+.select a:hover {
+	color:#f60;
+	background-color:#f3edc2;
+}
+.select .selected a {
+	color:#fff;
+	background-color:#f60
+}
+.select-result dt {
+	font-weight:bold;
+}
+.select-no {
+	color:#999
+}
+.select .select-result a {
+	padding-right:20px;
+	background:#f60 url("close.gif") right 9px no-repeat
+}
+.select .select-result a:hover {
+	background-position:right -15px
 }

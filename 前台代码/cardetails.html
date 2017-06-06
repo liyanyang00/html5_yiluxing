@@ -11,13 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="css/cardetails1.css">
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/cardetails.js"></script>
-	<script type="text/javascript" src="js/angular.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>	
+	<script src="js/jquery.simpleGal.js"></script>
 	<script type="text/javascript">
-	var app=angular.module('md1',['ng']);
-        app.controller('mc1',function($scope){
-            
-        });
+		$(document).ready(function () {
+			$('#smallpic').simpleGal({
+				mainImage: '#bigpic'
+			});
+		});
 	</script>
 </head>
 <body ng-controller="mc1">
@@ -37,7 +38,7 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="images/down.gif" alt="" id="down"/></p>
+                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="images/down.gif" alt="" id="down" /></p>
                             <div id="children">
                                 <div class="arrow"></div>
                                 <ul class="child">
@@ -59,12 +60,14 @@
 		<p class="bread">当前位置：首页>自驾租车</p>
 		<div class="middle-left">
 			<div class="picture">
-				<div><img src="images/photo.png" id="bigpic" width="421" height="240"/></div>
+				<div>
+				<img src="images/photo.png" alt="Placeholder" id="bigpic" width="421" height="240"/>
+				</div>
 				<div id="smallpic">
-					<img src="images/photo.png" width="97" height="56" id="small1" />
-					<img src="images/carlist.png" width="97" height="56" id="small1"/>
-					<img src="images/photo.png" width="97" height="56" id="small1"/>
-					<img src="images/carlist.png" width="97" height="56"/>
+					<a href="images/photo.png"><img src="images/photo.png" width="97" height="56" id="small1" /></a>
+					<a href="images/carlist.png"><img src="images/carlist.png" width="97" height="56" id="small1"/></a>
+					<a href="images/photo.png"><img src="images/photo.png" width="97" height="56" id="small1"/></a>
+					<a href="images/carlist.png"><img src="images/carlist.png" width="97" height="56"/></a>
 				</div>
 			</div>
 			<div class="pchoose">
@@ -79,7 +82,7 @@
 				<br/><br/>
 				其他&nbsp;&nbsp;&nbsp;<input ng-model="num"/>&nbsp;&nbsp;&nbsp;天
 				<br/><br/>
-				<span>费用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<p style=" color: rgb(251,109,0);font-size: 25px;display:inline;">￥98</p>元</span>
+				<span>费用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<p>￥98</p>元</span>
 				<br/><br/>
 				<input id="rent" type="submit" value="我要租">
 			</div>
