@@ -24,17 +24,25 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
@@ -63,8 +71,7 @@
        </div>
        <div class="left">
        		<table>
-            <form method="post" action="__MODULE__/Issue/addDetail">
-            <input name="user_id" value="{$_SESSION['id']}" style="display:none;">
+            <form method="post" action="__MODULE__/Issue/addDetail" enctype="multipart/form-data">
             	<tr>
                 	<th style="width:90px">颜色</th>
                     <td><input type="text" name="color"/>&nbsp;&nbsp;<span>*</span></td>
@@ -119,9 +126,9 @@
                 <tr>
                 	<th>天窗</th>
                     <td><select class="select" name="window">
-                    		<option>内藏式天窗</option>
-                            <option>外掀式天窗</option>
                             <option>全景天窗</option>
+                    		<option>内藏式天窗</option>
+                            <option>外掀式天窗</option>                           
                     	</select>&nbsp;&nbsp;<span>*</span></td>
                     <th>油箱容量</th>
                     <td><select class="select" name="tank">

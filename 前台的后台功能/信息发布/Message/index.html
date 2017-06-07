@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>易路行</title>
 <link href="__PUBLIC__/Home/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/Home/css/message.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Home/css/leave.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -15,10 +15,10 @@
 			<ul class="nav">
                 <li><a href="{:U('Index/index')}">首页</a></li>
                 <li><a href="{:U('Rent/index')}">自驾租车</a></li>
-                <li class="navnow"><a href="{:U('Issue/index')}">信息发布</a></li>
+                <li><a href="{:U('Issue/index')}">信息发布</a></li>
                 <li><a href="{:U('Special/index')}">优惠活动</a></li>
                 <li><a href="{:U('Help/index')}" target="_blank">帮助中心</a></li>
-                <li><a href="{:U('Message/index')}">留言板</a></li>
+                <li class="navnow"><a href="{:U('Message/index')}">留言板</a></li>
       		</ul>
             
 			<div class="top-right2">
@@ -28,7 +28,7 @@
                 if(!isset($user['user_name'])||$user['user_name']==''){ 
                     echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
                 }
-                else{  
+                else{   
                     $str = $user['user_name'];
                         echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
                             <div id='children'>
@@ -53,52 +53,48 @@
 <div class="content">
 	<div class="mybody">
        <div class="bread">
-       		<p>当前位置：<a href="{:U('Index/index')}">易路行</a> > <a href="添加座驾1.html">添加座驾</a> - <a href="添加座驾4.html">信息审核</a></p>
+       		<p>当前位置：<a href="{:U('Index/index')}">易路行</a> > <a href="留言板.html">留言板</a></p>
        </div>
-       <div class="add_bg">
-       		<div class="partt part1">
-            	<div class="cir2">1</div>&nbsp;&nbsp;提交信息
+       <div class="bg">
+       		<div class="left">
+            	<h1>感谢您给易路行的意见与建议！</h1>
+                <form method="post" action="__MODULE__/message/submit">
+                	<table>
+                    	<tr>
+                        	<td>意见简述：</td>
+                            <td><input type="text" name="introduce"/></td>
+                        </tr>
+                        <tr>
+                        	<td>手机号码：</td>
+                            <td><input type="text" name="telephone"/></td>
+                        </tr>
+                        <tr>
+                        	<td>电子邮箱：</td>
+                            <td><input type="text" name="email"/></td>
+                        </tr>
+                        <tr>
+                        	<td>具体描述：</td>
+                            <td rowspan="4"><textarea name="content"></textarea></td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        </tr>
+                        <input  type="text" name="publish" value="<?php echo date('Y-m-d H:i:s');?>" style="display:none;" >
+                        <tr>
+                        	<td colspan="2"><input type="submit" value="提 交" /></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
-            <div class="partt part2">
-            	<div class="cir2">2</div>&nbsp;&nbsp;认证身份
+            <div class="right">
+            	<img src="__PUBLIC__/Home/images/email.jpg" width="232" height="249" alt="" />
             </div>
-            <div class="partt part3">
-            	<div class="cir2">3</div>&nbsp;&nbsp;完善信息
-            </div>
-            <div class="part part4">
-            	<div class="cir1">4</div>&nbsp;&nbsp;信息审核
-            </div>
-       </div>
-       <div class="left left2">
-       		<table>
-            <form>
-            	<tr>
-                	<th class="title" style="height:100px;">您的车辆信息已登记，请耐心等待审核通过！</th>
-                </tr>
-                
-                <tr>
-                	<th colspan="3"><a href="{:U('Indent/myCars')}" target="_blank">查看我的座驾</a></td>
-                </tr>
-            </form>
-            </table>
-       </div>
-       <div class="right">
-       		<h1>什么样的车才可以发布？</h1>
-            <ul>
-            	<li>1.首次注册时间至今不超过10年</li>
-                <li>2.行驶里程不超过30万公里</li>
-                <li>3.有完备的证件和缴纳交强险</li>
-                <li>4.正常保养，车辆清洁</li>
-                <li>5.核心部件没有受过重大损伤</li>
-            </ul>
-            <h1>上线之前应该完善哪些信息</h1>
-            <ul>
-            	<li>1.座驾的图片，至少需要封面图</li>
-                <li>2.座驾的位置，座驾在哪里交车</li>
-                <li>3.座驾的证件，行驶证，交强险</li>
-                <li>4.座驾的租价，每天租用多少钱</li>
-                <li>5.座驾的描述，座驾介绍和特色</li>
-            </ul>
        </div>
     </div>  
 </div>

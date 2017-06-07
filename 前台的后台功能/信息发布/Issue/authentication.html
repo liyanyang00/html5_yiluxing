@@ -24,24 +24,31 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
 		</div>
     </div>
-</div>
-
+</div>     
 <div class="content">
 	<div class="mybody">
        <div class="bread">
@@ -63,7 +70,7 @@
        </div>
        <div class="left left2">
        		<table>
-            <form method="post" action="__MODULE__/Issue/upload">
+            <form method="post" action="__MODULE__/Issue/upload" enctype="multipart/form-data">
             	<tr>
                 	<th>请上传有效的身份证照片：</th>
                     <td>&nbsp;</td>
@@ -73,7 +80,7 @@
                 	<td style="height:240px;">
                             <div class="img" style="margin-bottom:10px">
                                 <div class="file-box"> 
-                                     <img src="__PUBLIC__/Home/images/add_card.jpg" width="360" height="210"/>
+                                     <img src="__PUBLIC__/Home/images/add_card.jpg" width="360" height="210" />
                                      <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" accept="image/jpeg,image/gif,image/png"/><br />
                                 </div>
                             </div>

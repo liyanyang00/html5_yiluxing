@@ -5,7 +5,6 @@
 <title>易路行</title>
 <link href="__PUBLIC__/Home/css/public.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/Home/css/message.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
@@ -24,17 +23,25 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
@@ -63,8 +70,7 @@
        </div>
        <div class="left">
        		<table>
-            <form method="post" action="__MODULE__/Issue/add">
-                <input name="user_id" value="{$_SESSION['id']}" style="display:none;">
+            <form method="post" action="__MODULE__/Issue/add">               
             	<tr>
                 	<th style="width:90px">车辆牌照号</th>
                     <td><input type="text" name="carNumber"/>&nbsp;&nbsp;<span>*</span></td>
@@ -72,11 +78,12 @@
                 </tr>
                 <tr>
                 	<th>所在城市</th>
-                    <td><select name="province">
-                    		<option>省/直辖市</option>
+                    <td>
+                    <select name="province">
+                    		<option>省/直辖市</option>                        
                     	</select>
                         <select name="city">
-                    		<option>市区</option>
+                    		<option>市区</option>                        
                     	</select>
                         &nbsp;&nbsp;<span>*</span>
                         </td>
@@ -84,7 +91,7 @@
                 </tr>
                 <tr>
                 	<th>品牌车型</th>
-                    <td><select>
+                    <td><select name="type">
                     		<option>请选择品牌</option>
                     	</select>
                         <select>
@@ -104,7 +111,8 @@
                 </tr>
                 <tr>
                 	<th>注册年份</th>
-                    <td><select>
+                    <td>
+                    <select name="register">
                     		<option>请选择</option>
                     	</select>&nbsp;&nbsp;<span>*</span></td>
                     <td>&nbsp;</td>
