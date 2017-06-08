@@ -114,8 +114,6 @@ body,html{
 	-moz-border-radius: 4px;      /* Gecko browsers圆角 */
     -webkit-border-radius: 4px;   /* Webkit browsers */
     border-radius:4px;            /* W3C syntax */
-    width: 112px;
-    height: 161px;
 	border:1px solid #ececec;
 }
 
@@ -131,6 +129,10 @@ body,html{
 	border-bottom-width: 1px;
 	border-bottom-style: dashed;
 	border-bottom-color: rgb(207,207,207);
+	width:64px;
+}
+.xu{
+	width:64px;
 }
 .child li:hover{
 	background-color: white;

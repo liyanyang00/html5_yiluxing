@@ -115,7 +115,7 @@
 	text-align:left;
 	font-size:14px;
 	}
-.left table tr td span{
+.left table tr td .red{
 	line-height:34px;
 	color:#f00;}
 .left table .span1{
@@ -196,27 +196,7 @@
 	background:url(../images/ture.jpg) left no-repeat;
 	text-indent:80px;
 	}
-.left table a{
-	display:block;
-	text-align:center;
-	border:1px solid #fb7611;
-	width:200px;
-	height:36px;
-	margin-left:280px;
-	margin-top:66px;
-	color:#fff;
-	font-size:14px;
-	background:#fb7611;
-	cursor:pointer;
-	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
-    -webkit-border-radius: 3px;   /* Webkit browsers */
-    border-radius:3px;            /* W3C syntax */
-	}
-.left table a:hover{
-	background:#fb6d00;
-	border:1px solid #fb6d00;
-	color:#fff;
-	}
+
 .right{
 	padding-bottom:30px;
 	}
