@@ -1,0 +1,100 @@
+/*
+* ###################################################
+* #                                                 #
+* #    Author: Marko Maksym                         #
+* M    WebSite: http://blognauki.in.ua/my-works/    M
+* #    Project name: MX-SLIDER                      #  
+* #    E-mail: markomaksym@gmail.com                #
+* X    Date of creation: 04.10.2016                 X
+* #    Last Modified:                               #
+* #                                                 #
+* ###################################################
+*/
+.MxSlider{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.mx-slider_wrap{
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.mx-slide{
+	position: absolute;
+	width: 100%;
+	display: table;
+	float: left;
+	left: 0%;
+}
+
+/* Navigation */
+.mx-navigation{
+	position: absolute;
+	float: left;
+	width: 100%;
+	top: 47%;
+	z-index: 888;
+}
+.mx-nav_dots{
+	position: absolute;
+	width: 100%;
+	top: 85%;
+    text-align: center;
+	z-index: 889;
+}
+.mx-nav_dots span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	font-size: 0px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border:1px solid rgb(12,42,76);
+	background-color: #fff;
+	cursor: pointer;
+}
+.mx-nav_dots span.dotActive{
+	background-color: #333;
+}
+.mx-bugs_bunny{
+		width: 740px;
+		height:270px;				
+	}
+	.mx-bugs_info{
+		position: absolute;
+		display: block;
+		max-width: 80%;
+		padding: 10px;
+		bottom: 40px;
+		background-color: rgba(39, 66, 93, 0.9);			
+	}
+	.mx-bugs_info a{				
+		font-family: 'Oswald', sans-serif;
+		color: #fff;
+		font-size: 18px;
+		text-decoration: none;
+	}
+	.mx-navigation {
+		top: 42%;
+	}
+	
+	.mx-nav_dots{
+		top: 90%;				
+	}
+	.mx-nav_dots span{
+		margin: 0px 4px;
+		border-radius: 50%;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		background-color: #fff;
+	}
+	.mx-nav_dots span.dotActive{
+		background-color: rgb(12,42,76);
+	}			

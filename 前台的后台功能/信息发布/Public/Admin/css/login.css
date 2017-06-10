@@ -1,0 +1,68 @@
+*{
+	margin:0;
+	font-family:"微软雅黑";
+	}
+html,body{height:100%} 
+.login{
+	width:100%;
+	height:100%;
+	background:url(../images/loginbg.jpg) center bottom;
+	float:left;
+	}
+.h1{
+	width:375px;
+	text-align:center;
+	height:80px;
+	line-height:80px;
+	margin:0 auto;
+	margin-top:5%; 
+	color:#394557;
+	font-size:22px;
+	font-weight:800;
+	font-family:"幼圆";
+	}
+.kuang{
+	width:375px;
+	height:310px;
+	border:4px solid #394557;
+	margin:0 auto;
+	background:#fff;
+	}
+.kuang h1{
+	background:url(../images/loginimg.gif) 0px 3px no-repeat;
+	font-size:18px;
+	color:#428bca;
+	font-weight:normal;
+	text-indent:26px;
+	margin:36px 36px 20px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ededed;
+	}
+input[type=text]{
+	width:301px;
+	height:34px;
+	border:1px solid #ccc;
+	margin-left:36px;
+	*margin-left:6px;
+	text-indent:30px;
+	background:url(../images/loginuser.jpg) 10px 12px no-repeat;
+	}
+input[type=password]{
+	width:301px;
+	height:34px;
+	border:1px solid #ccc;
+	margin-top:14px;
+	margin-left:36px;
+	text-indent:30px;
+	background:url(../images/loginpsw.jpg) 10px 9px no-repeat;
+	}
+input[type=submit]{
+	width:302px;
+	height:42px;
+	background:#428bca;
+	border:1px solid #428bca;
+	color:#fff;
+	font-size:16px;
+	margin:30px 0 0 36px;
+	cursor:pointer;
+	}

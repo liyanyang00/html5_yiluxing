@@ -1,0 +1,36 @@
+[ 2017-05-17T09:17:18+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+ERR: 无法加载模块:User
+
+[ 2017-05-17T09:46:44+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+ERR: 无法加载模块:User
+
+[ 2017-05-17T09:46:50+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载模块:Login
+
+[ 2017-05-17T09:47:59+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+ERR: 无法加载模块:Login
+
+[ 2017-05-17T09:52:48+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+ERR: 无法加载模块:User
+
+[ 2017-05-17T09:53:53+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+ERR: 无法加载模块:Login
+
