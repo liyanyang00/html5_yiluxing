@@ -6,7 +6,7 @@ class IndexController extends Controller {
     public function __construct(){  
         parent::__construct();
         if (!isset($_SESSION['id']) || $_SESSION['id']=='') {
-            $this->redirect("user/login");
+            
         }
         else{   
             $user = M('usertab');

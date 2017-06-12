@@ -24,7 +24,7 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
+                        <li><p>您好！&nbsp;{$user['user_name']}&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
                             <div id="children">
                                 <div class="arrow"></div>
                                 <ul class="child">
@@ -48,9 +48,9 @@
        		<div class="person">
             	<div class="person_head">
                 	<img src="__PUBLIC__/Home/images/user.jpg" class="head_img" width="113" height="113" alt="" />
-                    <p>刘二狗<img src="__PUBLIC__/Home/images/card.gif" alt="" /></p>
+                    <p>{$user['user_name']}<img src="__PUBLIC__/Home/images/card.gif" alt="" /></p>
                     <div class="left_1">
-                    	<a href="租车订单.html">
+                    	<a href="{:U('Indent/rentItem')}">
                     	<h4><span>1</span>单</h4>
                         <h4>未完成订单</h4></a>
                     </div>
@@ -197,24 +197,24 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
-				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
-				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+				<li><a href="{:U('Help/law')}">法律解读</a></li>
+				<li><a href="{:U('Help/cash')}">押金政策</a></li>
+				<li><a href="{:U('Help/insurance')}">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
-				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
-				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
-				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+				<li><a href="{:U('Help/service')}">服务条款</a></li>
+				<li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+				<li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+				<li><a href="{:U('Help/rule')}">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
-				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
-				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+				<li><a href="{:U('Help/reserve')}">预定取车</a></li>
+				<li><a href="{:U('Help/rent')}">我要出租</a></li>
+				<li><a href="{:U('Help/vipService')}">会员服务</a></li>
 			</ul>
 
 			<ul>

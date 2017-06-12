@@ -9,18 +9,9 @@
   	<meta name="Description" content="">
 	<link href="__PUBLIC__/Home/css/public.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/cardetails.css">
-	<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/cardetails.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/angular.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.min.js"></script>
-	<script type="text/javascript">
-	var app=angular.module('md1',['ng']);
-        app.controller('mc1',function($scope){
-            
-        });
-	</script>
+	
 </head>
-<body ng-controller="mc1">
+<body ng-app="myApp" ng-controller="myCtrl">
 <!-- logo -->
 <div class="header">
 	<div class="mybody">
@@ -37,17 +28,25 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" class="down" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
@@ -57,69 +56,107 @@
 <div class="content">
 	<div class="mybody2">
 		<div class="bread">
-       		<p>当前位置：<a href="{:U('Index/index')}">易路行</a> > <a href="自驾租车.html">自驾租车</a> > <a href="租车详情.html">租车详情</a></p>
+       		<p>当前位置：<a href="{:U('Index/index')}">易路行</a> > <a href="自驾租车.html">自驾租车</a> > <a href="{:U('Rent/detail')}">租车详情</a></p>
        </div>
-		<div class="middle-left">
+		<div class="middle-left" name="data">
 			<div class="picture">
-				<div><img src="__PUBLIC__/Home/images/photo.png" id="bigpic" width="421" height="240"/></div>
+
+				<div>
+				<?php
+					$a = $data['inf_carphoto'];
+                  	$arr = explode(",",$a);
+                  	echo "<img src='__PUBLIC__$arr[0]' alt='Placeholder'  id='bigpic' width='421' height='240'/>";
+                  	?>
+					
+				</div>
 				<div id="smallpic">
-					<img src="__PUBLIC__/Home/images/photo.png" width="97" height="56" id="small1" />
-					<img src="__PUBLIC__/Home/images/carlist.png" width="97" height="56" id="small1"/>
-					<img src="__PUBLIC__/Home/images/photo.png" width="97" height="56" id="small1"/>
-					<img src="__PUBLIC__/Home/images/carlist.png" width="97" height="56"/>
+				<?php
+					$a = $data['inf_carphoto'];
+                  	$arr = explode(",",$a);
+
+                 	foreach ($arr as $key => $value) {
+                      	echo "<a hre'__PUBLIC__$value'><img src='__PUBLIC__$value' alt=''width='97' height='56'  id='small1'></a>";
+
+                  	}
+				?>
+					
 				</div>
 			</div>
 			<div class="pchoose">
-				<p id="carname1">奇瑞QQ 2012</p>
-				<p id="descript">2012款 1.0L 手动 运动版 起航型 李先生</p>
+				<p id="carname1">{$data.inf_type} {$data.inf_register}</p>
+				<p id="descript">{$data.inf_register}款 {$data.inf_displacement} {$data.inf_gearbox} <?php 	
+				$where = "user_id=".$data['inf_user_id'];
+				$user = M('usertab')->where($where)->find();
+				if ($user['user_sex'] == '男') {
+					echo mb_substr($user['user_name'],0,1,'utf-8')."先生";
+				}
+				else{	
+					echo mb_substr($user['user_name'],0,1,'utf-8')."女士";
+				}
+				?></p>
 				<table>
+				<form method="post" action="__MODULE__/rent/wantit" >
                 	<tr>
                     	<td>选择时长：</td>
-                        <td><a href="#" class="day">1天</a><a href="#" class="day">1周</a><a href="#" class="day">1月</a></td>
+                        <td>
+                        	<input type="text" value="{$_GET['inf_id']}" name="inf_id" style="display:none" />
+                        	<ul class="select">
+                                <li class="select-list">
+                                <dl id="select3">
+                                    <dd class="selected"><a href="javascript:void(0)" ng-click="day = 1;price = {$data.inf_dayprice}">1天</a></dd>
+                                    <dd><a href="javascript:void(0)" ng-click=" day = 7 ; price = {$data.inf_weekprice}">1周</a></dd>
+                                    <dd><a href="javascript:void(0)" ng-click="day = 30; price = {$data.inf_monthprice}">1月</a></dd>
+								</dl>
+                                </li>
+                            </ul>
+
+                        </td>
                     </tr>
                     <tr>
                     	<td>&nbsp;</td>
-                        <td>其他&nbsp;&nbsp;&nbsp;<input type="text"/>&nbsp;&nbsp;&nbsp;天</td>
+                        <td>其他&nbsp;&nbsp;&nbsp;<input type="text" name="day" ng-model="day"/>&nbsp;&nbsp;&nbsp;天</td>
                     </tr>
                     <tr>
                     	<td>起租日期：</td>
-                        <td><input type="date" /></td>
+                        <td><input type="date" name="date" /></td>
                     </tr>
                     <tr>
                     	<td>费用：</td>
-                        <td><p style=" color: rgb(251,109,0);font-size: 22px;display:inline;">￥98</p>元</span></td>
+                        <td><p style=" color: rgb(251,109,0);font-size: 22px;display:inline;">
+
+                        ￥{{price}}</p>元</span></td>
                     </tr>
                     <tr>
                     	<td>&nbsp;</td>
-                        <td><a href="{:U('Rent/rentIt')}" class="rent" target="_blank">我要租</td>
+                        <td><input type="submit" value="我要租" class="button"/>
+</td>
                     </tr>
+                    </form>
                 </table>
 			</div>
 			<div class="message">
 				<div class="self">
 					<h4>个性描述</h4>
-					<p>酷酷酷酷酷酷酷酷</p>
+					<p>{$data.inf_introduce}</p>
 					<h4>配置信息</h4>
 					<div class="configure">
-                    <p><img src="__PUBLIC__/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
-                    <p><img src="__PUBLIC__/Home/images/cm.gif" width="20" height="20" alt="" />车门数：<span>4</span></p>
-                    <p><img src="__PUBLIC__/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>有</span></p>
-                    <p><img src="__PUBLIC__/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>汽油</span></p>
-                    <p><img src="__PUBLIC__/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>AT</span></p>
-                    <p><img src="__PUBLIC__/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>CD</span></p>
-                    <p><img src="__PUBLIC__/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>1598</span></p>
-                    <p><img src="__PUBLIC__/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>92-93汽油</span></p>
-                    <p><img src="__PUBLIC__/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>4</span></p>
-                    <p><img src="__PUBLIC__/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>前驱</span></p>
-                    <p><img src="__PUBLIC__/Home/images/fdj.gif" width="20" height="20" alt="" />发动机进气形式：<span>自然吸气</span></p>
-                    <p><img src="__PUBLIC__/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>有</span></p>
-                    <p><img src="__PUBLIC__/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>单天窗</span></p>
-                    <p><img src="__PUBLIC__/Home/images/cm.gif" width="20" height="20" alt="" />油箱容量：<span>60</span></p>
-                    <p><img src="__PUBLIC__/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
-                    <p><img src="__PUBLIC__/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
+                    <p><img src="__PUBLIC__/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>{$data.inf_chair}</span></p>
+                  
+                    <p><img src="__PUBLIC__/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>{$data.inf_camera}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>{$data.inf_fueltype}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>{$data.inf_gear}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>{$data.inf_dvd}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>{$data.inf_displacement}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>{$data.inf_fuelnum}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>{$data.inf_gasbag}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>{$data.inf_drivemanner}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>{$data.inf_gps}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>{$data.inf_window}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>{$data.inf_sound}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>{$data.inf_leather}</span></p>
                 </div>
 					<h4>租用事项</h4>
-					<p>车牌号：冀A*****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车辆颜色：白色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可否抽烟：否</p>
+					<p>车牌号：{$data.inf_carnumber}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车辆颜色：{$data.inf_color}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可否抽烟：{$data.inf_smoke}</p>
 					<h3>座驾评价</h3>
                     <div class="comment">
                     	<img src="__PUBLIC__/Home/images/user.jpg" width="60" height="60" />
@@ -151,12 +188,33 @@
 				<table id="comment2">
 					<tr>
 						<td><img src="__PUBLIC__/Home/images/user.jpg" width="80" height="80"></td>
-						<td id="comm2"><h4>王先生</h4><p>20次预定 &nbsp;&nbsp;8次评价</p></td>
+						<td id="comm2"><h4><?php 	
+				$where = "user_id=".$data['inf_user_id'];
+				$user = M('usertab')->where($where)->find();
+				if ($user['user_sex'] == '男') {
+					echo mb_substr($user['user_name'],0,1,'utf-8')."先生";
+				}
+				else{	
+					echo mb_substr($user['user_name'],0,1,'utf-8')."女士";
+				}
+				?></h4><p>20次预定 &nbsp;&nbsp;8次评价</p></td>
 					</tr>
 				</table>
 				<div class="tao2">
 					<p class="user">车主的其他座驾</p>
 					<table id="comment3">
+					<?php
+						$car = M('information')->where('inf_user_id='.$data['inf_user_id'])->select();
+						foreach ($car as $key => $value) {
+							echo "<tr>
+							<td><a href='#''><img src='".$value['inf_carphoto']."'></a></td>
+							<td id='comm2'>
+								<a href='#'><p id='QQ'>".$value['inf_type']."&nbsp;&nbsp;".$value['inf_register']."</p>
+								<p id='qq'>".$value['inf_type']."&nbsp;".$value['inf_displacement']."&nbsp;".$value['inf_gearbox']."</p></a>
+							</td>
+						</tr>";
+						};
+					?>
 						<tr>
 							<td><a href="#"><img src="__PUBLIC__/Home/images/today.jpg"></a></td>
 							<td id="comm2">
@@ -172,14 +230,14 @@
 							</td>
 						</tr>
 						<tr id="showdiv" style="display:none;">
-							<td><a href="#>"<img src="__PUBLIC__/Home/images/today.jpg"></a></td>
+							<td><a href="#"><img src="__PUBLIC__/Home/images/today.jpg"></a></td>
 							<td id="comm2">
 								<a href="#"><p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
 								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p></a>
 							</td>
 						</tr>
 					</table>
-					<a style="padding-left:120px;font-size:15px;" onclick="showHide()">查看更多</a>
+					<a id="a" style="padding-left:120px;font-size:15px;" onclick="showHide()">查看更多</a>
 				</div>
 			</div>
 		</div>
@@ -191,24 +249,24 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
-				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
-				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+				<li><a href="{:U('Help/law')}">法律解读</a></li>
+				<li><a href="{:U('Help/cash')}">押金政策</a></li>
+				<li><a href="{:U('Help/insurance')}">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
-				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
-				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
-				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+				<li><a href="{:U('Help/service')}">服务条款</a></li>
+				<li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+				<li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+				<li><a href="{:U('Help/rule')}">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
-				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
-				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+				<li><a href="{:U('Help/reserve')}">预定取车</a></li>
+				<li><a href="{:U('Help/rent')}">我要出租</a></li>
+				<li><a href="{:U('Help/vipService')}">会员服务</a></li>
 			</ul>
 
 			<ul>
@@ -225,4 +283,25 @@
     </div>
 </div>
 </body>
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Home/js/cardetails.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#smallpic').simpleGal({
+				mainImage: '#bigpic'
+			});
+		});
+	</script>
+<script src="__PUBLIC__/Home/js/angular.js"></script>
+<script src="__PUBLIC__/Home/js/select.js"></script>
+<script src="__PUBLIC__/Home/js/jquery.simpleGal.js"></script>
+
+<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.day = 0;
+			$scope.price = 0;
+		});
+	</script>
 </html>

@@ -24,21 +24,29 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
-		</div>
+		
     </div>
 </div>
 
@@ -113,24 +121,24 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
-				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
-				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+				<li><a href="{:U('Help/law')}">法律解读</a></li>
+				<li><a href="{:U('Help/cash')}">押金政策</a></li>
+				<li><a href="{:U('Help/insurance')}">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
-				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
-				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
-				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+				<li><a href="{:U('Help/service')}">服务条款</a></li>
+				<li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+				<li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+				<li><a href="{:U('Help/rule')}">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
-				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
-				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+				<li><a href="{:U('Help/reserve')}">预定取车</a></li>
+				<li><a href="{:U('Help/rent')}">我要出租</a></li>
+				<li><a href="{:U('Help/vipService')}">会员服务</a></li>
 			</ul>
 
 			<ul>

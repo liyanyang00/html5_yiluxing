@@ -25,57 +25,55 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
 		</div>
     </div>
-</div>
 
-<div class="content">
+
+<div class="content" name="ind">
 	<div class="mybody">
        		<div class="order">
             	<h1>生成订单</h1>
                 <div class="form">
                 	<table cellspacing="0" class="table">
-                <form method="post" action="__MODULE__/Rent/create">
-                	<tr>
-                    	<th width="100px" style="text-align:right">
-                        	起租日期：
-                        </td>
-                        <td width="200px">
-                        	<input type="date" />
-                        </td>
-                        <td width="400px">&nbsp;&nbsp;还车日期：<input type="date" /></td>
-                        
-                        <td>&nbsp;</td>
-                    </tr>
-                    
+                <form method="post" action="__MODULE__/Rent/sure">
+                	
+                    <input type="text" name="indId" value="{$_GET['ind_id']}" style="display:none">
                     <tr>
-                    	<th style="text-align:right">
+                    	<th width="100px" style="text-align:right">
                         	联系方式：
-                        </td>
-                        <td>
+                        </th>
+                        <td width="200px">
                         	<input type="text" placeholder="请输入手机号" />
                         </td>
-                        <td>&nbsp;</td>
+                        <td width="400px">&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                     	<th style="text-align:right">
                         	短信验证码：
-                        </td>
+                        </th>
                         <td>
                         	<input type="text" />
                         </td>
@@ -104,36 +102,36 @@
                     </tr>
                     <tr>
                     	<td style="height:118px;">
-                        	<img src="__PUBLIC__/Home/images/order.jpg" width="160" height="100" alt="" />  
+                        	<img src="{$ind.inf_carphoto}" width="160" height="100" alt="" />  
                         </td>
                         <td>
-                        	<h5>雪佛兰科鲁兹</h5>
-                            <p class="p">三厢/自动挡/乘坐5人</p></td>
+                        	<h5>{$ind.inf_type}</h5>
+                            <p class="p">{$ind.inf_gearbox}/{$ind.inf_displacement}/乘坐{$ind.inf_chair}人</p></td>
                         
-                    	<td><p>￥98元/天</p></td>
-                        <td><p>￥598元/周</p></td>
-                        <td><p>￥2298元/月</p></td>
-                        <td><p>否</p></td>
+                    	<td><p>￥{$ind.inf_dayprice}元/天</p></td>
+                        <td><p>￥{$ind.inf_weekprice}元/周</p></td>
+                        <td><p>￥{$ind.inf_monthprice}元/月</p></td>
+                        <td><p>{$ind.inf_add}</p></td>
                     </tr>
                 </table>
                 <div class="configure">
                 	<h1>配置信息</h1>
-                    <p><img src="__PUBLIC__/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
+                    <p><img src="__PUBLIC__/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>{$ind.inf_chair}</span></p>
                     <p><img src="__PUBLIC__/Home/images/cm.gif" width="20" height="20" alt="" />车门数：<span>4</span></p>
-                    <p><img src="__PUBLIC__/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>有</span></p>
-                    <p><img src="__PUBLIC__/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>汽油</span></p>
-                    <p><img src="__PUBLIC__/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>AT</span></p>
-                    <p><img src="__PUBLIC__/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>CD</span></p>
-                    <p><img src="__PUBLIC__/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>1598</span></p>
-                    <p><img src="__PUBLIC__/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>92-93汽油</span></p>
-                    <p><img src="__PUBLIC__/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>4</span></p>
-                    <p><img src="__PUBLIC__/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>前驱</span></p>
+                    <p><img src="__PUBLIC__/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>{$ind.inf_camera}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>{$ind.inf_fueltype}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>{$ind.inf_gear}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>{$ind.inf_dvd}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>{$ind.inf_displacement}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>{$ind.inf_fuelnum}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>{$ind.inf_gasbag}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>{$ind.inf_drivemanner}</span></p>
                     <p><img src="__PUBLIC__/Home/images/fdj.gif" width="20" height="20" alt="" />发动机进气形式：<span>自然吸气</span></p>
-                    <p><img src="__PUBLIC__/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>有</span></p>
-                    <p><img src="__PUBLIC__/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>单天窗</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>{$ind.inf_gps}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>{$ind.inf_window}</span></p>
                     <p><img src="__PUBLIC__/Home/images/cm.gif" width="20" height="20" alt="" />油箱容量：<span>60</span></p>
-                    <p><img src="__PUBLIC__/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
-                    <p><img src="__PUBLIC__/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
+                    <p><img src="__PUBLIC__/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>{$ind.inf_sound}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>{$ind.inf_leather}</span></p>
                 </div>
             </div>
 
@@ -153,26 +151,26 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
-				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
-				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+				<li><a href="{:U('Help/law')}">法律解读</a></li>
+				<li><a href="{:U('Help/cash')}">押金政策</a></li>
+				<li><a href="{:U('Help/insurance')}">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
-				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
-				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
-				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+				<li><a href="{:U('Help/service')}">服务条款</a></li>
+				<li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+				<li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+				<li><a href="{:U('Help/rule')}">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
-				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
-				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+				<li><a href="{:U('Help/reserve')}">预定取车</a></li>
+				<li><a href="{:U('Help/rent')}">我要出租</a></li>
+				<li><a href="{:U('Help/vipService')}">会员服务</a></li>
 			</ul>
-
+			
 			<ul>
 				<li class="bottom-aa">联系我们</li>
 				<li>客服电话：0311-88888888</li>

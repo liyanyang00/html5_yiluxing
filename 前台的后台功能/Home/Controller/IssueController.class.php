@@ -6,7 +6,7 @@ class IssueController extends Controller {
     public function __construct(){  
         parent::__construct();
         if (!isset($_SESSION['id']) || $_SESSION['id']=='') {
-            $this->redirect("user/login");
+           
         }
         else{   
             $user = M('usertab');
@@ -21,7 +21,7 @@ class IssueController extends Controller {
     	$this->display();
     }
     public function submit(){	
-    	$this->redirect('Issue/check');
+    	$this->redirect('Rent/detail');
     }
     public function add(){	
     	$this->redirect('Issue/authentication');

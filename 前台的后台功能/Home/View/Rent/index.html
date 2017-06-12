@@ -5,6 +5,7 @@
 <title>易路行</title>
 <link href="__PUBLIC__/Home/css/public.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/Home/css/carlist.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Home/css/page.css" rel="stylesheet" type="text/css" />
 <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
 <script src="__PUBLIC__/Home/js/select.js"></script>
 </head>
@@ -25,17 +26,25 @@
 			<div class="top-right2">
 				<div>
 					<ul>
-                        <li><p>您好！&nbsp;刘二狗&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
-                            <div id="children">
-                                <div class="arrow"></div>
-                                <ul class="child">
-                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
-                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
-                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
-                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                        <?php
+                if(!isset($user['user_name'])||$user['user_name']==''){ 
+                    echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>";
+                }
+                else{  
+                    $str = $user['user_name'];
+                        echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='__PUBLIC__/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='__MODULE__/user/logout'>退出登录</a></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>";
+                    }
+                    ?>
 					</ul>
 				</div>
 			</div>
@@ -49,10 +58,10 @@
        		<p>当前位置：<a href="{:U('Index/index')}">易路行</a> > <a href="自驾租车.html">自驾租车</a></p>
        </div>
 		<div class="middle-top">
-			<form>
+			<form method="" action="__MODULE__/Rent/search">
 				您的位置：<input type="text" name="address"/>
-				取车时间：<input id="time" type="date" name="taketime"/>
-				还车时间：<input id="time" type="date" name="returntime"/>
+				取车时间：<input id="time" type="date" name="date1"/>
+				还车时间：<input id="time" type="date" name="date2"/>
 				<input type="submit" value="搜索">
 			</form>
 		</div>
@@ -143,121 +152,27 @@
 			<a>价格从低到高</a>
 			</div>
 			<table>
+			<volist name="infor" id="e">
 				<tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
+					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="{$e.inf_carphoto}" width="150" height="92"></a></td>
 					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
+						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">{$e.inf_type}&nbsp;&nbsp;{$e.inf_register}</p>
+						<p class="qq">{$e_inf_introduce} {$e.inf_displayment} {$e.inf_gearbox} </p>
+						<p class="qq">{$e.inf_province}{$e.inf_city}</p></a>
 					</td>
 					<td class="price" style="width:240px;">
-						<p>98元/天</p>
+						<p>{$e.inf_dayprice}元/天</p>
 					</td>
 					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
+						<a href="{:U('Rent/detail')}/inf_id/{$e.inf_id}" target="_blank" class="go">我要租</a>
 					</td>
 				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
-                <tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr><tr>
-					<td style="width:160px;"><a href="{:U('Rent/detail')}" target="_blank"><img src="__PUBLIC__/Home/images/carlist.png" width="150" height="92"></a></td>
-					<td style="width:290px;">
-						<a href="{:U('Rent/detail')}" target="_blank"><p class="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
-						<p class="qq">张先生的奇瑞QQ 1.0L 手动挡 起航型</p>
-						<p class="qq">河北石家庄·裕华区</p></a>
-					</td>
-					<td class="price" style="width:240px;">
-						<p>98元/天</p>
-					</td>
-					<td style="width:130px;">
-						<a href="{:U('Rent/detail')}" target="_blank" class="go">我要租</a>
-					</td>
-				</tr>
+			</volist>
+				
+                
 			</table>
 			<div class="fan">
-				<a href="#" class="page pagenow">1</a>
-                <a href="#" class="page">2</a>
+                <div class="pagination" class="page" id="page">{$page}</div>
 			</div>
 		</div>
 		</div>
@@ -266,16 +181,16 @@
 			<div class="tao2">
 			<h1>什么样的车才可以发布？</h1>
             <ul>
-            	<li><a href="帮助中心.html" target="_blank">1.客户具备什么条件可以享受租车服务？</a></li>
-                <li><a href="帮助中心.html" target="_blank">2.哪些身份证明可以作为租车的身份证件？</a></li>
-                <li><a href="帮助中心.html" target="_blank">3.每天的租车次数有限制吗？</a></li>
-                <li><a href="帮助中心.html" target="_blank">4.还车时需要走什么手续？</a></li>
-                <li><a href="帮助中心.html" target="_blank">5.还车时油箱不满该怎么处理？</a></li>
-                <li><a href="帮助中心.html" target="_blank">6.车辆超时还车怎么计算费用？</a></li>
-                <li><a href="帮助中心.html" target="_blank">7.租用车辆必须支付保险费用吗？</a></li>
-                <li><a href="帮助中心.html" target="_blank">8.如果车辆在使用过程中出现故障该如何处理？</a></li>
-                <li><a href="帮助中心.html" target="_blank">9.怎样升级会员级别？</a></li>
-                <li><a href="帮助中心.html" target="_blank">10.会员有哪些服务？</a></li>
+            	<li><a href="{:U('Help/index')}" target="_blank">1.客户具备什么条件可以享受租车服务？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">2.哪些身份证明可以作为租车的身份证件？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">3.每天的租车次数有限制吗？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">4.还车时需要走什么手续？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">5.还车时油箱不满该怎么处理？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">6.车辆超时还车怎么计算费用？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">7.租用车辆必须支付保险费用吗？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">8.如果车辆在使用过程中出现故障该如何处理？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">9.怎样升级会员级别？</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">10.会员有哪些服务？</a></li>
             </ul>
 			</div>
 		</div>
@@ -287,24 +202,24 @@
     	<div class="bottom-ul">
 			<ul>
 				<li class="bottom-aa">新手上路</li>
-				<li><a href="法律解读.html" target="_blank">法律解读</a></li>
-				<li><a href="押金政策.html" target="_blank">押金政策</a></li>
-				<li><a href="保险条款.html" target="_blank">保险条款</a></li>
+				<li><a href="{:U('Help/law')}">法律解读</a></li>
+				<li><a href="{:U('Help/cash')}">押金政策</a></li>
+				<li><a href="{:U('Help/insurance')}">保险条款</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">服务规则</li>
-				<li><a href="服务条款.html" target="_blank">服务条款</a></li>
-				<li><a href="驾客协议.html" target="_blank">驾客协议</a></li>
-				<li><a href="车东协议.html" target="_blank">车东协议</a></li>
-				<li><a href="平台规则.html" target="_blank">平台规则</a></li>
+				<li><a href="{:U('Help/service')}">服务条款</a></li>
+				<li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+				<li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+				<li><a href="{:U('Help/rule')}">平台规则</a></li>
 			</ul>
 
 			<ul>
 				<li class="bottom-aa">帮助中心</li>
-				<li><a href="预定取车.html" target="_blank">预定取车</a></li>
-				<li><a href="我要出租.html" target="_blank">我要出租</a></li>
-				<li><a href="会员服务.html" target="_blank">会员服务</a></li>
+				<li><a href="{:U('Help/reserve')}">预定取车</a></li>
+				<li><a href="{:U('Help/rent')}">我要出租</a></li>
+				<li><a href="{:U('Help/vipService')}">会员服务</a></li>
 			</ul>
 
 			<ul>

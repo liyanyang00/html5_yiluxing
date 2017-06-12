@@ -1,0 +1,179 @@
+/************
+//帮助中心页代码
+************/
+
+.banner{
+	width:100%;
+	height: 240px;
+	text-align: center;
+	background-image: url(../images/helpcar.jpg);
+}
+
+#mybody1{
+	margin:0 auto;/*div居中显示*/
+	width:1200px;
+}
+
+#tabs ul li{
+	float: left;
+	width: 232px;
+	height: 65px;
+	border-bottom:5px;
+}
+
+#tabs ul li a:hover{
+	color: black;
+
+}
+#tabs ul{
+	padding-left: 300px;
+	height: 70px;
+	background-color: white;
+}
+#tabs {
+	width: 100%;
+
+}
+#tabs ul li a{
+	display:inline-block;
+	width:230px;
+	height:70px;
+	line-height:70px;
+	font-size:15px;
+	text-align:center;
+	}
+#tabs ul .xs{
+	background:url(../images/xs_1.jpg) 50px 26px no-repeat;
+	}
+#tabs ul .xs:hover{
+	background:url(../images/xs_2.jpg) 50px 26px no-repeat;
+	color:#444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+#tabs ul .xs1{
+	background:url(../images/xs_2.jpg) 50px 26px no-repeat;
+	color:#444444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+#tabs ul .fw{
+	background:url(../images/fw_1.jpg) 50px 26px no-repeat;
+	}
+#tabs ul .fw:hover{
+	background:url(../images/fw_2.jpg) 50px 26px no-repeat;
+	color:#444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+#tabs ul .fw1{
+	background:url(../images/fw_2.jpg) 50px 26px no-repeat;
+	color:#444444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+#tabs ul .bz{
+	background:url(../images/bz_1.jpg) 50px 26px no-repeat;
+	}
+#tabs ul .bz:hover{
+	background:url(../images/bz_2.jpg) 50px 26px no-repeat;
+	color:#444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+#tabs ul .bz1{
+	background:url(../images/bz_2.jpg) 50px 26px no-repeat;
+	color:#444444;
+	border-bottom:5px solid rgb(251,109,0);
+	}
+
+/*****************************************************
+***右侧问题列表样式**********************************
+*****************************************************/
+#accordion1{
+	width: 846px;
+	margin:0 auto 50px;
+	padding: 0;
+}
+#accordion1 h4{
+	border-bottom:1px dashed rgb(232,232,232);
+	width: 846px;
+	height: 30px;
+	padding-top: 15px;
+	font-size: 13px;
+	font-weight: 400;
+	color: gray;
+}
+#accordion1 p{
+	background-color: rgb(242,243,245);
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 28px;
+	color: gray;
+	padding:10px 14px;
+}
+.question{
+	overflow:hidden;
+	}
+/*折.叠框的高度*/
+.hei{
+	margin-top:-2px;
+	}
+
+.find h1{
+	font-weight:normal;
+	margin-top:60px;
+	float:left;
+	text-align:center;
+	width:1200px;
+	}
+.find p{
+	font-weight:normal;
+	float:left;
+	text-align:center;
+	margin-top:16px;
+	width:1200px;
+	}
+
+
+.left{
+	width:200px;
+	float:left;
+	}
+.left_nav{
+	width:200px;
+	padding-bottom:40px;
+	margin-bottom:40px;
+	margin-top:30px;
+	background:#fff;
+	}
+.left_nav h1{
+	width:200px;
+	height:38px;
+	line-height:38px;
+	font-size:15px;
+	font-weight:normal;
+	text-indent:20px;
+	border-bottom:1px solid #ececec;
+	border-top:1px solid #ececec;
+	color:#444;
+	}
+.left_nav a{
+	display:block;
+	width:200px;
+	height:40px;
+	line-height:40px;
+	text-indent:35px;
+	color:#666;
+	}
+.left_nav a:hover,.left_nav .person_now{
+	color:#fb6d00;
+	background:#fbfbfb;
+	}
+.right{
+	float:left;
+	margin-left:20px;
+	width:980px;
+	background:#fff;
+	margin-top:30px;
+	}
+.right h1{
+	margin:12px 0 0 20px;
+	font-weight:normal;
+	font-size:16px;
+	}
