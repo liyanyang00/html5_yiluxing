@@ -3,6 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>易路行</title>
+<META NAME="Generator" CONTENT="EditPlus">  
+<META NAME="Author" CONTENT="">  
+<META NAME="Keywords" CONTENT="">  
+<META NAME="Description" CONTENT="">  
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/message.css" rel="stylesheet" type="text/css" />
 
@@ -63,87 +67,111 @@
        </div>
        <div class="left">
        		<table>
-            <form>
+            <form method="post" action="" name="form1">
             	<tr>
                 	<th style="width:90px">颜色</th>
-                    <td><input type="text" />&nbsp;&nbsp;<span>*</span></td>
+                    <td><input type="text" />&nbsp;&nbsp;<span class="red">*</span></td>
                     <th style="width:100px">车门数</th>
-                    <td><input type="text" />&nbsp;&nbsp;<span>*</span></td>
+                    <td><input type="text" />&nbsp;&nbsp;<span class="red">*</span></td>
                 </tr>
                 <tr>
                 	<th>燃料类型</th>
-                    <td><select class="select">
-                    		<option>可选择</option>
-                    	</select>
-                        &nbsp;&nbsp;<span>*</span>
+                    <td><select name="province" onChange="getCity()" class="select">  
+                            <option value="0">请选择燃料</option> 
+                            <option value="汽油">汽油</option>
+                            <option value="柴油">柴油</option>
+                            <option value="车用天然气">车用天然气</option>
+                            <option value="液化石油气">液化石油气</option>
+                            <option value="醇类燃料">醇类燃料</option>
+                        </select>&nbsp;&nbsp;<span class="red">*</span>
                         </td>
                 	<th>燃油标号</th>
-                    <td><select class="select">
+                    <td><select name="city" class="select">
                     		<option>可选择</option>
-                    	</select>
-                        &nbsp;&nbsp;<span>*</span>
+                    	</select>&nbsp;&nbsp;<span class="red">*</span>
                         </td>
                 </tr>
                 <tr>
                 	<th>驱动方式</th>
                     <td><select class="select">
-                    		<option>前驱</option>
-                    	</select>
-                        &nbsp;&nbsp;<span>*</span>
+                    		<option>前置后驱</option>
+                            <option  selected = "selected" >前置前驱</option>
+                            <option>后置后驱</option>
+                            <option>中置后驱</option>
+                            <option>四轮驱动</option>
+                    	</select>&nbsp;&nbsp;<span class="red">*</span>
                         </td>
                 	<th>发动机进气形式</th>
                     <td><select class="select">
                     		<option>自然吸气</option>
-                    	</select>
-                        &nbsp;&nbsp;<span>*</span>
+                            <option>机械增压</option>
+                            <option>涡轮增压</option>
+                    	</select>&nbsp;&nbsp;<span class="red">*</span>
                         </td>
                 </tr>
                 <tr>
                 	<th>天窗</th>
                     <td><select class="select">
                     		<option>单天窗</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                            <option>双天窗</option>
+                    	</select></td>
                     <th>油箱容量</th>
                     <td><select class="select">
-                    		<option>60</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>40</option>
+                            <option  selected = "selected" >60</option>
+                            <option>80</option>
+                            <option>100</option>
+                    	</select>&nbsp;&nbsp;<span class="red">*</span></td>
                 </tr>
                 <tr>
                 	<th>音箱</th>
                     <td><select class="select">
-                    		<option>有</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>请选择</option>
+                            <option>有</option>
+                            <option>无</option>
+                    	</select></td>
                     <th>真皮座椅</th>
                     <td><select class="select">
+                    		<option>请选择</option>
                     		<option>有</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                            <option>无</option>
+                    	</select></td>
                 </tr>
                 <tr>
                 	<th>倒车雷达</th>
                     <td><select class="select">
-                    		<option>有</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>请选择</option>
+                            <option>有</option>
+                            <option>无</option>
+                    	</select></td>
                         <th>气囊数量</th>
                     <td><select class="select">
                     		<option>6</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                            <option>8</option>
+                            <option>10</option>
+                    	</select></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                 	<th>DVD/VCD</th>
                     <td><select class="select">
-                    		<option>DVD</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>请选择</option>
+                            <option>有</option>
+                            <option>无</option>
+                    	</select></td>
                     <th>GPS导航</th>
                     <td><select class="select">
-                    		<option>有</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>请选择</option>
+                            <option>有</option>
+                            <option>无</option>
+                    	</select></td>
                 </tr>
                 <tr>
                 	<th>可抽烟</th>
                     <td><select class="select">
-                    		<option>否</option>
-                    	</select>&nbsp;&nbsp;<span>*</span></td>
+                    		<option>是</option>
+                            <option  selected = "selected" >否</option>
+                    	</select>&nbsp;&nbsp;<span class="red">*</span></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -238,7 +266,8 @@
 </div>
 </body>
 	
-<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/oil.js"></script>
 <script type="text/javascript">
 /*页头下拉菜单*/
 		$(document).ready(function($) {

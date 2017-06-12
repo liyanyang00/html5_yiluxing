@@ -1,0 +1,248 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>易路行</title>
+  	<meta name="Generator" content="EditPlus">
+  	<meta name="Author" content="">
+  	<meta name="Keywords" content="">
+  	<meta name="Description" content="">
+	<link href="/easygo/Public/Home/css/public.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/easygo/Public/Home/css/cardetails.css">
+	
+</head>
+<body ng-controller="mc1">
+<!-- logo -->
+<div class="header">
+	<div class="mybody">
+    	<div class="logo"><a href="<?php echo U('Index/index');?>"><img src="/easygo/Public/Home/images/logo.jpg" alt="logo" /></a></div>
+			<ul class="nav">
+                <li><a href="<?php echo U('Index/index');?>">首页</a></li>
+                <li class="navnow"><a href="<?php echo U('Rent/index');?>">自驾租车</a></li>
+                <li><a href="<?php echo U('Issue/index');?>">信息发布</a></li>
+                <li><a href="<?php echo U('Special/index');?>">优惠活动</a></li>
+                <li><a href="<?php echo U('Help/index');?>" target="_blank">帮助中心</a></li>
+                <li><a href="<?php echo U('Message/index');?>">留言板</a></li>
+      		</ul>
+            
+			<div class="top-right2">
+				<div>
+					<ul>
+                        <?php
+ if(!isset($user['user_name'])||$user['user_name']==''){ echo "<a style='color:white' href='".U('user/login')."'>登录</a> | <a style='color:white' href='".U('user/register')."'>注册</a>"; } else{ $str = $user['user_name']; echo "<li><p>您好！&nbsp;$str&nbsp;&nbsp;&nbsp;<img src='/easygo/Public/Home/images/down.gif' alt='' /></p>
+                            <div id='children'>
+                                <div class='arrow'></div>
+                                <ul class='child'>
+                                    <li id='xu'><a href=".U('Indent/rentItem')." target='_blank'>我的订单</a></li>
+                                    <li id='xu'><a href=".U('Indent/discount')." target='_blank'>我的资产</a></li>
+                                    <li id='xu'><a href=".U('Indent/personal')." target='_blank'>我的账户</a></li>
+                                    <li id='xu' style='border:none'><a href='/easygo/index.php/Home/user/logout'>退出登录</a></li>
+                                </ul>
+                            </div>
+                        </li>"; } ?>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+<!-- 主要部分-->
+<div class="content">
+	<div class="mybody2">
+		<div class="bread">
+       		<p>当前位置：<a href="<?php echo U('Index/index');?>">易路行</a> > <a href="自驾租车.html">自驾租车</a> > <a href="<?php echo U('Rent/detail');?>">租车详情</a></p>
+       </div>
+		<div class="middle-left">
+			<div class="picture">
+				<div>
+					<img src="/easygo/Public/Home/images/photo.png" alt="Placeholder"  id="bigpic" width="421" height="240"/>
+				</div>
+				<div id="smallpic">
+					<a href="/easygo/Public/Home/images/photo.png"><img src="/easygo/Public/Home/images/photo.png" width="97" height="56" id="small1" /></a>
+					<a href="/easygo/Public/Home/images/carlist.png"><img src="/easygo/Public/Home/images/carlist.png" width="97" height="56" id="small1"/></a>
+					<a href="/easygo/Public/Home/images/photo.png"><img src="/easygo/Public/Home/images/photo.png" width="97" height="56" id="small1"/></a>
+					<a href="/easygo/Public/Home/images/carlist.png"><img src="/easygo/Public/Home/images/carlist.png" width="97" height="56"/></a>
+				</div>
+			</div>
+			<div class="pchoose">
+				<p id="carname1">奇瑞QQ 2012</p>
+				<p id="descript">2012款 1.0L 手动 运动版 起航型 李先生</p>
+				<table>
+				<form method="" action="<?php echo U('Rent/rentIt');?>">
+                	<tr>
+                    	<td>选择时长：</td>
+                        <td>
+                        	<ul class="select">
+                                <li class="select-list">
+                                <dl id="select3">
+                                    <dd><a href="javascript:void(0)">1天</a></dd>
+                                    <dd><a href="javascript:void(0)">1周</a></dd>
+                                    <dd><a href="javascript:void(0)">1月</a></dd>
+								</dl>
+                                </li>
+                            </ul>
+
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;</td>
+                        <td>其他&nbsp;&nbsp;&nbsp;<input type="text"/>&nbsp;&nbsp;&nbsp;天</td>
+                    </tr>
+                    <tr>
+                    	<td>起租日期：</td>
+                        <td><input type="date" /></td>
+                    </tr>
+                    <tr>
+                    	<td>费用：</td>
+                        <td><p style=" color: rgb(251,109,0);font-size: 22px;display:inline;">￥98</p>元</span></td>
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;</td>
+                        <td><input type="submit" value="我要租" class="button"/>
+</td>
+                    </tr>
+                    </form>
+                </table>
+			</div>
+			<div class="message">
+				<div class="self">
+					<h4>个性描述</h4>
+					<p>酷酷酷酷酷酷酷酷</p>
+					<h4>配置信息</h4>
+					<div class="configure">
+                    <p><img src="/easygo/Public/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>5</span></p>
+                    <p><img src="/easygo/Public/Home/images/cm.gif" width="20" height="20" alt="" />车门数：<span>4</span></p>
+                    <p><img src="/easygo/Public/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>有</span></p>
+                    <p><img src="/easygo/Public/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>汽油</span></p>
+                    <p><img src="/easygo/Public/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>AT</span></p>
+                    <p><img src="/easygo/Public/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>CD</span></p>
+                    <p><img src="/easygo/Public/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>1598</span></p>
+                    <p><img src="/easygo/Public/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>92-93汽油</span></p>
+                    <p><img src="/easygo/Public/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>4</span></p>
+                    <p><img src="/easygo/Public/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>前驱</span></p>
+                    <p><img src="/easygo/Public/Home/images/fdj.gif" width="20" height="20" alt="" />发动机进气形式：<span>自然吸气</span></p>
+                    <p><img src="/easygo/Public/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>有</span></p>
+                    <p><img src="/easygo/Public/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>单天窗</span></p>
+                    <p><img src="/easygo/Public/Home/images/cm.gif" width="20" height="20" alt="" />油箱容量：<span>60</span></p>
+                    <p><img src="/easygo/Public/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>6</span></p>
+                    <p><img src="/easygo/Public/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>有</span></p>
+                </div>
+					<h4>租用事项</h4>
+					<p>车牌号：冀A*****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车辆颜色：白色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可否抽烟：否</p>
+					<h3>座驾评价</h3>
+                    <div class="comment">
+                    	<img src="/easygo/Public/Home/images/user.jpg" width="60" height="60" />
+                        <div class="write">
+                        	<h5>驾客未作出评价，系统默认好评！</h5>
+                            <p>万先生&nbsp;&nbsp;2017-01-01</p>
+                        </div>
+                    </div>
+                    <div class="comment">
+                    	<img src="/easygo/Public/Home/images/user.jpg" width="60" height="60" />
+                        <div class="write">
+                        	<h5>驾客未作出评价，系统默认好评！</h5>
+                            <p>万先生&nbsp;&nbsp;2017-01-01</p>
+                        </div>
+                    </div>
+					 <div class="comment">
+                    	<img src="/easygo/Public/Home/images/user.jpg" width="60" height="60" />
+                        <div class="write">
+                        	<h5>驾客未作出评价，系统默认好评！</h5>
+                            <p>万先生&nbsp;&nbsp;2017-01-01</p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="middle-right">
+		<div class="tao">
+				<p class="user">车主信息</p>
+				<table id="comment2">
+					<tr>
+						<td><img src="/easygo/Public/Home/images/user.jpg" width="80" height="80"></td>
+						<td id="comm2"><h4>王先生</h4><p>20次预定 &nbsp;&nbsp;8次评价</p></td>
+					</tr>
+				</table>
+				<div class="tao2">
+					<p class="user">车主的其他座驾</p>
+					<table id="comment3">
+						<tr>
+							<td><a href="#"><img src="/easygo/Public/Home/images/today.jpg"></a></td>
+							<td id="comm2">
+								<a href="#"><p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p></a>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#"><img src="/easygo/Public/Home/images/today.jpg"></a></td>
+							<td id="comm2">
+								<a href="#"><p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p></a>
+							</td>
+						</tr>
+						<tr id="showdiv" style="display:none;">
+							<td><a href="#"><img src="/easygo/Public/Home/images/today.jpg"></a></td>
+							<td id="comm2">
+								<a href="#"><p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
+								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p></a>
+							</td>
+						</tr>
+					</table>
+					<a id="a" style="padding-left:120px;font-size:15px;" onclick="showHide()">查看更多</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class="footer">
+	<div class="mybody">
+    	<div class="bottom-ul">
+			<ul>
+				<li class="bottom-aa">新手上路</li>
+				<li><a href="<?php echo U('Help/law');?>">法律解读</a></li>
+				<li><a href="<?php echo U('Help/cash');?>">押金政策</a></li>
+				<li><a href="<?php echo U('Help/insurance');?>">保险条款</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">服务规则</li>
+				<li><a href="<?php echo U('Help/service');?>">服务条款</a></li>
+				<li><a href="<?php echo U('Help/passengerDeal');?>">驾客协议</a></li>
+				<li><a href="<?php echo U('Help/ownerDeal');?>">车东协议</a></li>
+				<li><a href="<?php echo U('Help/rule');?>">平台规则</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">帮助中心</li>
+				<li><a href="<?php echo U('Help/reserve');?>">预定取车</a></li>
+				<li><a href="<?php echo U('Help/rent');?>">我要出租</a></li>
+				<li><a href="<?php echo U('Help/vipService');?>">会员服务</a></li>
+			</ul>
+
+			<ul>
+				<li class="bottom-aa">联系我们</li>
+				<li>客服电话：0311-88888888</li>
+				<li>客服电话：0311-88886666</li>
+			</ul>
+		</div>
+        <div class="bottom-right">
+			<img src="/easygo/Public/Home/images/QRcode.jpg" width="99px" height="99px"/>
+			<h4>关注微信公众号</h4>
+		</div>
+    <p>Copyright©2017-2019 www.jumao.com All Rights Reserved.　易路行官网 京ICP备10005000号 京公网安备号 11010502026705</p>
+    </div>
+</div>
+</body>
+<script src="/easygo/Public/Home/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/easygo/Public/Home/js/cardetails.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#smallpic').simpleGal({
+				mainImage: '#bigpic'
+			});
+		});
+	</script>
+<script src="/easygo/Public/Home/js/select.js"></script>
+<script src="/easygo/Public/Home/js/jquery.simpleGal.js"></script>
+</html>

@@ -1,0 +1,66 @@
+[ 2017-06-06T11:02:32+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002342s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:03:37+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002495s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:03:42+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:03:43+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:03:44+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:04:04+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001612s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:11:23+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id/32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001614s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:12:48+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001049s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:14:16+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001665s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:14:33+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001150s ]
+ERR: 无法加载模块:Issue
+
+[ 2017-06-06T11:14:45+08:00 ] 127.0.0.1 /easygo/index.php/Issue/authentication/inf_id/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+ERR: 无法加载模块:Issue
+

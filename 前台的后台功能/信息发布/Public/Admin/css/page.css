@@ -1,0 +1,37 @@
+#page {
+	padding:3px;
+	margin:3px;
+	text-align:center;
+}
+#page a{
+	border:#dedfde 1px solid;
+	padding:2px 6px;
+	background-position:50% bottom;
+	color:black;
+	margin:0 3px 0 0;
+	text-decoration:none;
+}
+#page a:hover{
+	border:#000 1px solid;
+	background-image:none;
+	color:white;
+	background-color:black;
+}
+#page a:active{
+	border:#000 1px solid;
+	background-image:none;
+	color:white;
+	background-color:black;
+}
+#page span.current{
+	border:#dedfde 1px solid;
+	padding:2px 6px;
+	color:white;
+	background-color:black;
+	margin:0 3px 0 0;
+}
+#page span.disabled{
+	padding:2px 6px;
+	color:black;
+	margin:0 3px 0 0;
+} 

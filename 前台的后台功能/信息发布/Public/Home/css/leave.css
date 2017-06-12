@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:0;
+	font-family:"微软雅黑"!important;
+	}
+.bread p{
+	font-size:14px;
+	margin:14px 0;
+	}
+.bg{
+	width:1200px;
+	background:#fff;
+	overflow:hidden;
+	padding-bottom:30px;
+	margin-bottom:40px;
+	}
+.left{
+	width:870px;
+	float:left;
+	}
+.left h1{
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	margin-top:40px;
+	}
+.left form table{
+	font-size:13px;
+	margin:40px 0 40px 80px;
+	text-indent:4px;
+	}
+.left form table tr td{
+	height:40px;
+	}
+.left form input[type=text]{
+	border:1px solid #ccc;
+	width:560px;
+	height:32px;
+	margin-left:20px;
+	margin-top:12px;
+	font-size:14px;
+	color:#666;
+	text-indent:4px;
+	margin-top:0px;
+	}
+.left form textarea{
+	border:1px solid #ccc;
+	width:560px;
+	height:156px;
+	margin-left:20px;
+	font-size:14px;
+	color:#666;
+	resize:none;
+	line-height:24px;
+	text-indent:4px;
+	}
+.right{
+	width:330px;
+	float:left;
+	}
+.right img{
+	margin-top:100px;
+	}
+input[type=submit]{
+	border:1px solid #fb7611;
+	width:200px;
+	height:36px;
+	margin-left:250px;
+	margin-top:24px;
+	color:#fff;
+	font-size:14px;
+	background:#fb7611;
+	cursor:pointer;
+	-moz-border-radius: 3px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+	}
+input[type=submit]:hover{
+	background:#fb6d00;
+	border:1px solid #fb6d00;
+	color:#fff;
+	}
