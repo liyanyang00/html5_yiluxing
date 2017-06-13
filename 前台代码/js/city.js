@@ -49,6 +49,4 @@
                 sltCity[i+1]=new Option(provinceCity[i],provinceCity[i]);    
                 }    
         }    
-		
-		
              
