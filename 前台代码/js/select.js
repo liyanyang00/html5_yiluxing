@@ -61,8 +61,8 @@ $(document).ready(function() {
             }
         }
     });
-/*
-    $("#selectA").live("click",
+
+    /*$("#selectA").live("click",
     function() {
         $(this).remove();
         $("#select1 .select-all").addClass("selected").siblings().removeClass("selected");
@@ -93,22 +93,5 @@ $(document).ready(function() {
             } else {
                 $(".select-no").show();
             }
-<<<<<<< HEAD
         });*/
 });
-/****************加载显示更多，收起筛选条件***************/
-function fang(){ 
-    $("#er").css("display", "block"); 
-    $("#but").css("display", "none"); 
-    $("#but1").css("display", "block"); 
-};
-
-function shou() { 
-    $("#er").css("display", "none"); 
-    $("#but").css("display", "block"); 
-    $("#but1").css("display", "none"); 
-};
-=======
-        });
-});
->>>>>>> c524c9cf7c0f3bcef730754c651863fb008c610a
