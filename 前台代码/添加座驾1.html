@@ -3,10 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>易路行</title>
+<META NAME="Generator" CONTENT="EditPlus">  
+<META NAME="Author" CONTENT="">  
+<META NAME="Keywords" CONTENT="">  
+<META NAME="Description" CONTENT="">  
 <link href="css/public.css" rel="stylesheet" type="text/css" />
 <link href="css/message.css" rel="stylesheet" type="text/css" />
 
-<link href="css/select2.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -65,7 +68,7 @@
        </div>
        <div class="left">
        		<table>
-            <form>
+            <form method="post" action="" name="form1">
             	<tr>
                 	<th style="width:90px">车辆牌照号</th>
                     <td><input type="text" />&nbsp;&nbsp;<span class="red">*</span></td>
@@ -74,21 +77,84 @@
                 <tr>
                 	<th>所在城市</th>
                     <td>
-                    	<div class="main">
-                        <select id="loc_province" style="width:120px;">
-                        </select>
-                        <select id="loc_city" style="width:120px; margin-left: 10px">
-                        </select>
-                        <select id="loc_town" style="width:120px;margin-left: 10px">
-                        </select>
-                        </div>
+                    	<select name="province" onChange="getCity()" class="sheng">  
+                            <option value="0">请选择省份</option> 
+                            <option value="北京市">北京市</option>  
+                            <option value="广东省">广东省</option> 
+                            <option value="山东省">江苏省</option>  
+                            <option value="江苏省">福建省</option>  
+                            <option value="河南省">河南省</option>    
+                            <option value="上海市">上海市</option> 
+                            <option value="河北省">河北省</option> 
+                            <option value="浙江省">浙江省</option> 
+                            <option value="香港特别行政区">香港特别行政区</option>
+                            <option value="陕西省">陕西省</option> 
+                            <option value="湖南省">湖南省</option> 
+                            <option value="重庆市">重庆市</option> 
+                            <option value="福建省">福建省</option>
+                            <option value="天津市">天津市</option> 
+                            <option value="云南省">云南省</option> 
+                            <option value="四川省">四川省</option> 
+                            <option value="广西壮族自治区">广西壮族自治区</option>
+                            <option value="安徽省">安徽省</option> 
+                            <option value="海南省">海南省</option> 
+                            <option value="江西省">江西省</option> 
+                            <option value="湖北省">湖北省</option>
+                            <option value="山西省">山西省</option> 
+                            <option value="辽宁省">辽宁省</option> 
+                            <option value="台湾省">台湾省</option> 
+                            <option value="黑龙江">黑龙江</option>
+                            <option value="内蒙古自治区">内蒙古自治区</option> 
+                            <option value="澳门特别行政区">澳门特别行政区</option> 
+                            <option value="贵州省">贵州省</option> 
+                            <option value="甘肃省">甘肃省</option>
+                            <option value="青海省">青海省</option> 
+                            <option value="新疆维吾尔自治区">新疆维吾尔自治区</option> 
+                            <option value="西藏自治区">西藏自治区</option> 
+                            <option value="吉林省">吉林省</option>
+                            <option value="宁夏回族自治区">宁夏回族自治区</option>
+                        </SELECT>    
+                        <SELECT NAME="city" class="sheng" style="margin-left:10px;">    
+                            <OPTION VALUE="0">请选择城市</OPTION>    
+                        </SELECT>&nbsp;&nbsp;<span class="red">*</span>
                         </td>
                 	<td>&nbsp;</td>
                 </tr>
                 <tr>
                 	<th>品牌车型</th>
                     <td>
-                        &nbsp;&nbsp;<span class="red">*</span>
+                        <select name="provincee" onChange="set_cityy(this, this.form.cityy);" class="sheng">
+                        <option value="0">请选择品牌</option>
+                        <option value="奥迪">奥迪</option>
+                        <option value="奥克斯">奥克斯</option>
+                        <option value="阿尔法·罗米欧">阿尔法·罗米欧</option>
+                        <option value="阿斯顿·马丁">阿斯顿·马丁</option>
+                        <option value="奔驰">奔驰</option>
+                        <option value="宝马">宝马</option>
+                        <option value="标致">标致</option>
+                        <option value="北汽制造">北汽制造</option>
+                        <option value="比亚迪">比亚迪</option>
+                        <option value="本田">本田</option>
+                        <option value="奔腾">奔腾</option>
+                        <option value="宝龙">宝龙</option>
+                        <option value="保时捷">保时捷</option>
+                        <option value="宾利">宾利</option>
+                        <option value="别克">别克</option>
+                        <option value="布嘉迪">布嘉迪</option>
+                        <option value="宝骏">宝骏</option>
+                        <option value="北汽威旺">北汽威旺</option>
+                        <option value="巴博斯">巴博斯</option>
+                        <option value="长城">长城</option>
+                        <option value="昌河">昌河</option>
+                        <option value="长丰">长丰</option>
+                        <option value="大众">大众</option>
+                        <option value="东风">东风</option>
+                        <option value="东南">东南</option>
+                        </select>
+                        <select   name="cityy" id="citys" style="margin-left:10px;" class="sheng">
+                        <option value="0">请选择车系</option>
+                        </select>&nbsp;&nbsp;<span class="red">*</span>
+                        
                         </td>
                 	<td>&nbsp;</td>
                 </tr>
@@ -100,7 +166,24 @@
                 <tr>
                 	<th>注册年份</th>
                     <td><select>
-                    		<option>请选择</option>
+                    		<option>2000年</option>
+                            <option>2001年</option>
+                            <option>2002年</option>
+                            <option>2003年</option>
+                            <option>2004年</option>
+                            <option>2005年</option>
+                            <option>2006年</option>
+                            <option>2007年</option>
+                            <option>2008年</option>
+                            <option>2009年</option>
+                            <option  selected = "selected" >2010年</option>
+                            <option>2011年</option>
+                            <option>2012年</option>
+                            <option>2013年</option>
+                            <option>2014年</option>
+                            <option>2015年</option>
+                            <option>2016年</option>
+                            <option>2017年</option>
                     	</select>&nbsp;&nbsp;<span class="red">*</span></td>
                     <td>&nbsp;</td>
                 </tr>
@@ -112,14 +195,19 @@
                 <tr>
                 	<th>变速箱</th>
                     <td><select>
-                    		<option>请选择</option>
+                    		<option>手动挡</option>
+                            <option>自动挡</option>
                     	</select>&nbsp;&nbsp;<span class="red">*</span></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                 	<th>座位数</th>
                     <td><select>
-                    		<option>请选择</option>
+                    		<option>2座</option>
+                            <option>4座</option>
+                            <option  selected = "selected" >5座</option>
+                            <option>7座</option>
+                            <option>9座及以上</option>
                     	</select>&nbsp;&nbsp;<span class="red">*</span></td>
                     <td>&nbsp;</td>
                 </tr>
@@ -202,11 +290,8 @@
 	
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-
-<script type="text/javascript" src="js/location.js"></script>
-<script type="text/javascript" src="js/select2.js"></script>
-<script type="text/javascript" src="js/select2_locale_zh-CN.js"></script>
-<script type="text/javascript" src="js/area.js"></script>
+<script type="text/javascript" src="js/car.js"></script>
+<script type="text/javascript" src="js/city.js"></script>
 <script type="text/javascript">
 /*页头下拉菜单*/
 		$(document).ready(function($) {

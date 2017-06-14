@@ -139,7 +139,7 @@
 	}
 .left table select{
 	border:1px solid #ccc;
-	width:120px;
+	width:140px;
 	height:34px;
 	margin-left:12px;
 	margin-top:12px;
@@ -196,6 +196,10 @@
 	background:url(../images/ture.jpg) left no-repeat;
 	text-indent:80px;
 	}
+.left table .sheng{
+	width:140px;
+	}
+
 
 .right{
 	padding-bottom:30px;
