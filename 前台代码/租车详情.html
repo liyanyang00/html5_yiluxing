@@ -11,24 +11,17 @@
 	<link rel="stylesheet" type="text/css" href="css/cardetails.css">
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/cardetails.js"></script>
-	<script type="text/javascript" src="js/angular.js"></script>	
-	<script src="js/jquery.simpleGal.js"></script>
-	<script type="text/javascript">
-<<<<<<< HEAD
-		$(document).ready(function () {
-			$('#smallpic').simpleGal({
-				mainImage: '#bigpic'
-			});
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/select.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.day = 1;
 		});
-=======
-	var app=angular.module('md1',['ng']);
-        app.controller('mc1',function($scope){
-            
-        });
->>>>>>> c524c9cf7c0f3bcef730754c651863fb008c610a
 	</script>
 </head>
-<body ng-controller="mc1">
+<body ng-app="myApp" ng-controller="myCtrl">
 <!-- logo -->
 <div class="header">
 	<div class="mybody">
@@ -69,27 +62,36 @@
        </div>
 		<div class="middle-left">
 			<div class="picture">
-				<div>
-				<img src="images/photo.png" alt="Placeholder" id="bigpic" width="421" height="240"/>
-				</div>
+				<div><img src="images/photo.png" id="bigpic" width="421" height="240"/></div>
 				<div id="smallpic">
-					<a href="images/photo.png"><img src="images/photo.png" width="97" height="56" id="small1" /></a>
-					<a href="images/carlist.png"><img src="images/carlist.png" width="97" height="56" id="small1"/></a>
-					<a href="images/photo.png"><img src="images/photo.png" width="97" height="56" id="small1"/></a>
-					<a href="images/carlist.png"><img src="images/carlist.png" width="97" height="56"/></a>
+					<img src="images/photo.png" width="97" height="56" id="small1" />
+					<img src="images/carlist.png" width="97" height="56" id="small1"/>
+					<img src="images/photo.png" width="97" height="56" id="small1"/>
+					<img src="images/carlist.png" width="97" height="56"/>
 				</div>
 			</div>
 			<div class="pchoose">
 				<p id="carname1">奇瑞QQ 2012</p>
 				<p id="descript">2012款 1.0L 手动 运动版 起航型 李先生</p>
 				<table>
+                <form action="我要租.html">
                 	<tr>
                     	<td>选择时长：</td>
-                        <td><a href="#" class="day">1天</a><a href="#" class="day">1周</a><a href="#" class="day">1月</a></td>
+                        <td>
+                        	<ul class="select">
+                                <li class="select-list">
+                                <dl id="select3">
+                                    <dd class="selected"><a href="javascript:void(0)" ng-click="day = 1">1天</a></dd>
+                                    <dd><a href="javascript:void(0)" ng-click="day = 7">1周</a></dd>
+                                    <dd><a href="javascript:void(0)" ng-click="day = 30">1月</a></dd>
+								</dl>
+                                </li>
+                            </ul>
+                        </td>
                     </tr>
                     <tr>
                     	<td>&nbsp;</td>
-                        <td>其他&nbsp;&nbsp;&nbsp;<input type="text"/>&nbsp;&nbsp;&nbsp;天</td>
+                        <td>其他&nbsp;&nbsp;&nbsp;<input type="text" ng-model="day"/>&nbsp;&nbsp;&nbsp;天</td>
                     </tr>
                     <tr>
                     	<td>起租日期：</td>
@@ -97,12 +99,13 @@
                     </tr>
                     <tr>
                     	<td>费用：</td>
-                        <td><p style=" color: rgb(251,109,0);font-size: 22px;display:inline;">￥98</p>元</span></td>
+                        <td><p style=" color: rgb(251,109,0);font-size: 22px;display:inline;">￥{{day * 98}}</p>元</span></td>
                     </tr>
                     <tr>
                     	<td>&nbsp;</td>
-                        <td><a href="我要租.html" class="rent" target="_blank">我要租</td>
+                        <td><input type="submit" value="我要租" class="button"/></td>
                     </tr>
+                    </form>
                 </table>
 			</div>
 			<div class="message">
@@ -182,7 +185,7 @@
 							</td>
 						</tr>
 						<tr id="showdiv" style="display:none;">
-							<td><a href="#>"<img src="images/today.jpg"></a></td>
+							<td><a href="#"><img src="images/today.jpg"></a></td>
 							<td id="comm2">
 								<a href="#"><p id="QQ">奇瑞QQ&nbsp;&nbsp;2012</p>
 								<p id="qq">奇瑞QQ 1.0L 手动挡 起航型</p></a>
