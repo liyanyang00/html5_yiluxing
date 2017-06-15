@@ -1,0 +1,27 @@
+[ 2017-05-25T08:19:18+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009765s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-05-25T14:41:59+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009615s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-05-25T15:07:13+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载控制器:Index
+

@@ -1,0 +1,37 @@
+#page {
+	padding:3px;
+	margin:3px;
+	text-align:center;
+}
+#page a{
+	border:#fb6d00 1px solid;
+	padding:8px 13px;
+	background-position:50% bottom;
+	color:rgb(251,109,0);
+	margin:0 3px 0 0;
+	text-decoration:none;
+}
+#page a:hover{
+	border: 1px solid;
+	background-image:none;
+	color:white;
+	background-color:rgb(251,109,0);
+}
+#page a:active{
+	border: 1px solid;
+	background-image:none;
+	color:white;
+	background-color:rgb(251,109,0);
+}
+#page span.current{
+	border:#fb6d00 1px solid;
+	padding:7px 13px;
+	color:white;
+	background-color:rgb(251,109,0);
+	margin:0 3px 0 0;
+}
+#page span.disabled{
+	padding:8px 13px;
+	color:rgb(251,109,0);
+	margin:0 3px 0 0;
+} 

@@ -1,0 +1,140 @@
+[ 2017-06-07T10:32:58+08:00 ] 127.0.0.1 /easygo/easygo/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+
+[ 2017-06-07T10:32:58+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2017-06-07T10:33:05+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.0613s ]
+SQL: SELECT * FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2017-06-07T10:33:06+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Indent/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0243s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id   [ RunTime:0.0653s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id  ORDER BY ind_id LIMIT 0,5   [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0229s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 2 ) LIMIT 1   [ RunTime:0.0269s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 3 ) LIMIT 1   [ RunTime:0.0018s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2017-06-07T10:33:11+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Cars/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0259s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `information` LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `usertab` INNER JOIN information on information.inf_user_id = usertab.user_id  ORDER BY inf_id LIMIT 0,5   [ RunTime:0.0709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001627s ]
+
+[ 2017-06-07T10:33:17+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Cars/check/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `information` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `usertab` INNER JOIN information on information.inf_user_id = usertab.user_id  ORDER BY inf_id LIMIT 5,5   [ RunTime:0.0174s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2017-06-07T10:33:23+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Cars/check/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0265s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `information` LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `usertab` INNER JOIN information on information.inf_user_id = usertab.user_id  ORDER BY inf_id LIMIT 0,5   [ RunTime:0.0148s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001127s ]
+

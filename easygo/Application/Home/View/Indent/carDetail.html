@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>易路行</title>
+<link href="__PUBLIC__/Home/css/public.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Home/css/person.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div class="header">
+    <div class="mybody">
+        <div class="logo"><a href="{:U('Rent/index')}"><img src="__PUBLIC__/Home/images/logo.jpg" alt="logo" /></a></div>
+            <ul class="nav">
+                <li><a href="{:U('Index/index')}">首页</a></li>
+                <li><a href="{:U('Rent/index')}">自驾租车</a></li>
+                <li><a href="{:U('Issue/index')}">信息发布</a></li>
+                <li><a href="{:U('Special/index')}">优惠活动</a></li>
+                <li><a href="{:U('Help/index')}" target="_blank">帮助中心</a></li>
+                <li><a href="{:U('Message/index')}">留言板</a></li>
+            </ul>
+            
+            <div class="top-right2">
+                <div>
+                    <ul>
+                        <li><p>您好！&nbsp;{$user['user_name']}&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/Home/images/down.gif" alt="" /></p>
+                            <div id="children">
+                                <div class="arrow"></div>
+                                <ul class="child">
+                                    <li id="xu"><a href="{:U('Indent/rentItem')}" target="_blank">我的订单</a></li>
+                                    <li id="xu"><a href="{:U('Indent/discount')}" target="_blank">我的资产</a></li>
+                                    <li id="xu"><a href="{:U('Indent/personal')}" target="_blank">我的账户</a></li>
+                                    <li><a href="__MODULE__/user/logout">退出登录</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="mybody">
+       <div class="left">
+            <div class="person">
+                <div class="person_head">
+                    <img src="__PUBLIC__/{$user.user_head}" class="head_img" width="113" height="113" alt="" />
+                    <p>{$user['user_name']}<img src="__PUBLIC__/Home/images/card.gif" alt="" /></p>
+                    <div class="left_1">
+                        <a href="{:U('Indent/rentItem')}">
+                        <h4><span>{$count1}</span>单</h4>
+                        <h4>未完成订单</h4></a>
+                    </div>
+                    <div class="left_2">
+                        <a href="{:U('Indent/discount')}">
+                        <h4><span>{$discount}</span>张</h4>
+                        <h4>优惠券</h4></a>
+                    </div>
+                </div>
+            </div>
+            <div class="left_nav">
+                <h1>我的订单</h1>
+                <a href="{:U('Indent/rentItem')}">租车订单({$count})</a>
+                <a href="{:U('Indent/shareItem')}">出租订单({$count2})</a>
+                <h1>我的资产</h1>
+                <a href="{:U('Indent/discount')}">优惠券</a>
+                <a href="{:U('Indent/bankCard')}">银行卡</a>
+                <h1>我的账户</h1>
+                <a href="{:U('Indent/personal')}">个人信息</a>
+                <a href="{:U('Indent/alterPwd')}">修改密码</a>
+                <a href="{:U('Indent/myCars')}" class="person_now">我的座驾</a>
+                <h1>我的会员</h1>
+                <a href="{:U('Indent/vipLevel')}">会员等级</a>
+                <a href="{:U('Indent/vipSystem')}">会员制度</a>
+            </div>
+       </div>
+       
+       <div class="right">
+            <div class="order">
+                <h1>座驾详情</h1>
+                <table cellspacing="0">
+                    <tr>
+                        <th style="width:170px;">车辆信息</th>
+                        <th style="width:240px;">&nbsp;</th>
+                        <th style="width:200px;">车辆状态</th>
+                        <th style="width:200px;">借还时间</th>
+                        <th style="width:200px;">租车价格</th>
+                    </tr>
+
+                    <?php
+                        $a = $data['inf_carphoto'];
+                        $arr = explode(",",$a);
+                    ?>
+                        <td style="height:118px;">
+                            <img src="__PUBLIC__{$arr[0]}" width="160" height="100" alt="" />  
+                        </td>
+                        <td>
+                            <h5>{$data.inf_type}</h5>
+                            <p class="p">{$data.inf_introduce}</p>
+                        <td>
+                            <p>{$data.inf_carstate}</p>
+                        </td>
+                        <td>
+                            <p>{$data.ind_startdate}</p>
+                            <p>--</p>
+                            <p>{$data.ind_enddate}</p>
+                        </td>
+                        <td><p>￥{$data.inf_dayprice}元/天</p>
+                        <p>￥{$data.inf_weekprice}元/周</p>
+                        <p>￥{$data.inf_monthprice}元/月</p></td>
+                </table>
+                <div class="configure">
+                    <h1>配置信息</h1>
+                    <p><img src="__PUBLIC__/Home/images/zws.gif" width="20" height="20" alt="" />座位数：<span>{$data.inf_chair}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/ld.gif" width="20" height="20" alt="" />倒车雷达：<span>{$data.inf_camera}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/rl.gif" width="20" height="20" alt="" />燃料类型：<span>{$data.inf_fueltype}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/bs.gif" width="20" height="20" alt="" />变速箱类型：<span>{$data.inf_gearbox}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dvd.gif" width="20" height="20" alt="" />DVD/CD：<span>{$data.inf_dvd}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/pl.gif" width="20" height="20" alt="" />排量：<span>{$data.inf_displacement}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/ry.gif" width="20" height="20" alt="" />燃油标号：<span>{$data.inf_fuelnum}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qn.gif" width="20" height="20" alt="" />气囊：<span>{$data.inf_gasbag}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/qd.gif" width="20" height="20" alt="" />驱动方式：<span>{$data.inf_drivemanner}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/dh.gif" width="20" height="20" alt="" />GPS导航：<span>{$data.inf_gps}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/tc.gif" width="20" height="20" alt="" />天窗：<span>{$data.inf_window}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/yx1.gif" width="20" height="20" alt="" />音箱：<span>{$data.inf_sound}</span></p>
+                    <p><img src="__PUBLIC__/Home/images/zy.gif" width="20" height="20" alt="" />真皮座椅：<span>{$data.inf_leather}</span></p>
+                </div>
+                <div class="change">
+                    <p>修改价格：</p>
+                    <form action="__MODULE__/Indent/change" method="post"> 
+                    <input type="text" name="inf_id" value="{$_GET['inf_id']}" style="display:none"/>
+                        日租价：<input type="text" name="day" placeholder="" />&nbsp;元/日<br />
+                        月租价：<input type="text" name="week" placeholder="" />&nbsp;元/周<br />
+                        年租价：<input type="text" name="month" placeholder="" />&nbsp;元/月<br />
+                        <input type="submit" value="保存" />
+                    </form>
+                </div>
+            </div>
+            
+
+            <div class="text">
+                <h1>注意事项</h1>
+                <div class="write">
+                    <p>1.取车时，请检查租车人以下证件的原件：本人二代身份证、本人国内有效驾驶证正副本、本人一张信用及可用额度均不低于3000元的国内有效信用卡，所有证件有效期须至少超过当次租期的一个月以上。</p>
+                    <p>2.请您准时送车，超时送车造成的一切损失由车主承担。</p>
+                    <p>3.车辆归还之后请仔细检查车辆有无破损以及其他问题，如有请及时与租客沟通，订单结束之后发现的损失由车主承担。</p>
+                </div>
+            </div>
+       </div>
+    </div>  
+</div>
+
+<div class="footer">
+    <div class="mybody">
+        <div class="bottom-ul">
+            <ul>
+                <li class="bottom-aa">新手上路</li>
+                <li><a href="{:U('Help/law')}">法律解读</a></li>
+                <li><a href="{:U('Help/cash')}">押金政策</a></li>
+                <li><a href="{:U('Help/insurance')}">保险条款</a></li>
+            </ul>
+
+            <ul>
+                <li class="bottom-aa">服务规则</li>
+                <li><a href="{:U('Help/service')}">服务条款</a></li>
+                <li><a href="{:U('Help/passengerDeal')}">驾客协议</a></li>
+                <li><a href="{:U('Help/ownerDeal')}">车东协议</a></li>
+                <li><a href="{:U('Help/rule')}">平台规则</a></li>
+            </ul>
+
+            <ul>
+                <li class="bottom-aa">帮助中心</li>
+                <li><a href="{:U('Help/reserve')}">预定取车</a></li>
+                <li><a href="{:U('Help/rent')}">我要出租</a></li>
+                <li><a href="{:U('Help/vipService')}">会员服务</a></li>
+            </ul>
+
+            <ul>
+                <li class="bottom-aa">联系我们</li>
+                <li>客服电话：0311-88888888</li>
+                <li>客服电话：0311-88886666</li>
+            </ul>
+        </div>
+        <div class="bottom-right">
+            <img src="__PUBLIC__/Home/images/QRcode.jpg" width="99px" height="99px"/>
+            <h4>关注微信公众号</h4>
+        </div>
+    <p>Copyright©2017-2019 www.jumao.com All Rights Reserved.　易路行官网 京ICP备10005000号 京公网安备号 11010502026705</p>
+    </div>
+</div>
+</body>
+    
+<script src="__PUBLIC__/Home/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*页头下拉菜单*/
+        $(document).ready(function($) {
+            $("li").hover(function() {
+            $(this).children('#children').css('display', 'block');
+            }, function() {
+            $(this).children('#children').css('display', 'none');
+            });
+        });
+</script>
+</html>

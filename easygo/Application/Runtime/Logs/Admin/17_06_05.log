@@ -1,0 +1,243 @@
+[ 2017-06-05T14:41:54+08:00 ] 127.0.0.1 /easygo/easygo/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+
+[ 2017-06-05T14:41:54+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-06-05T14:41:57+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.1089s ]
+SQL: SELECT * FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0105s ]
+
+[ 2017-06-05T14:41:58+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.0564s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `administrator` LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT * FROM `administrator` ORDER BY adm_id LIMIT 0,5   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001740s ]
+
+[ 2017-06-05T14:42:07+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/action.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.0243s ]
+SQL: SELECT * FROM `administrator` WHERE ( adm_id=11 ) LIMIT 1   [ RunTime:0.0418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2017-06-05T14:42:10+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Cars/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0565s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `information` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0253s ]
+SQL: SELECT * FROM `usertab` INNER JOIN information on information.inf_user_id = usertab.user_id  ORDER BY inf_id LIMIT 0,5   [ RunTime:0.0711s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2017-06-05T14:42:16+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Indent/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0304s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id  ORDER BY ind_id LIMIT 0,5   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0232s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 2 ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 3 ) LIMIT 1   [ RunTime:0.0028s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001090s ]
+
+[ 2017-06-05T14:43:27+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Indent/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `indent` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `indent` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `indent` left JOIN information on information.inf_id = indent.inf_id left JOIN usertab on usertab.user_id=information.inf_user_id  ORDER BY ind_id LIMIT 0,5   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `usertab` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 2 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `usertab` WHERE ( user_id = 3 ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001347s ]
+
+[ 2017-06-05T16:25:31+08:00 ] 127.0.0.1 /easygo/easygo/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+
+[ 2017-06-05T16:25:31+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2017-06-05T16:25:34+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.0337s ]
+SQL: SELECT * FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `administrator` WHERE `adm_username` = 'admin' AND `adm_password` = 'admin' LIMIT 1   [ RunTime:0.0018s ]
+
+[ 2017-06-05T16:25:35+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `administrator` [ RunTime:0.0274s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `administrator` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `administrator` ORDER BY adm_id LIMIT 0,5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001728s ]
+
+[ 2017-06-05T16:30:38+08:00 ] 127.0.0.1 /easygo/easygo/index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\wwwroot\easygo\easygo\Application\Admin\Controller\AdminController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001446s ]
+

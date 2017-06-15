@@ -1,0 +1,132 @@
+*{
+	margin:0px;
+	padding:0px;
+	border-width:0px;
+	list-style:none;
+	font-family:"微软雅黑";
+	margin:auto;
+}
+.top{
+	background-color: black;
+	width:100%;
+	height:80px;
+}
+.top img{
+	margin-top:8px;
+}
+.middle{
+	background-image: url(../images/banner1.jpg);
+	width:100%;
+	height:604px;
+}
+.bottom{
+	background-color: rgb(51,51,51);
+	width:100%;
+	height:46px;
+}
+.bottom p{
+	color: white;
+	text-align: center;
+	font-size: 12px;
+	line-height:46px;
+}
+.register{
+	width: 400px;
+	height:390px;
+	background-color: white;
+	float: right;
+	margin-top: 100px;
+	margin-right: 100px;
+}
+.register .little{width:180px;}
+input[type=text],input[type=password]{
+	height: 40px;
+	width:314px;
+	border:1px solid #ccc;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-indent:1em;
+	font-size:14px;
+}
+input[type=submit]{
+	height: 40px;
+	width:314px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align:center;
+	cursor:pointer;}
+.register h4{
+	text-align: center;
+	padding-top: 20px;
+	font-weight:normal;
+	font-size:18px;
+	height: 40px;
+	font-family: "微软雅黑";
+}
+.register form a:hover p{
+	text-decoration:underline;
+	}
+#zhuce{
+	height:50px;
+	width:320px;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    background-color:rgb(251,109,0);
+    border-color:rgb(251,109,0);
+    margin-top: 28px;
+    color: white;
+    font-family: '微软雅黑';
+    font-size: 100%;
+	border:1px solid rgb(251,109,0);
+    font-weight: lighter;
+}
+form p{
+	float: right;
+	margin-right: 40px;
+	margin-top: 15px;
+	font-family: '微软雅黑';
+}
+.register input[type=button]{
+	float:right;
+	display:inline-block;
+	background:#fff;
+	color:#fb6d00;
+	border:1px solid #fb6d00;
+	width:120px;
+	height:42px;
+	margin:10px 44px 0 0 ;
+	cursor:pointer;
+	}
+#zhuce2{
+	display:block;
+	height:50px;
+	width:320px;
+	-moz-border-radius: 8px;      /* Gecko browsers */
+    -webkit-border-radius: 8px;   /* Webkit browsers */
+    border-radius:8px;            /* W3C syntax */
+    background-color:white;
+    margin-top: 17px;
+    font-family: '微软雅黑';
+    font-size: 100%;
+    font-weight: lighter;
+	border:1px solid #ccc;
+    color: gray;
+	line-height:50px;
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align:center;
+	cursor:pointer;
+	text-decoration:none;
+}
+.register input[type=button]{
+	float:right;
+	display:inline-block;
+	background:#fff;
+	color:#fb6d00;
+	border:1px solid #fb6d00;
+	width:120px;
+	height:42px;
+	margin:10px 44px 0 0 ;
+	cursor:pointer;
+	}

@@ -1,0 +1,29 @@
+[ 2017-05-22T14:49:37+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009255s ]
+ERR: 无法加载控制器:Index
+
+[ 2017-05-22T14:49:41+08:00 ] 127.0.0.1 /easygo/5.15_5.21/easygo/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.216664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.216767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017665s ]
+

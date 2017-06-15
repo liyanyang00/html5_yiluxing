@@ -1,0 +1,227 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:0;
+	font-family:"微软雅黑"!important;
+	}
+a
+{
+   font-size:13px;
+   color:#333;
+   text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+	color:#fb6d00;}
+ul{
+	margin:0px;
+	padding:0px;
+	}
+li{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+h1{
+	margin:0px;
+	padding:0px;
+	}
+img
+{
+   border:0px;
+}
+body
+{
+    background-color:#fff;
+}
+body,html{
+	height: 100%;
+	background:#f7f7f7;
+}
+
+/**************************头部****************************/
+.mybody{
+	width:1200px;
+	margin:0 auto;
+	}
+.header{
+	overflow:hidden;
+	width:100%;
+	background:#000;
+	}
+.logo{
+	overflow:auto;
+	width:176px;
+	height:44px;
+	margin:14px;
+	float:left;
+	}
+.nav{
+	margin-left:30px;
+	float:left;
+	margin-top:22px;
+	}
+.nav li{
+	float:left;
+	margin-left:24px;
+	}
+.nav li a{
+	display:block;
+	font-size:15px;
+	color:#ededed;
+	padding:4px 6px;
+	}
+.nav li a:hover{
+	color:#fb6d00;
+	text-decoration:none;
+	}
+.nav .navnow a{
+	color:#fb6d00;
+	text-decoration:none;
+	}
+
+.top-right2{
+	float: right;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: white;
+	font-weight: lighter;
+	margin-right: 100px;
+	margin-top: 30px;
+}
+/*尖角代码,尖角就是定义个width和height都为0的div，
+然后给这个div添加一个n像素并且为实线的border，并设置四个border的颜色即可！
+至于尖角是朝上、朝左、朝右还是朝下使用border-color控制的。*/
+.arrow{
+	width: 0;
+	height: 0;
+	border:solid 8px;
+	border-color:rgba(0,0,0,0)  rgba(0,0,0,0)  rgba(255,255,255,255);
+	position: relative;
+	top: 0px;
+	left: 40px;
+}
+#children{
+	display: none;
+}
+.child{
+	background-color: white;
+	position:absolute;/*绝对定位，顺序堆叠，是菜单浮动到第二层*/
+	z-index: 2;
+	-moz-border-radius: 4px;      /* Gecko browsers圆角 */
+    -webkit-border-radius: 4px;   /* Webkit browsers */
+    border-radius:4px;            /* W3C syntax */
+	border:1px solid #ececec;
+}
+
+.child li{
+	list-style-type: none;
+	padding: 10px 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-right: 35px;
+	font-size:13px;
+}
+#xu{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: rgb(207,207,207);
+	width: 64px;
+}
+.child li:hover{
+	background-color: white;
+}
+.child li a:hover{color:#fb6d00;}
+.child li a{
+	color: black;
+	text-decoration: blink;
+}
+.show{display: block;}
+
+	
+/**************************底部*********************************/
+.footer{
+	width:100%;
+	background:rgb(51,51,51);
+	height:280px;
+	float:left;
+	color:#ededed;
+	}
+.bottom-ul{
+	width:980px;
+	margin-left:20px;
+	float:left;
+	font-weight:normal;
+	font-size:13px;
+	line-height:28px;
+	}
+.bottom-aa{
+	font-size:15px;
+	color:#fb6d00;
+	line-height:36px;
+	}
+.bottom-ul ul{
+	float: left;
+	color: #ededed;
+	padding-left: 45px;
+	padding-right:65px;
+	margin-top: 45px;
+}
+
+.bottom-ul ul li a{
+	color:#ededed;
+	line-height:28px;
+	}
+.bottom-ul ul li a:hover{
+	text-decoration:underline;
+	}
+.bottom-right{
+	float:left;
+	margin-top:40px;
+	color:#fb6d00;
+	font-size:13px;
+	}
+.bottom-right h4{
+	font-weight:normal;
+	width:99px;
+	text-align:center;
+	margin-top:12px;
+	}
+.footer p{
+	width:1200px;
+	color:#ededed;
+	font-size:13px;
+	text-align:center;
+	line-height:46px;
+	border-top:1px solid #565656;
+	float:left;
+	margin-top:30px;
+	}
+
+
+@media screen and (min-width: 1440px) {
+.footer,.header,.ad,body{
+	width: 1423px;
+}
+}
+
+@media screen and (width: 1366px) {
+.footer,.header,.ad,body{
+	width: 1349px;
+}
+}
+
+@media screen and (width: 1360px) {
+.footer,.header,.ad,body{
+	width: 1343px;
+}
+}
+
+@media screen and (max-width: 1280px) {
+.footer,.header,.ad,body{
+	width: 1263px;
+}
+}
